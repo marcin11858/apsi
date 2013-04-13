@@ -23,9 +23,46 @@ także zamównieniam sprzedaży jak i zakupu. System ten nie jest specjalizowany
 pod konkrentną dziedzine handlu. Umożliwia on natomiast przechowywanie i
 zarządznanie informacjami o towarach dowolnego typu. 
 
+\subsection{Architektura systemu}
 
+W obecnie towrzonych systemach spotyka się dwie podstawowe struktury:
+architekturę klient-serwer oraz architekturę trójwarstwową.
+W architekturze klient-serwer, która była szczególnie popularna w
+latach dziewięćdziesiątych ubiegłego wieku, wyróżnia się
+dwie warstwy: 
+\begin{itemize}
+ \item aplikację użytkownika (\emph{klient});
+ \item system zarządzania bazą danych (\emph{serwer}).
+\end{itemize}
+
+Struktura ta sprawdza się dla prostych systemów, których zadaniem jest
+zapisywanie, odczytywanie oraz aktualizacja danych. Problem
+pojawia się jednak w przypadku, gdy dane muszą być przetwarzane w
+nietrywialny sposób, przy uwzględnieniu dziedziny problemu (ang. \emph{domain
+logic}) modelowanego zagadnienia. Realizacja obliczeń w warstwie klienta,
+której głównym zadaniem jest prezentacja informacji użytkownikowi, może
+znacząco wpływać na jego komfort pracy oraz powodować problemy związane z
+duplikacją kodu źródłowego aplikacji.
+Natomiast umieszczenie logiki aplikacji po stronie serwera bardzo często narzuca
+przygotowanie programu w środowisku specyficznym dla danego systemu zarządzania
+bazami danych. 
+
+Problemy te zmusiły projektantów aplikacji do wydzielenia jeszcze jednego
+poziomu, który jest odpowiedzialny za logikę operacji na danych. W
+architekturze trójwarstwowej uwzględnione są następujące warstwy:
+\begin{itemize}
+ \item warstwa prezentacji;
+ \item warstwa aplikacji;
+ \item warstwa źródła danych.
+\end{itemize}
+
+%TODO Wstawić schemat prezentujący architekturę trójwarstwową.
+
+W przypadku systemu do obsługi magazynu zdecydowano się wykorzystanie
+architektóry trójwarstwowej.
 
 \section{Aktorzy}
+
 
 \section{Wymagania funkcjonalne}
 
