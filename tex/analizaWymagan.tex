@@ -26,7 +26,7 @@ pod konkrentną dziedzine handlu. Umożliwia on natomiast przechowywanie i
 zarządznanie informacjami o towarach dowolnego typu. 
 
 \subsection{Architektura systemu}
-% Świetny styl!
+
 W obecnie towrzonych systemach spotyka się dwie podstawowe struktury:
 architekturę klient-serwer oraz architekturę trójwarstwową.
 W architekturze klient-serwer, która była szczególnie popularna w
@@ -113,7 +113,7 @@ Niniejsze rozdział zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 		   	3.2 & Edycja danych klientów & wysoki & niskie & sprzedawca \\
 		   	3.3 & Usuwanie danych klientów & wysoki & niskie & sprzedawca \\
 		   	\hline
-		   	4 & Zarządzanie danycmi dostawców & wysoki & niskie & magazynier \\
+		   	4 & Zarządzanie danymi dostawców & wysoki & niskie & magazynier \\
 		   	4.1 & Dodawanie dostawców & wysoki & niskie & magazynier \\
 		   	4.2 & Edycja danych dostawców & wysoki & niskie & magaziner \\
 		   	4.3 & Usuwanie danych dostawców & wysoki & niskie & magazynier \\
@@ -134,7 +134,7 @@ Niniejsze rozdział zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 		   	\hline
 		   	7 & Zarządzanie raportami & średni & niskie & administrator \\
 		   	7.1 & Generowanie raportów sprzedaży & średni & niskie & administrator \\
-		   	7.2 & Generowanie raportów zakupów & średni & niskie & sdministrator \\
+		   	7.2 & Generowanie raportów zakupów & średni & niskie & administrator \\
 		   	\hline
 		   	\hline
 	    \end{tabular}
@@ -154,10 +154,22 @@ projektowanego systemu.
 			\textbf{Lp.} & \textbf{Nazwa} & \textbf{Priorytet} & \textbf{Ryzyko} \\
 			\hline
 			1 & Bezpieczeństwo & wysoki & niskie \\
+			1.1 & Mechanizm uwierzytelniania użytkowników za pomocą loginu i hasła &
+			wysoki & niskie \\
+			1.2 & Zróżnicowanie uprawnień do korzystania z systemu & wysoki & niskie \\
+			1.3 & Zapisywanie historii przeprowadzanych transakcji & wysoki & niskie \\
+			1.4 & Szyfrwanie haseł w bazie danych funkcją skrótu & wysoki & niskie \\
 			\hline
 			2 & Dostępność & wysoki & niskie \\
+			2.1 & Dostępność systemu co najmniej 98\% w skali dnia & wysoki & niskie \\ 
+			2.2 & Dostępność przez przeglądarke & wysoki & niskie \\
 			\hline
 			3 & Elastyczność & wysoki & niskie \\
+			3.1 & Architektura systemu umożliwia łatwą rozbudowe i konserwacje & wysoki &
+			niskie \\
+			3.2 & Możliwość integracji z innymi systemami używanymi w firmie & wysoki &
+			niskie \\
+			
 			\hline
 			4 & Niezawodność & wysoki & niskie \\
 			\hline
@@ -171,3 +183,24 @@ projektowanego systemu.
 \FloatBarrier
 
 \section{Specyfikacja przypadków użycia na poziomie ogólnym}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[angle=-90,scale=0.8]{../img/kierownikUseCase.png}
+    \end{center}
+    \label{fig:kierownikUseCase}
+\end{figure}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[angle=-90,scale=0.75]{../img/sprzedawcaUseCase.png}
+    \end{center}
+    \label{fig:sprzedawcaUseCase}
+\end{figure}
+
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[angle=-90,scale=0.75]{../img/magazynierUseCase.png}
+    \end{center}
+    \label{fig:magazynierUseCase}
+\end{figure}
