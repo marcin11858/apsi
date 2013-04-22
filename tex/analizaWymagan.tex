@@ -5,29 +5,29 @@
 %TODO Alternatywna wersja 
 
 Wraz z rozwojem handlu konieczne stało się stworzenie miejsca w którym towary
-będą składowane przed zakupem  przez klienta. W przypadku małych magazynów to
-pracownicy są w stanie nim efektywnie zarządzać i efektywnie wyszukiwać towarów
-znajdujących się w nim. Jednak co dzieje się w przypadku gdy magazyn jest
-większy? Konieczne staje się stworzenie systemu który umożliwi pracownikom
-łatwiejsze i bardziej efektywne zarządzanie towarami znajdującymi się w
-magazynie.
+będą składowane przed zakupem przez klienta. W przypadku małych magazynów to
+pracownicy są w stanie nim efektywnie zarządzać i efektywnie wyszukiwać 
+znajdujące się w nim towary. Jednak co dzieje się w przypadku, gdy liczba towarów
+przechowywanych w magazynie jest bardzo duża? Konieczne staje się stworzenie
+systemu który umożliwi pracownikom prostsze i bardziej efektywne zarządzanie
+towarami znajdującymi się w magazynie.
 
 Głównym zadaniem systemu do zarządzania magazynem jest przechowywanie ilości
-poszczególnych towarów. Możliwość przyjmowania dostaw jaki i również sprzedaży
-towarów klientom. Powinien również przechowywać informacje o dostawcach,
-towarach a także o klientach.
+poszczególnych towarów, odznaczanie dostaw jak i również sprzedaży
+towarów klientom. Powinien również przechowywać niezbędne informacje o
+dostawcach, towarach oraz klientach.
 
 \subsection{Przeznaczenie systemu}
 
 Głównym zadaniem systemu jest ułatwienie zarządzania magazynem pracownikom
 magazynu, poprzez umożliwienie zarządzania klientami, dostawcami, towarami a
 także zamówieniami sprzedaży jak i zakupu. System ten nie jest specjalizowany
-pod konkretną dziedzinę handlu. Umożliwia on natomiast przechowywanie i
+pod konkretną dziedzinę handlu -- ma on umożliwiać przechowywanie i
 zarządzanie informacjami o towarach dowolnego typu. 
 
 \subsection{Architektura systemu}
 
-W obecnie towrzonych systemach spotyka się dwie podstawowe struktury:
+W obecnie tworzonych systemach spotyka się dwie podstawowe struktury:
 architekturę klient-serwer oraz architekturę trójwarstwową.
 W architekturze klient-serwer, która była szczególnie popularna w
 latach dziewięćdziesiątych ubiegłego wieku, wyróżnia się
@@ -66,8 +66,8 @@ architekturze trójwarstwowej uwzględnione są następujące warstwy:
     \caption{Schemat architektury trójwarstwowej}
 \end{figure}
 \FloatBarrier
-W przypadku systemu do obsługi magazynu zdecydowano się wykorzystanie
-architektury trójwarstwowej.
+W przypadku realizowanego systemu do obsługi magazynu zastosowana będzie
+architektura trójwarstwowa.
 
 \section{Aktorzy}
 
@@ -75,7 +75,7 @@ Aktorzy w zaprojektowanym systemie zostali podzieleni na dwie grupy: aktorów
 osobowych oraz aktorów nieosobowych. Do aktorów osobowym można zaliczyć
 wszystkich użytkowników projektowanego systemu, aktorami nieosobowymi są
 natomiast wszystkie systemy zewnętrzne współpracujące z projektowanym systemem.
-Poniższy diagram przedstawia hierarchie aktorów osobowych w systemie:
+Poniższy diagram przedstawia hierarchię aktorów osobowych w systemie:
 
 \begin{figure}[h]
     \begin{center}
@@ -86,13 +86,14 @@ Poniższy diagram przedstawia hierarchie aktorów osobowych w systemie:
 \end{figure}
 \FloatBarrier
 
-
-
 \section{Wymagania funkcjonalne}
 
 Niniejsze rozdział zawiera wymagania funkcjonalne jakie powinien spełniać
-projektowany system. Wymagania te zostały podzielone na większe grupy takie jak
-zarządzanie danymi klientów bądź danymi dostawców. 
+projektowany system. Wymagania te zostały podzielone na większe grupy wymagań
+takie jak: zarządzanie danymi klientów czy zarządzanie danymi dostawców. 
+Grupy wymagań zawierają bardziej szczegółowe wymagania, takie jak edycja czy
+usuwanie danych. W tabeli umieszczone zostały również informacje o priorytecie
+wymagania oraz ryzyku i aktorach.
 
 %\arrayrulecolor{line}
 %\rowcolors{2}{cell}{white}
@@ -100,7 +101,6 @@ zarządzanie danymi klientów bądź danymi dostawców.
 \begin{table}[ht]
 	 \begin{center}
 % 	    \rowcolors{1}{}{lightblue}
-% TODO a wyszukiwanie
 	    \begin{tabular}{| l | l | l | l | l |}%\toprule
 	    	\hline
 		    \textbf{Lp.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
@@ -153,8 +153,9 @@ zarządzanie danymi klientów bądź danymi dostawców.
 
 \section{Wymagania niefunkcjonalne}
 
-W niniejszym rozdziale znajdują się opis wymagań niefunkcjonalnych
-projektowanego systemu.
+Rozdział ten zawiera wymagania niefunkcjonalne dotyczące projektowanego systemu.
+Wymagania zostały podzielone na kilka grup, przy każdym z wymagań został
+określony priorytet oraz ryzyko.
 
 \begin{table}[h]
 	\begin{center}
@@ -204,14 +205,12 @@ projektowanego systemu.
 
 \section{Specyfikacja przypadków użycia na poziomie ogólnym}
 
-
-
 Dwa podstawowe zadania kierownika to zarządzanie innymi użytkownikami 
 systemu oraz zarządzanie raportami. Posiada on największe 
 uprawnienia w systemie. Może dodawać i usuwać użytkowników, a 
 także nadawać im uprawnienia. Kierownik zajmuje się 
 generowaniem raportów sprzedaży i zakupu.
-Diagram przedstawiający przypadki użycia kierownika znajduje się na wysunku
+Diagram przedstawiający przypadki użycia kierownika znajduje się na rysunku
 \ref{fig:kierownikUseCase}.
 
 Sprzedawca pośredniczy w kontaktach z klientem i zarządza procesem 
@@ -226,8 +225,8 @@ Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu magazynu
 w systemie. Wprowadza dane towarów do systemu, a także aktualizuje ich 
 ilość. Ponadto zarządza on zamówieniami zakupu oraz danymi dostawców. 
 Zadaniem magazyniera jest prowadzenie ewidencji dostawców, dodawanie nowych 
-oraz usuwanie tych, z którymi zakończono współpracę. Magazynier tworzy zamówienia 
-zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizację zamówień. W razie 
+oraz usuwanie tych, z którymi zakończono współpracę. Magazynier tworzy
+zamówienia zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizację zamówień. W razie 
 potrzeby może anulować zamówienie zakupu. Diagram przedstawiający opisane
 przypadki użycia został zaprezentowany na rysunku \ref{fig:magazynierUseCase}.
 
