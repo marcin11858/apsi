@@ -63,6 +63,7 @@ architekturze trójwarstwowej uwzględnione są następujące warstwy:
     \includegraphics[scale=0.5]{../img/arch-3warstw.png}
     \end{center}
     \label{fig:arch3warstw}
+    \caption{Schemat architektury trójwarstwowej}
 \end{figure}
 \FloatBarrier
 W przypadku systemu do obsługi magazynu zdecydowano się wykorzystanie
@@ -81,6 +82,7 @@ Poniższy diagram przedstawia hierarchie aktorów osobowych w systemie:
     \includegraphics[scale=0.75]{../img/diagramDziedziczenia.png}
     \end{center}
     \label{fig:diagramDziedziczenia}
+    \caption{Diagram przedstawiający aktorów w systemie}
 \end{figure}
 \FloatBarrier
 
@@ -88,7 +90,9 @@ Poniższy diagram przedstawia hierarchie aktorów osobowych w systemie:
 
 \section{Wymagania funkcjonalne}
 
-Niniejsze rozdział zawiera zdefiniowane dla systemu wymagania funkcjonalne.
+Niniejsze rozdział zawiera wymagania funkcjonalne jakie powinien spełniać
+projektowany system. Wymagania te zostały podzielone na większe grupy takie jak
+zarządzanie danymi klientów bądź danymi dostawców. 
 
 %\arrayrulecolor{line}
 %\rowcolors{2}{cell}{white}
@@ -102,7 +106,7 @@ Niniejsze rozdział zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 		    \textbf{Lp.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
 		    \textbf{Nazwa aktora} \\
 		    \hline
-	1 & Zarządzanie użytkownikami & wysoki & niskie & kierownik \\
+			1 & Zarządzanie użytkownikami & wysoki & niskie & kierownik \\
 		    1.1 & Dodawanie użytkowników & wysoki & niskie & kierownik \\
 		    1.2 & Edycja danych użytkowników & wysoki & niskie & kierownik \\ 	
 		    1.3 & Usuwanie danych użytkowników & wysoki &niskie & kierownik \\
@@ -200,43 +204,55 @@ projektowanego systemu.
 
 \section{Specyfikacja przypadków użycia na poziomie ogólnym}
 
-\begin{figure}[h]
-    \begin{center}
-    \includegraphics[angle=-90,scale=0.8]{../img/kierownikUseCase.png}
-    \end{center}
-    \label{fig:kierownikUseCase}
-\end{figure}
-\FloatBarrier
+
 
 Dwa podstawowe zadania kierownika to zarządzanie innymi użytkownikami 
 systemu oraz zarządzanie raportami. Posiada on największe 
 uprawnienia w systemie. Może dodawać i usuwać użytkowników, a 
 także nadawać im uprawnienia. Kierownik zajmuje się 
 generowaniem raportów sprzedaży i zakupu.
-\begin{figure}[h]
-    \begin{center}
-    \includegraphics[angle=-90,scale=0.75]{../img/sprzedawcaUseCase.png}
-    \end{center}
-    \label{fig:sprzedawcaUseCase}
-\end{figure}
-\FloatBarrier
+Diagram przedstawiający przypadki użycia kierownika znajduje się na wysunku
+\ref{fig:kierownikUseCase}.
+
 Sprzedawca pośredniczy w kontaktach z klientem i zarządza procesem 
 sprzedaży towarów. Przyjmuje on zamówienia i dodaje je do bazy, 
 aktualizując jednocześnie dane klientów. Sprawuje kontrolę nad 
 realizacją zamówień sprzedaży, a w razie potrzeby może anulować zamówienie. 
 Do zadań sprzedawcy należy prowadzenie ewidencji klientów, aktualizowanie 
-informacji o nich oraz usuwanie starych.
-\begin{figure}[h]
-    \begin{center}
-    \includegraphics[angle=-90,scale=0.75]{../img/magazynierUseCase.png}
-    \end{center}
-    \label{fig:magazynierUseCase}
-\end{figure}
-\FloatBarrier
+informacji o nich oraz usuwanie starych. Przypadki użycia sprzedawcy zostały
+zaprezentowane na diagramie \ref{fig:sprzedawcaUseCase}.  
+
 Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu magazynu 
 w systemie. Wprowadza dane towarów do systemu, a także aktualizuje ich 
 ilość. Ponadto zarządza on zamówieniami zakupu oraz danymi dostawców. 
 Zadaniem magazyniera jest prowadzenie ewidencji dostawców, dodawanie nowych 
 oraz usuwanie tych, z którymi zakończono współpracę. Magazynier tworzy zamówienia 
 zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizację zamówień. W razie 
-potrzeby może anulować zamówienie zakupu.
+potrzeby może anulować zamówienie zakupu. Diagram przedstawiający opisane
+przypadki użycia został zaprezentowany na rysunku \ref{fig:magazynierUseCase}.
+
+\begin{figure}[ht]
+    \begin{center}
+    \includegraphics[angle=-90,scale=0.8]{../img/kierownikUseCase.png}
+    \end{center}
+    \caption{Diagram przypadków użycia kierownika}
+    \label{fig:kierownikUseCase}
+\end{figure}
+
+\begin{figure}[ht]
+    \begin{center}
+    \includegraphics[angle=-90,scale=0.75]{../img/sprzedawcaUseCase.png}
+    \end{center}
+    \caption{Diagram przypadków użycia sprzedawcy}
+    \label{fig:sprzedawcaUseCase}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \begin{center}
+    	\includegraphics[angle=-90,scale=0.7]{../img/magazynierUseCase.png}
+    	\caption{Diagram przypadków użycia magazyniera}
+    	\label{fig:magazynierUseCase}
+    \end{center}
+\end{figure}
+
