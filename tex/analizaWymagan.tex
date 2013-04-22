@@ -1,77 +1,77 @@
-\chapter{Analiza wymagañ}
+\chapter{Analiza wymagaÅ„}
 
-\section{Wstêp}
+\section{WstÄ™p}
 
 %TODO Alternatywna wersja 
 
-Wraz z rozwojem handlu konieczne sta³o siê stowrznie miejsca w którym towary
-bêd¹ sk³adowane przed zakupem  przez klienta. W przypadku ma³ych magazynów to
-pracownicy s¹ w stanie nim efektywnie zarz¹dzaæ i efektywnie wyszukiwaæ towarów
-znajduj¹cych siê w nim. Jednak co dzieje siê w przypadku gdy magazyn jest
-wiêkszy? Konieczne staje siê stowrzenie systemu który umo¿liwi pracownikom
-³atwiejsze i bardziej efektywne zarz¹dzanie towarami znajduj¹cymi siê w
+Wraz z rozwojem handlu konieczne staÅ‚o siÄ™ stowrznie miejsca w ktÃ³rym towary
+bÄ™dÄ… skÅ‚adowane przed zakupem  przez klienta. W przypadku maÅ‚ych magazynÃ³w to
+pracownicy sÄ… w stanie nim efektywnie zarzÄ…dzaÄ‡ i efektywnie wyszukiwaÄ‡ towarÃ³w
+znajdujÄ…cych siÄ™ w nim. Jednak co dzieje siÄ™ w przypadku gdy magazyn jest
+wiÄ™kszy? Konieczne staje siÄ™ stowrzenie systemu ktÃ³ry umoÅ¼liwi pracownikom
+Å‚atwiejsze i bardziej efektywne zarzÄ…dzanie towarami znajdujÄ…cymi siÄ™ w
 magazynie.
 
-G³ównym zadaniem systemu do zarz¹dzania magazynem jest przechowywanie iloœci
-poszczególnych towarów. Mo¿liwoœæ przyjmowania dostaw jaki i równie¿ sprzeda¿y
-towarów klientom. Powinien równie¿ przechowywaæ informacje o dostawcach,
-towarach a tak¿e o klientach.
+GÅ‚Ã³wnym zadaniem systemu do zarzÄ…dzania magazynem jest przechowywanie iloÅ›ci
+poszczegÃ³lnych towarÃ³w. MoÅ¼liwoÅ›Ä‡ przyjmowania dostaw jaki i rÃ³wnieÅ¼ sprzedaÅ¼y
+towarÃ³w klientom. Powinien rÃ³wnieÅ¼ przechowywaÄ‡ informacje o dostawcach,
+towarach a takÅ¼e o klientach.
 
 \subsection{Przeznaczenie systemu}
 
-G³ównym zadaniem systemu jest u³atwienie zarz¹dzania magazynem pracownikom
-magazynu, poprzez umo¿liwienie zarz¹dzania klientami, dostawcami, towarami a
-tak¿e zamównieniam sprzeda¿y jak i zakupu. System ten nie jest specjalizowany
-pod konkrentn¹ dziedzine handlu. Umo¿liwia on natomiast przechowywanie i
-zarz¹dznanie informacjami o towarach dowolnego typu. 
+GÅ‚Ã³wnym zadaniem systemu jest uÅ‚atwienie zarzÄ…dzania magazynem pracownikom
+magazynu, poprzez umoÅ¼liwienie zarzÄ…dzania klientami, dostawcami, towarami a
+takÅ¼e zamÃ³wnieniam sprzedaÅ¼y jak i zakupu. System ten nie jest specjalizowany
+pod konkrentnÄ… dziedzine handlu. UmoÅ¼liwia on natomiast przechowywanie i
+zarzÄ…dznanie informacjami o towarach dowolnego typu. 
 
 \subsection{Architektura systemu}
 
-W obecnie towrzonych systemach spotyka siê dwie podstawowe struktury:
-architekturê klient-serwer oraz architekturê trójwarstwow¹.
-W architekturze klient-serwer, która by³a szczególnie popularna w
-latach dziewiêædziesi¹tych ubieg³ego wieku, wyró¿nia siê
+W obecnie towrzonych systemach spotyka siÄ™ dwie podstawowe struktury:
+architekturÄ™ klient-serwer oraz architekturÄ™ trÃ³jwarstwowÄ….
+W architekturze klient-serwer, ktÃ³ra byÅ‚a szczegÃ³lnie popularna w
+latach dziewiÄ™Ä‡dziesiÄ…tych ubiegÅ‚ego wieku, wyrÃ³Å¼nia siÄ™
 dwie warstwy: 
 \begin{itemize}
- \item aplikacjê u¿ytkownika (\emph{klient});
- \item system zarz¹dzania baz¹ danych (\emph{serwer}).
+ \item aplikacjÄ™ uÅ¼ytkownika (\emph{klient});
+ \item system zarzÄ…dzania bazÄ… danych (\emph{serwer}).
 \end{itemize}
 
-Struktura ta sprawdza siê dla prostych systemów, których zadaniem jest
+Struktura ta sprawdza siÄ™ dla prostych systemÃ³w, ktÃ³rych zadaniem jest
 zapisywanie, odczytywanie oraz aktualizacja danych. Problem
-pojawia siê jednak w przypadku, gdy dane musz¹ byæ przetwarzane w
-nietrywialny sposób, przy uwzglêdnieniu dziedziny problemu (ang. \emph{domain
-logic}) modelowanego zagadnienia. Realizacja obliczeñ w warstwie klienta,
-której g³ównym zadaniem jest prezentacja informacji u¿ytkownikowi, mo¿e
-znacz¹co wp³ywaæ na jego komfort pracy oraz powodowaæ problemy zwi¹zane z
-duplikacj¹ kodu Ÿród³owego aplikacji.
-Natomiast umieszczenie logiki aplikacji po stronie serwera bardzo czêsto narzuca
-przygotowanie programu w œrodowisku specyficznym dla danego systemu zarz¹dzania
+pojawia siÄ™ jednak w przypadku, gdy dane muszÄ… byÄ‡ przetwarzane w
+nietrywialny sposÃ³b, przy uwzglÄ™dnieniu dziedziny problemu (ang. \emph{domain
+logic}) modelowanego zagadnienia. Realizacja obliczeÅ„ w warstwie klienta,
+ktÃ³rej gÅ‚Ã³wnym zadaniem jest prezentacja informacji uÅ¼ytkownikowi, moÅ¼e
+znaczÄ…co wpÅ‚ywaÄ‡ na jego komfort pracy oraz powodowaÄ‡ problemy zwiÄ…zane z
+duplikacjÄ… kodu ÅºrÃ³dÅ‚owego aplikacji.
+Natomiast umieszczenie logiki aplikacji po stronie serwera bardzo czÄ™sto narzuca
+przygotowanie programu w Å›rodowisku specyficznym dla danego systemu zarzÄ…dzania
 bazami danych. 
 
-Problemy te zmusi³y projektantów aplikacji do wydzielenia jeszcze jednego
-poziomu, który jest odpowiedzialny za logikê operacji na danych. W
-architekturze trójwarstwowej uwzglêdnione s¹ nastêpuj¹ce warstwy:
+Problemy te zmusiÅ‚y projektantÃ³w aplikacji do wydzielenia jeszcze jednego
+poziomu, ktÃ³ry jest odpowiedzialny za logikÄ™ operacji na danych. W
+architekturze trÃ³jwarstwowej uwzglÄ™dnione sÄ… nastÄ™pujÄ…ce warstwy:
 \begin{itemize}
  \item warstwa prezentacji;
  \item warstwa aplikacji;
- \item warstwa Ÿród³a danych.
+ \item warstwa ÅºrÃ³dÅ‚a danych.
 \end{itemize}
 
-%TODO Wstawiæ schemat prezentuj¹cy architekturê trójwarstwow¹.
+%TODO WstawiÄ‡ schemat prezentujÄ…cy architekturÄ™ trÃ³jwarstwowÄ….
 
-W przypadku systemu do obs³ugi magazynu zdecydowano siê wykorzystanie
-architektóry trójwarstwowej.
+W przypadku systemu do obsÅ‚ugi magazynu zdecydowano siÄ™ wykorzystanie
+architektÃ³ry trÃ³jwarstwowej.
 
 \section{Aktorzy}
 
-Aktorzy w zaprojektowanym systemie zostali podzieleni na dwie grupy: aktorów
-osobowych oraz aktorów nieosobowych. Do aktorów osobowym mo¿na zaliczyæ
-wszystkich u¿ytkowników projektowanego systemu, aktorami nieosobowymi s¹
-natomiast wszystkie systemy zewnêtrzne wspó³pracuj¹ce z projektowanym systemem.
-Poni¿szy diagram przedstawia hierarchie aktorów osobowych w systemie:
+Aktorzy w zaprojektowanym systemie zostali podzieleni na dwie grupy: aktorÃ³w
+osobowych oraz aktorÃ³w nieosobowych. Do aktorÃ³w osobowym moÅ¼na zaliczyÄ‡
+wszystkich uÅ¼ytkownikÃ³w projektowanego systemu, aktorami nieosobowymi sÄ…
+natomiast wszystkie systemy zewnÄ™trzne wspÃ³Å‚pracujÄ…ce z projektowanym systemem.
+PoniÅ¼szy diagram przedstawia hierarchie aktorÃ³w osobowych w systemie:
 
-%TODO Wstawiæ diagram z aktorami osobowymi: administrator, magazynier,
+%TODO WstawiÄ‡ diagram z aktorami osobowymi: administrator, magazynier,
 % sprzedawca 
 \begin{figure}[h]
     \begin{center}
@@ -85,7 +85,7 @@ Poni¿szy diagram przedstawia hierarchie aktorów osobowych w systemie:
 
 \section{Wymagania funkcjonalne}
 
-Niniejsze rozdzia³ zawiera zdefiniowane dla systemu wymagania funkcjonalne.
+Niniejsze rozdziaÅ‚ zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 
 %\arrayrulecolor{line}
 %\rowcolors{2}{cell}{white}
@@ -99,45 +99,45 @@ Niniejsze rozdzia³ zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 		    \textbf{Lp.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
 		    \textbf{Nazwa aktora} \\
 		    \hline
-		    1 & Zarz¹dzanie u¿ytkownikami & wysoki & niskie & administrator \\
-		    1.1 & Dodawanie u¿ytkowników & wysoki & niskie & adminstrator \\
-		    1.2 & Edycja danych u¿ytkowników & wysoki & niskie & adminstrator \\ 	
-		    1.3 & Usuwanie danych u¿ytkowników & wysoki &niskie & administrator \\
+		    1 & ZarzÄ…dzanie uÅ¼ytkownikami & wysoki & niskie & administrator \\
+		    1.1 & Dodawanie uÅ¼ytkownikÃ³w & wysoki & niskie & adminstrator \\
+		    1.2 & Edycja danych uÅ¼ytkownikÃ³w & wysoki & niskie & adminstrator \\ 	
+		    1.3 & Usuwanie danych uÅ¼ytkownikÃ³w & wysoki &niskie & administrator \\
 		    \hline
-		    2 & Zarz¹dzanie danymi towarów & wysoki & niskie & magazynier \\
+		    2 & ZarzÄ…dzanie danymi towarÃ³w & wysoki & niskie & magazynier \\
 		    2.1 & Dodawanie towaru & wysoki &  niskie & magazynier \\
-		    2.2 & Edycja danych twarów & wysoki & niskie & magazynier \\
-		    2.2.1 & Edycja opisu towarów & wysoki & niskie & magazynier \\
-		    2.2.2 & Zmiana iloœci towarów & wysoki & niskie & u¿ytkownik \\
-		    2.3 & Usuwanie danych towarów & wysoki & niskie & magazynier \\
+		    2.2 & Edycja danych twarÃ³w & wysoki & niskie & magazynier \\
+		    2.2.1 & Edycja opisu towarÃ³w & wysoki & niskie & magazynier \\
+		    2.2.2 & Zmiana iloÅ›ci towarÃ³w & wysoki & niskie & uÅ¼ytkownik \\
+		    2.3 & Usuwanie danych towarÃ³w & wysoki & niskie & magazynier \\
 		    \hline
-		   	3 & Zarz¹dzanie danymi klientów & wysoki & niskie & sprzedawca \\
-		   	3.1 & Dodawanie klientów & wysoki & niski & sprzedawca \\
-		   	3.2 & Edycja danych klientów & wysoki & niskie & sprzedawca \\
-		   	3.3 & Usuwanie danych klientów & wysoki & niskie & sprzedawca \\
+		   	3 & ZarzÄ…dzanie danymi klientÃ³w & wysoki & niskie & sprzedawca \\
+		   	3.1 & Dodawanie klientÃ³w & wysoki & niski & sprzedawca \\
+		   	3.2 & Edycja danych klientÃ³w & wysoki & niskie & sprzedawca \\
+		   	3.3 & Usuwanie danych klientÃ³w & wysoki & niskie & sprzedawca \\
 		   	\hline
-		   	4 & Zarz¹dzanie danymi dostawców & wysoki & niskie & magazynier \\
-		   	4.1 & Dodawanie dostawców & wysoki & niskie & magazynier \\
-		   	4.2 & Edycja danych dostawców & wysoki & niskie & magaziner \\
-		   	4.3 & Usuwanie danych dostawców & wysoki & niskie & magazynier \\
+		   	4 & ZarzÄ…dzanie danymi dostawcÃ³w & wysoki & niskie & magazynier \\
+		   	4.1 & Dodawanie dostawcÃ³w & wysoki & niskie & magazynier \\
+		   	4.2 & Edycja danych dostawcÃ³w & wysoki & niskie & magaziner \\
+		   	4.3 & Usuwanie danych dostawcÃ³w & wysoki & niskie & magazynier \\
 		   	\hline
-		   	5 & Zarz¹dzanie zamowieniami sprzeda¿y & wysoki & niskie & sprzedawca \\
-		   	5.1 & Tworzenie zamówieñ sprzeda¿y & wyskoki & niskie & sprzedawca \\
-		   	5.2 & Edycja zamówieñ sprzeda¿y & wysoki & niskie & sprzedaca \\
-		   	5.3 & Usuwanie zamówieñ sprzeda¿y & wysoki & niskie & sprzedaca \\
-		   	5.4 & Realizacja zamówieñ sprzeda¿y & wysoki & niskie & sprzedawca \\
-		   	5.5 & Anulowanie zamówieñ sprzeda¿y & wysoki & niskie & sprzedawca \\
+		   	5 & ZarzÄ…dzanie zamowieniami sprzedaÅ¼y & wysoki & niskie & sprzedawca \\
+		   	5.1 & Tworzenie zamÃ³wieÅ„ sprzedaÅ¼y & wyskoki & niskie & sprzedawca \\
+		   	5.2 & Edycja zamÃ³wieÅ„ sprzedaÅ¼y & wysoki & niskie & sprzedaca \\
+		   	5.3 & Usuwanie zamÃ³wieÅ„ sprzedaÅ¼y & wysoki & niskie & sprzedaca \\
+		   	5.4 & Realizacja zamÃ³wieÅ„ sprzedaÅ¼y & wysoki & niskie & sprzedawca \\
+		   	5.5 & Anulowanie zamÃ³wieÅ„ sprzedaÅ¼y & wysoki & niskie & sprzedawca \\
 		   	\hline
-		   	6 & Zarz¹dzanie zamówieniami zakupu & wysoki & niskie & magazynier \\
-		   	6.1 & Tworzenie zamowieñ zakupu & wysoki & niskie & magazynier \\
-		   	6.2 & Edycja zamówieñ zakupu & wysoki & niskie & magazynier \\
-		   	6.3 & Usuwanie zamówieñ zakupu & wysoki & niskie & magazynier \\
-		   	6.4 & Realizacja zamówieñ zakupu & wysoki & niskie & magazynier \\
-		   	6.5 & Anulowanie zamówieñ zakupu & wysoki & niskie & magazynier \\
+		   	6 & ZarzÄ…dzanie zamÃ³wieniami zakupu & wysoki & niskie & magazynier \\
+		   	6.1 & Tworzenie zamowieÅ„ zakupu & wysoki & niskie & magazynier \\
+		   	6.2 & Edycja zamÃ³wieÅ„ zakupu & wysoki & niskie & magazynier \\
+		   	6.3 & Usuwanie zamÃ³wieÅ„ zakupu & wysoki & niskie & magazynier \\
+		   	6.4 & Realizacja zamÃ³wieÅ„ zakupu & wysoki & niskie & magazynier \\
+		   	6.5 & Anulowanie zamÃ³wieÅ„ zakupu & wysoki & niskie & magazynier \\
 		   	\hline
-		   	7 & Zarz¹dzanie raportami & œredni & niskie & administrator \\
-		   	7.1 & Generowanie raportów sprzeda¿y & œredni & niskie & administrator \\
-		   	7.2 & Generowanie raportów zakupów & œredni & niskie & administrator \\
+		   	7 & ZarzÄ…dzanie raportami & Å›redni & niskie & administrator \\
+		   	7.1 & Generowanie raportÃ³w sprzedaÅ¼y & Å›redni & niskie & administrator \\
+		   	7.2 & Generowanie raportÃ³w zakupÃ³w & Å›redni & niskie & administrator \\
 		   	\hline
 		   	\hline
 	    \end{tabular}
@@ -147,7 +147,7 @@ Niniejsze rozdzia³ zawiera zdefiniowane dla systemu wymagania funkcjonalne.
 
 \section{Wymagania niefunkcjonalne}
 
-W niniejszym rozdziale znajduj¹ siê opis wymagañ niefunkcjonalnych
+W niniejszym rozdziale znajdujÄ… siÄ™ opis wymagaÅ„ niefunkcjonalnych
 projektowanego systemu.
 
 \begin{table}[h]
@@ -156,38 +156,38 @@ projektowanego systemu.
 			\hline
 			\textbf{Lp.} & \textbf{Nazwa} & \textbf{Priorytet} & \textbf{Ryzyko} \\
 			\hline
-			1 & Bezpieczeñstwo & wysoki & niskie \\
-			1.1 & Mechanizm uwierzytelniania u¿ytkowników za pomoc¹ loginu i has³a &
+			1 & BezpieczeÅ„stwo & wysoki & niskie \\
+			1.1 & Mechanizm uwierzytelniania uÅ¼ytkownikÃ³w za pomocÄ… loginu i hasÅ‚a &
 			wysoki & niskie \\
-			1.2 & Zró¿nicowanie uprawnieñ do korzystania z systemu & wysoki & niskie \\
+			1.2 & ZrÃ³Å¼nicowanie uprawnieÅ„ do korzystania z systemu & wysoki & niskie \\
 			1.3 & Zapisywanie historii przeprowadzanych transakcji & wysoki & niskie \\
-			1.4 & Szyfrwanie hase³ w bazie danych funkcj¹ skrótu & wysoki & niskie \\
+			1.4 & Szyfrwanie haseÅ‚ w bazie danych funkcjÄ… skrÃ³tu & wysoki & niskie \\
 			\hline
-			2 & Dostêpnoœæ & wysoki & niskie \\
-			2.1 & Dostêpnoœæ systemu co najmniej 98\% w skali dnia & wysoki & niskie \\ 
-			2.2 & Dostêpnoœæ przez przegl¹darke & wysoki & niskie \\
+			2 & DostÄ™pnoÅ›Ä‡ & wysoki & niskie \\
+			2.1 & DostÄ™pnoÅ›Ä‡ systemu co najmniej 98\% w skali dnia & wysoki & niskie \\ 
+			2.2 & DostÄ™pnoÅ›Ä‡ przez przeglÄ…darke & wysoki & niskie \\
 			\hline
-			3 & Elastycznoœæ & wysoki & niskie \\
-			3.1 & Architektura systemu umo¿liwia ³atw¹ rozbudowe i konserwacje & wysoki &
+			3 & ElastycznoÅ›Ä‡ & wysoki & niskie \\
+			3.1 & Architektura systemu umoÅ¼liwia Å‚atwÄ… rozbudowe i konserwacje & wysoki &
 			niskie \\
-			3.2 & Mo¿liwoœæ integracji z innymi systemami u¿ywanymi w firmie & wysoki &
+			3.2 & MoÅ¼liwoÅ›Ä‡ integracji z innymi systemami uÅ¼ywanymi w firmie & wysoki &
 			niskie \\
 			
 			\hline
-			4 & Niezawodnoœæ & wysoki & niskie \\
+			4 & NiezawodnoÅ›Ä‡ & wysoki & niskie \\
 			4.1 & Maksymalny czas powstania po awarii 2h & wysoki & niskie \\
 			4.2 & Odtwarzanie uszkodzonych danych na podstawie kopii zapasowe & wysoki &
 			niskie \\
 			4.3 & Wykonywanie kopii zapasowych danych & wysoki & niskie \\
 			\hline
-			5 & U¿ytecznoœæ & wysoki & niskie \\
-			5.1 & Intuicyjny sposób obs³ugi systemy & wysoki & niskie \\
+			5 & UÅ¼ytecznoÅ›Ä‡ & wysoki & niskie \\
+			5.1 & Intuicyjny sposÃ³b obsÅ‚ugi systemy & wysoki & niskie \\
 			5.2 & Przejrzysty system pomocy & wysoki & niskie \\
 			\hline
-			6 & Wydajnoœæ & wysoki & niskie \\
+			6 & WydajnoÅ›Ä‡ & wysoki & niskie \\
 			6.1 & Przechowywanie informacji o transakcjach przez 3 lata & wysoki & niskie
 			\\
-			6.2 & Umo¿liwienie równoczesnej pracy przez 200 u¿ytkowników & wysoki &
+			6.2 & UmoÅ¼liwienie rÃ³wnoczesnej pracy przez 200 uÅ¼ytkownikÃ³w & wysoki &
 			niskie
 			\\
 			\hline
@@ -196,7 +196,7 @@ projektowanego systemu.
 \end{table}
 \FloatBarrier
 
-\section{Specyfikacja przypadków u¿ycia na poziomie ogólnym}
+\section{Specyfikacja przypadkÃ³w uÅ¼ycia na poziomie ogÃ³lnym}
 
 \begin{figure}[h]
     \begin{center}
@@ -204,18 +204,37 @@ projektowanego systemu.
     \end{center}
     \label{fig:kierownikUseCase}
 \end{figure}
-Dwa podstawowe zadania kierownika to zarz¹dzanie innymi u¿ytkownikami systemu oraz zarz¹dzanie raportami. Posiada on najwiêksze uprawnienia w systemie. Mo¿e dodawaæ i usuwaæ u¿ytkowników, a tak¿e nadawaæ im uprawnienia. Kierownik zajmuje siê generowaniem raportów sprzeda¿y i zakupu.
+\FloatBarrier
+
+Dwa podstawowe zadania kierownika to zarzÄ…dzanie innymi uÅ¼ytkownikami 
+systemu oraz zarzÄ…dzanie raportami. Posiada on najwiÄ™ksze 
+uprawnienia w systemie. MoÅ¼e dodawaÄ‡ i usuwaÄ‡ uÅ¼ytkownikÃ³w, a 
+takÅ¼e nadawaÄ‡ im uprawnienia. Kierownik zajmuje siÄ™ 
+generowaniem raportÃ³w sprzedaÅ¼y i zakupu.
 \begin{figure}[h]
     \begin{center}
     \includegraphics[angle=-90,scale=0.75]{../img/sprzedawcaUseCase.png}
     \end{center}
     \label{fig:sprzedawcaUseCase}
 \end{figure}
-Sprzedawca poœredniczy w kontaktach z klientem i zarz¹dza procesem sprzeda¿y towarów. Przyjmuje on zamówienia i dodaje je do bazy, aktualizuj¹c jednoczeœnie dane klientów. Sprawuje kontrolê nad realizacj¹ zamówieñ sprzeda¿y, a w razie potrzeby mo¿e anulowaæ zamówienie. Do zadañ sprzedawcy nale¿y prowadzenie ewidencji klientów, aktualizowanie informacji o nich oraz usuwanie starych.
+\FloatBarrier
+Sprzedawca poÅ›redniczy w kontaktach z klientem i zarzÄ…dza procesem 
+sprzedaÅ¼y towarÃ³w. Przyjmuje on zamÃ³wienia i dodaje je do bazy, 
+aktualizujÄ…c jednoczeÅ›nie dane klientÃ³w. Sprawuje kontrolÄ™ nad 
+realizacjÄ… zamÃ³wieÅ„ sprzedaÅ¼y, a w razie potrzeby moÅ¼e anulowaÄ‡ zamÃ³wienie. 
+Do zadaÅ„ sprzedawcy naleÅ¼y prowadzenie ewidencji klientÃ³w, aktualizowanie 
+informacji o nich oraz usuwanie starych.
 \begin{figure}[h]
     \begin{center}
     \includegraphics[angle=-90,scale=0.75]{../img/magazynierUseCase.png}
     \end{center}
     \label{fig:magazynierUseCase}
 \end{figure}
-Magazynier jest osob¹ odpowiedzialn¹ za odwzorowanie aktualnego stanu magazynu w systemie. Wprowadza dane towarów do systemu, a tak¿e aktualizuje ich iloœæ. Ponadto zarz¹dza on zamówieniami zakupu oraz danymi dostawców. Zadaniem magazyniera jest prowadzenie ewidencji dostawców, dodawanie nowych oraz usuwanie tych, z którymi zakoñczono wspó³pracê. Magazynier tworzy zamówienia zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizacjê zamówieñ. W razie potrzeby mo¿e anulowaæ zamówienie zakupu.
+\FloatBarrier
+Magazynier jest osobÄ… odpowiedzialnÄ… za odwzorowanie aktualnego stanu magazynu 
+w systemie. Wprowadza dane towarÃ³w do systemu, a takÅ¼e aktualizuje ich 
+iloÅ›Ä‡. Ponadto zarzÄ…dza on zamÃ³wieniami zakupu oraz danymi dostawcÃ³w. 
+Zadaniem magazyniera jest prowadzenie ewidencji dostawcÃ³w, dodawanie nowych 
+oraz usuwanie tych, z ktÃ³rymi zakoÅ„czono wspÃ³Å‚pracÄ™. Magazynier tworzy zamÃ³wienia 
+zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizacjÄ™ zamÃ³wieÅ„. W razie 
+potrzeby moÅ¼e anulowaÄ‡ zamÃ³wienie zakupu.
