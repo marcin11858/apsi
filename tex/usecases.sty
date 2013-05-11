@@ -28,14 +28,14 @@
 %-------------------------------------------------------------------------------
 %                \addfield command: add a property of the use case
 %-------------------------------------------------------------------------------
-\newcommand\addfield[2]{\textit{#1} &#2\\ [1ex] \hline \\ [-1.3ex] }
+\newcommand\addfield[2]{\textbf{#1} &#2\\ [1ex] \hline \\ [-1.3ex] }
 
 %-------------------------------------------------------------------------------
 %                \addscenario command: add the main (or alternative) scenario
 %                of the use case
 %-------------------------------------------------------------------------------
 \newcommand\addscenario[2]{ 
-\multicolumn{2}{l}{\textit{#1}} \\
+\multicolumn{2}{l}{\textbf{#1}} \\
 \multicolumn{2}{l}{
 \begin{minipage}[t]{13.2cm}
     \begin{enumerate} #2   \end{enumerate}
@@ -48,7 +48,7 @@
 %-------------------------------------------------------------------------------
 \newcommand\additemizedfield[2]{ 
 	\begin{minipage}[t][][t]{4.5cm}
-		\textit{#1} 
+		\textbf{#1} 
 		\vspace{1.3ex}
 	\end{minipage}% 
    &
