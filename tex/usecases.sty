@@ -17,25 +17,28 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{longtable}
+\usepackage{color}
+
+\definecolor{light-gray}{gray}{0.0}
 
 %-------------------------------------------------------------------------------
 %                \addtitle command: add the title of the use case
 %-------------------------------------------------------------------------------
-\newcommand\addtitle[2]{\hline \\ [-1.5ex] \textbf{#1} &\textbf{#2}\\ [1ex] \hline \\ [-1.5ex]}
+\newcommand\addtitle[2]{\hline \\ [-1.5ex]\texttt{\underline{#1}} &\textbf{\underline{#2}}\\ [1ex] \hline \\ [-1.5ex]}
 \newcommand\tabularhead{\begin{longtable}{lp{8.9cm}}
 }
 
 %-------------------------------------------------------------------------------
 %                \addfield command: add a property of the use case
 %-------------------------------------------------------------------------------
-\newcommand\addfield[2]{\textbf{#1} &#2\\ [1ex] \hline \\ [-1.3ex] }
+\newcommand\addfield[2]{\texttt{\color{light-gray}#1} &#2\\ [1ex] \hline \\ [-1.3ex] }
 
 %-------------------------------------------------------------------------------
 %                \addscenario command: add the main (or alternative) scenario
 %                of the use case
 %-------------------------------------------------------------------------------
 \newcommand\addscenario[2]{ 
-\multicolumn{2}{l}{\textbf{#1}} \\
+\multicolumn{2}{l}{\texttt{\color{light-gray}#1}} \\
 \multicolumn{2}{l}{
 \begin{minipage}[t]{13.2cm}
     \begin{enumerate} #2   \end{enumerate}
@@ -48,7 +51,7 @@
 %-------------------------------------------------------------------------------
 \newcommand\additemizedfield[2]{ 
 	\begin{minipage}[t][][t]{4.5cm}
-		\textbf{#1} 
+		\texttt{\color{light-gray}#1} 
 		\vspace{1.3ex}
 	\end{minipage}% 
    &
