@@ -1,0 +1,44 @@
+\section{Moduł zarządzania systemem}
+
+\begin{usecase}
+% Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
+% ID + nazwa
+\addtitle{PU1}{Generowanie raportów sprzedaży} 
+% Priorytet
+\addfield{Priorytet}{średni}
+% Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
+\addfield{Aktor główny:}{Kierownik}
+% Pozostali aktorzy uczestniczący 
+%\additemizedfield{Aktorzy:}{
+%	\item Sprzedawca
+%	\item Magazynier
+%}
+% Warunki początkowe
+\additemizedfield{Warunki początkowe:}{
+  \item Kierownik został uwierzytelniony.
+  \item W systemie przechowywana jest informacja o co najmniej jednej sprzedaży/zakupie.
+} 
+% Warunki końcowe
+\addfield{Warunki końcowe:}{Kierownik posiada dokument z raportem z wybranej działalności hurtowni.}
+% Scenariusz główny
+\addscenario{Przebieg zdarzeń:}{
+	\item Kierownik wybiera opcję tworzenia raportów.
+    \item System wyświetla listę możliwych dostępnych typów raportów.
+    \item 
+}
+% Scenariusze alternatywne
+\addscenario{Przebiegi alternatywne:}{
+  % [nr kroku scenariusza głównego.kolejna litera a,b,c wyznaczająca kolejny scenariusz alternatywny od wybranego kroku s.głównego.
+	\item[2.a] Nie istnieją dane odpowiednie dla danego typu raportu. 
+		\begin{enumerate}
+		\item[1.] etc.
+		\item[2.] etc.
+		\end{enumerate}
+}
+% Wyjątki
+% \addfield{Wyjątki}{} TODO uwzględniać to?
+% Wymagania funkcjonalne związane z danym przypadkiem użycia
+\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami}
+% Wymagania niefunkcjonalne - tylko gdy konieczne
+% \addfield{Wymagania niefunkcjonalne}{}
+\end{usecase}
