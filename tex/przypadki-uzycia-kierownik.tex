@@ -2,7 +2,7 @@
 \singlespacing
 
 \subsection{Zarządzanie pracownikami} 
-
+Przypadek użycia umożliwiający zarządzanie pracownikami.
 \begin{usecase}
 % Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
 % ID + nazwa
@@ -18,13 +18,13 @@
 %}
 % Warunki początkowe
 \additemizedfield{Warunki początkowe:}{
-  \item Kierownik został uwierzytelniony.
+  \item Aktor został uwierzytelniony.
 } 
 % Warunki końcowe
 %\addfield{Warunki końcowe:} 
 % Scenariusz główny
-\addscenario{Przebieg zdarzeń:}{
-	\item Kierownik wybiera opcję przeglądania pracowników.
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję przeglądania pracowników.
     \item System wyświetla listę pracowników.
 }
 % Wyjątki
@@ -36,6 +36,7 @@
 \end{usecase}
 
 \subsection{Dodawanie pracowników}
+Przypadek użycia umożliwiający dodawanie pracowników.
 \begin{usecase}
 % Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
 % ID + nazwa
@@ -51,27 +52,28 @@
 %}
 % Warunki początkowe
 \additemizedfield{Warunki początkowe:}{
-  \item Kierownik został uwierzytelniony.
+  \item Aktor został uwierzytelniony.
 } 
 % Warunki końcowe
 \addfield{Warunki końcowe:}{Dane pracownika zostają zapisane w systemie}
 % Scenariusz główny
-\addscenario{Przebieg zdarzeń:}{
-	\item Kierownik wybiera opcję dodania nowego pracownika.
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję dodania nowego pracownika.
     \item System wyświetla formularz umożliwiający wprowadzenie danych pracownika.
-    \item Kierownik wprowadza dane pracownika.
-    \item Kierownik wciska przycisk "Zapisz"
+    \item Aktor wprowadza dane pracownika.
+    \item Aktor zatwierdza wprowadzone dane.
     \item System sprawdza poprawność wprowadzonych danych.
     \item System zapisuje dane nowego pracownika.
     \item System wyświetla potwierdzenie wykonania operacji.
 }
 % Scenariusze alternatywne
-\addscenario{Przebiegi alternatywne:}{
+\addscenario{Scenariusz alternatywny:}{
   % [nr kroku scenariusza głównego.kolejna litera a,b,c wyznaczająca kolejny scenariusz alternatywny od wybranego kroku s.głównego.
 	\item[6.a] Wprowadzono błędne dane
 		\begin{enumerate}
 		\item[1.--5.] Jak w scenariuszu głównym.
 		\item[6.] System wyświetla komunikat informujący o wprowadzeniu błędnych danych.
+		\item[7.] Powrót do punktu 3. scenariusza głównego.
 		\end{enumerate}
 }
 % Wyjątki
@@ -83,6 +85,7 @@
 \end{usecase}
 
 \subsection{Edycja danych pracowników}
+Przypadek użycia opisujący edycję danych pracowników.
 \begin{usecase}
 % Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
 % ID + nazwa
@@ -98,28 +101,29 @@
 %}
 % Warunki początkowe
 \additemizedfield{Warunki początkowe:}{
-  \item Kierownik został uwierzytelniony.
+  \item Aktor został uwierzytelniony.
   \item W systemie istnieje co najmniej jeden pracownik.
 } 
 % Warunki końcowe
 \addfield{Warunki końcowe:}{Dane pracownika zostają zmienione w systemie}
 % Scenariusz główny
-\addscenario{Przebieg zdarzeń:}{
-	\item Kierownik wybiera opcję edycji pracownika.
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję edycji pracownika.
     \item System wyświetla formularz umożliwiający modyfikację danych pracownika.
-    \item Kierownik modyfikuje dane pracownika.
-    \item Kierownik wciska przycisk "Zapisz"
+    \item Aktor modyfikuje dane pracownika.
+    \item Aktor zatwierdza wprowadzone zmiany.
     \item System sprawdza poprawność wprowadzonych danych.
     \item System zapisuje zmienione dane pracownika.
     \item System wyświetla potwierdzenie wykonania operacji.
 }
 % Scenariusze alternatywne
-\addscenario{Przebiegi alternatywne:}{
+\addscenario{Scenariusz alternatywny:}{
   % [nr kroku scenariusza głównego.kolejna litera a,b,c wyznaczająca kolejny scenariusz alternatywny od wybranego kroku s.głównego.
 	\item[6.a] Wprowadzono błędne dane
 		\begin{enumerate}
 		\item[1.--5.] Jak w scenariuszu głównym.
 		\item[6.] System wyświetla komunikat informujący o wprowadzeniu błędnych danych.
+		\item[7.] Powrót do punktu 3. scenariusza głównego.
 		\end{enumerate}
 }
 % Wyjątki
@@ -131,6 +135,7 @@
 \end{usecase}
 
 \subsection{Usuwanie danych pracowników}
+Przypadek użycia opisujący usuwanie danych pracowników.
 \begin{usecase}
 % Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
 % ID + nazwa
@@ -146,23 +151,23 @@
 %}
 % Warunki początkowe
 \additemizedfield{Warunki początkowe:}{
-  \item Kierownik został uwierzytelniony.
+  \item Aktor został uwierzytelniony.
   \item W istnieje co najmniej jeden pracownik.
 } 
 % Warunki końcowe
 \addfield{Warunki końcowe:}{Dane pracownika zostają usunięte z systemu.}
 % Scenariusz główny
-\addscenario{Przebieg zdarzeń:}{
-	\item Kierownik wybiera opcję usunięcia pracownika.
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję usunięcia pracownika.
     \item System wyświetla okno potwierdzenia.
-    \item Kierownik zatwierdza usunięcie pracownika.
+    \item Aktor zatwierdza usunięcie pracownika.
     \item System usuwa dane pracownika.
     \item System wyświetla potwierdzenie wykonania operacji.
 }
 % Scenariusze alternatywne
-\addscenario{Przebiegi alternatywne:}{
+\addscenario{Scenariusz alternatywny:}{
   % [nr kroku scenariusza głównego.kolejna litera a,b,c wyznaczająca kolejny scenariusz alternatywny od wybranego kroku s.głównego.
-	\item[3.a] Kierownik anuluje usuwanie pracownika
+	\item[3.a] Aktor anuluje usuwanie pracownika
 		\begin{enumerate}
 		\item[1.--2.] Jak w scenariuszu głównym.
 		\item[3.] System zamyka okno potwierdzenia.
@@ -172,6 +177,80 @@
 % \addfield{Wyjątki}{} TODO uwzględniać to?
 % Wymagania funkcjonalne związane z danym przypadkiem użycia
 \addfield{Wymagania funkcjonalne}{1. Zarządzanie pracownikami}
+% Wymagania niefunkcjonalne - tylko gdy konieczne
+% \addfield{Wymagania niefunkcjonalne}{}
+\end{usecase}
+
+\subsection{Zarządzanie raportami} 
+Przypadek użycia umożliwiający zarządzanie raportami.
+\begin{usecase}
+% Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
+% ID + nazwa
+\addtitle{PU5}{Zarządzanie raportami} 
+% Priorytet
+\addfield{Priorytet:}{średni}
+% Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
+\addfield{Aktor główny:}{Kierownik}
+% Pozostali aktorzy uczestniczący 
+%\additemizedfield{Aktorzy:}{
+%	\item Sprzedawca
+%	\item Magazynier
+%}
+% Warunki początkowe
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+  \item W systemie przechowywana jest informacja o co najmniej jednej sprzedaży/zakupie.
+} 
+% Warunki końcowe
+%\addfield{Warunki końcowe: } 
+% Scenariusz główny
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia raportów.
+    \item System wyświetla listę możliwych dostępnych typów raportów.
+}
+% Wyjątki
+% \addfield{Wyjątki}{} TODO uwzględniać to?
+% Wymagania funkcjonalne związane z danym przypadkiem użycia
+\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami}
+% Wymagania niefunkcjonalne - tylko gdy konieczne
+% \addfield{Wymagania niefunkcjonalne}{}
+\end{usecase}
+
+\subsection{Generowanie raportów sprzedaży}
+Przypadek użycia umożliwiający generowanie raportów sprzedaży.
+\begin{usecase}
+% Pola na podstawie przykładowego szablonu z http://piotrsalata.pl/documents/wymagania.pdf.
+% ID + nazwa
+\addtitle{PU6}{Generowanie raportów sprzedaży} 
+% Priorytet
+\addfield{Priorytet:}{średni}
+% Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
+\addfield{Aktor główny:}{Kierownik}
+% Pozostali aktorzy uczestniczący 
+%\additemizedfield{Aktorzy:}{
+%	\item Sprzedawca
+%	\item Magazynier
+%}
+% Warunki początkowe
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+  \item W systemie przechowywana jest informacja o co najmniej jednej sprzedaży.
+} 
+% Warunki końcowe
+\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem sprzedaży.} 
+% Scenariusz główny
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję dodania generowania raportu sprzedaży.
+    \item System generuje raport sprzedaży.
+}
+% Scenariusze alternatywne
+%\addscenario{Przebiegi alternatywne:}{
+  % [nr kroku scenariusza głównego.kolejna litera a,b,c wyznaczająca kolejny scenariusz alternatywny od wybranego kroku s.głównego.
+%}
+% Wyjątki
+% \addfield{Wyjątki}{} TODO uwzględniać to?
+% Wymagania funkcjonalne związane z danym przypadkiem użycia
+\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami}
 % Wymagania niefunkcjonalne - tylko gdy konieczne
 % \addfield{Wymagania niefunkcjonalne}{}
 \end{usecase}
