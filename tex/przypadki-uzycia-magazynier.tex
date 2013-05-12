@@ -1,2 +1,49 @@
 \section{Moduł zarządzania towarami}
-Terefere
+% 
+\singlespacing
+\subsection{Zarządzanie danymi towarów}
+
+Dane towarów stanowią podstawę do przygotowywania zamówień przez
+sprzedawcę. Istotne jest więc, aby magazynier, odpowiedzialny za
+zarządzanie towarami przedsiębiorstwa, posiadał narzędzia 
+ułatwiające realizację niezbędnych czynności. System
+do zarządzania magazynem powinien więc umożliwiać \textbf{zarządzanie
+danymi towarów}.
+
+\begin{usecase}
+  % Pola na podstawie przykładowego szablonu z
+  % http://piotrsalata.pl/documents/wymagania.pdf.  
+  %
+  % ID + nazwa
+  \addtitle{PU30}{Zarządzanie danymi towarów}
+  %
+  % Priorytet
+  \addfield{Priorytet:}{wysoki}
+  %
+  % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
+  \addfield{Aktor główny:}{Magazynier}
+  %
+  %	Warunki początkowe
+  \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
+  %
+  % Warunki końcowe (brak).
+  % 
+  % Scenariusz główny.
+  \addscenario{Przebieg zdarzeń:}{
+  \item Magazynier wybiera opcję wyświetlenia listy towarów w magazynie.
+  \item System wyświetla listę towarów w magazynie.}
+  %
+  % Wyjątki \addfield{Wyjątki:}{brak} 
+  %
+  % Wymagania funkcjonalne związane z danym przypadkiem użycia
+  \addfield{Wymagania funkcjonalne:}{2. Zarządzanie danymi towarów}
+  %
+  % Wymagania niefunkcjonalne - tylko gdy konieczne
+  % \addfield{Wymagania niefunkcjonalne}{}
+\end{usecase}
+TODO diagram komunikacji
+TODO diagram ecb.
+\subsection{Dodawanie towarów}
+Przypadek użycia systemu umożliwiający wprowadzenie do systemu informacji
+o nowym towarze.
+itd. tak jak w poprzednim przypadku użycia.
