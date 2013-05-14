@@ -68,14 +68,11 @@ o nowym towarze w magazynie. Rozszerza możliwość zarządzania towarami w syst
   \addfield{Warunki poprawności danych:}{
     Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
   }
-  %
-  % Wyjątki \addfield{Wyjątki:}{brak} 
-  %
-  % Wymagania funkcjonalne związane z danym przypadkiem użycia
   \addfield{Wymagania funkcjonalne:}{2.1 Dodawanie towaru}
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
+
 %%%%%%%
 \subsection{Edycja danych towarów}
 Przypadek użycia systemu umożliwiający edycję danych towarów. Rozszerza
@@ -116,109 +113,30 @@ możliwości zarządzania danymi towarów.
   }
   \addfield{Zakres przetwarzanych danych:}{Dane towaru dostępne przy edycji, przedstawione w rozdziale \ref{dziedzina-problemu}.
   \addfield{Warunki poprawności danych:}{Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.}
-  %
-  % Wyjątki \addfield{Wyjątki:}{brak}
-  %
-  % Wymagania funkcjonalne związane z danym przypadkiem użycia
   \addfield{Wymagania funkcjonalne:}{2.2 Edycja danych towarów, 2.2.1 Edycja opisu towaru}
-  %
-  % Wymagania niefunkcjonalne - tylko gdy konieczne
-  % \addfield{Wymagania niefunkcjonalne}{}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 %%%%%%%
-\subsection{Zmiana ilości towarów}
-Przypadek użycia umożliwiający zmianę ilości towarów w magazynie.
-Przypadek ten jest dostępny dla dowolnego użytkownika systemu -- dzięki
-temu zarówno sprzedawca, jak i magazynier mają możliwość wpływania 
-na stan magazynu w zależności od faktycznej ilości towaru przechowywanego
-w magazynie.
-\begin{usecase}
-  %
-  % ID + nazwa
-  \addtitle{PU33}{Zmiana ilości towarów}
-  %
-  % Priorytet
-  \addfield{Priorytet:}{wysoki}
-  %
-  % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-  \addfield{Aktor główny:}{Użytkownik}
-  % 
-  % Jakie przypadki rozszerza.
-  \addfield{Rozszerza przypadki:}{PU30, PU32}
-  %
-  %	Warunki początkowe
-  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
-  %
-  % Warunki końcowe (brak).
-  % 
-  % Scenariusz główny.
-  \addscenario{Przebieg zdarzeń:}{
-     \item Aktor wybiera opcję aktualizacji stanu towaru.
-     \item System wyświetla okno z polem do zmiany stanu towaru.
-     \item Aktor zmienia ilość wybranego towaru.
-     \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
-  }
-  %
-  % Scenariusze alternatywne
-  \addscenario{Przebiegi alternatywne:} {
-     \item[4.a] Aktor podaje błędną ilość towaru.
-       \begin{enumerate}
-          \item[1.--3.] Jak w scenariuszu głównym.
-          \item[4.] System informuje aktora, że podana ilość nie jest poprawna.
-          \item[5.] Aktor wraca do punktu 2.
-       \end{enumerate}
-  }
-  % 
-  % Zakres przetwarzanych danych
-  \addfield{Zakres przetwarzanych danych:} {
-    Dane wprowadzane: ilość wartość zmiennoprzecinkowa z dowolną precyzją.
-  }
-  %
-  % Wyjątki \addfield{Wyjątki:}{brak}
-  %
-  % Wymagania funkcjonalne związane z danym przypadkiem użycia
-  \addfield{Wymagania funkcjonalne:}{2.2.2 Zmiana ilości towarów}
-  %
-  % Wymagania niefunkcjonalne - tylko gdy konieczne
-  % \addfield{Wymagania niefunkcjonalne}{}
-\end{usecase}
-TODO diagram komunikacji TODO diagram ecb
-% %%%%%%%
 \subsection{Usuwanie danych towarów}
 Przypadek użycia systemu umożliwiający usunięcie danych towarów z systemu.
 Przypadek ten jest szczególnie użyteczny w sytuacji zmiany profilu % pfffff...
 asortymentu obsługiwanego przez wybrany magazyn.
 \begin{usecase}
-  %
-  % ID + nazwa
   \addtitle{PU35}{Usuwanie danych towarów}
-  %
-  % Priorytet
   \addfield{Priorytet:}{wysoki}
-  %
-  % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
   \addfield{Aktor główny:}{Magazynier}
-  %
-  %	Warunki początkowe
   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-  %
-  % Warunki końcowe
   \additemizedfield{Warunki końcowe:}{
     \item Dane towaru zostały usunięte z systemu.
     \item Usunięcie danych towaru z systemu nie wpływa na dane towarów przechowywane w zrealizowanych zamówieniach zakupu i sprzedaży.
     \item Usunięty towar nie jest wypisywany na liście towarów w magazynie.
   }
-  % 
-  % Scenariusz główny.
   \addscenario{Przebieg zdarzeń:}{
     \item Aktor wybiera opcję usunięcia danych towaru z systemu.
     \item System prosi o potwierdzenie operacji.
     \item Aktor potwierdza usunięcie towaru z systemu.
     \item System wyświetla informację o pomyślnym usunięciu towaru z systemu.
   }
-  %
-  % Scenariusze alternatywne
   \addscenario{Przebiegi alternatywne:}{
     \item[4.a] Aktor anuluje usunięcie towaru z systemu.
       \begin{enumerate}
@@ -227,14 +145,7 @@ asortymentu obsługiwanego przez wybrany magazyn.
         \item[4.] System wyświetla informację, że operacja została anulowana.
       \end{enumerate}
   }
-  %
-  % Wyjątki \addfield{Wyjątki:}{brak}
-  %
-  % Wymagania funkcjonalne związane z danym przypadkiem użycia
   \addfield{Wymagania funkcjonalne:}{2.3 Usuwanie danych towarów}
-  %
-  % Wymagania niefunkcjonalne - tylko gdy konieczne
-  % \addfield{Wymagania niefunkcjonalne}{}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 % %%%%%%
