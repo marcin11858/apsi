@@ -1,4 +1,5 @@
 \section{Dziedzina problemu}
+\label{dziedzina-problemu}
 Poniżej przedstawione zostały kluczowe pojęcia i procesy charakteryzujące system obsługi magazynu.
 
 \subsection{Towary}
@@ -10,6 +11,14 @@ Towar jest podstawową jednostką przechowywaną w magazynie. Każdy towar jest 
 	\item jednostka miary,
 	\item stan początkowy (początkowa ilość towaru w magazynie),
 	\item cena sprzedaży.
+\end{itemize}
+
+Warunki poprawności danych towaru:
+\begin{itemize}
+    \item nazwa towaru powinna posiadać co najmniej 3 znaki; 
+    \item cena sprzedaży musi być liczbą nieujemną, z dokładnością do dwóch miejsc po przecinku;
+    \item stan początkowy musi być liczbą całkowitą nieujemną;
+    \item kod kreskowy musi spełniać jedną z norm akceptowanych przez organizację \emph{GS1}\footnote{http://www.gs1pl.org/}.
 \end{itemize}
 
 Możliwe są następujące operacje:
@@ -96,3 +105,5 @@ Z procesem wydania towaru powiązane są następujące operacje:
 \end{itemize}
 
 Dodatkowo można wskazać przyjęcie towaru, do którego odnosi się to wydanie towaru: wtedy możliwe jest wskazanie wydawanego towaru, który był kiedyś przyjęty za pewną kwotę, a tym samym możliwe jest obliczenie zysku ze wydania towaru/wskazanie marży z towaru)
+
+% LocalWords:  WZ
