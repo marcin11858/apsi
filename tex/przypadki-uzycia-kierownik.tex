@@ -14,7 +14,7 @@
 	\item Aktor wybiera opcję przeglądania pracowników.
     \item System wyświetla listę pracowników.
 }
-\addfield{Wymagania funkcjonalne}{1. Zarządzanie pracownikami}
+\addfield{Wymagania funkcjonalne}{1.}
 \end{usecase}
 
 \subsection{Dodawanie pracowników}
@@ -27,25 +27,32 @@
 \additemizedfield{Warunki początkowe:}{
   \item Aktor został uwierzytelniony.
 } 
-\addfield{Warunki końcowe:}{Dane pracownika zostają zapisane w systemie}
+\additemizedfield{Warunki końcowe:}{
+\item Dane pracownika zostają zapisane w systemie.
+\item Aktor może wyświetlić dane pracownika na 
+liście. pracowników.}
 \addscenario{Scenariusz główny:}{
 	\item Aktor wybiera opcję dodania nowego pracownika.
-    \item System wyświetla formularz umożliwiający wprowadzenie danych pracownika.
-    \item Aktor wprowadza dane pracownika.
-    \item Aktor zatwierdza wprowadzone dane.
-    \item System sprawdza poprawność wprowadzonych danych.
-    \item System zapisuje dane nowego pracownika.
-    \item System wyświetla potwierdzenie wykonania operacji.
+    \item System wyświetla formularz dodawania nowego pracownika pracownika do systemu.
+    \item Aktor wpisuje wymagane oraz opcjonalne dane pracownika do formularza.
+    \item Aktor wybiera opcję zapisania nowego pracownika w systemie.
+    \item System informuje aktora, że pracownik został poprawnie zapisany w systemie.
 }
 \addscenario{Scenariusz alternatywny:}{
-	\item[6.a] Wprowadzono błędne dane
+    \item [4.a] Aktor nie podał wymaganych pól formularza:
+       \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3 scenariusza głównego.  
+        \end{enumerate}
+	\item[4.b] Wprowadzono błędne dane
 		\begin{enumerate}
-		\item[1.--5.] Jak w scenariuszu głównym.
-		\item[6.] System wyświetla komunikat informujący o wprowadzeniu błędnych danych.
-		\item[7.] Powrót do punktu 3. scenariusza głównego.
+		\item[1.--4.] Jak w scenariuszu głównym.
+		\item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+		\item[6.] Aktor wraca do punktu 3 scenariusza głównego.
 		\end{enumerate}
 }
-\addfield{Wymagania funkcjonalne}{1. Zarządzanie pracownikami, 1.1 Dodawanie pracowników}
+\addfield{Wymagania funkcjonalne}{1., 1.1}
 \end{usecase}
 
 \subsection{Edycja danych pracowników}
@@ -58,25 +65,31 @@
   \item Aktor został uwierzytelniony.
   \item W systemie istnieje co najmniej jeden pracownik.
 } 
-\addfield{Warunki końcowe:}{Dane pracownika zostają zmienione w systemie}
+\additemizedfield{Warunki końcowe:}{
+\item Dane pracownika zostały zaktualizowane w systemie
+\item Aktor może wyświetlić dane pracownika na liście pracowników.}
 \addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję edycji pracownika.
-    \item System wyświetla formularz umożliwiający modyfikację danych pracownika.
-    \item Aktor modyfikuje dane pracownika.
-    \item Aktor zatwierdza wprowadzone zmiany.
-    \item System sprawdza poprawność wprowadzonych danych.
-    \item System zapisuje zmienione dane pracownika.
-    \item System wyświetla potwierdzenie wykonania operacji.
+    \item Aktor wybiera opcję aktualizacji danych wskazanego pracownika.
+    \item System wyświetla formularz aktualizacji danych pracownika wypełniony obecnymi danymi pracownika.
+    \item Aktor wypełnia lub zmienia wybrane pola formularza.
+    \item Aktor wybiera opcję aktualizacji danych pracownika.
+    \item System informuje aktora, że dane pracownika zostały poprawnie zaktualizowane.
 }
 \addscenario{Scenariusz alternatywny:}{
-	\item[6.a] Wprowadzono błędne dane
+    \item [4.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3 scenariusza głównego.  
+      \end{enumerate}
+	\item[4.b] Wprowadzono błędne dane
 		\begin{enumerate}
-		\item[1.--5.] Jak w scenariuszu głównym.
-		\item[6.] System wyświetla komunikat informujący o wprowadzeniu błędnych danych.
-		\item[7.] Powrót do punktu 3. scenariusza głównego.
+		\item[1.--4.] Jak w scenariuszu głównym.
+		\item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+		\item[6.] Aktor wraca do punktu 3 scenariusza głównego.
 		\end{enumerate}
 }
-\addfield{Wymagania funkcjonalne}{1. Zarządzanie pracownikami, 1.2 Edycja danych pracowników}
+\addfield{Wymagania funkcjonalne}{1., 1.2}
 \end{usecase}
 
 \subsection{Usuwanie danych pracowników}
@@ -87,24 +100,26 @@
 \addfield{Rozszerza przypadki:}{PU1}
 \additemizedfield{Warunki początkowe:}{
   \item Aktor został uwierzytelniony.
-  \item W istnieje co najmniej jeden pracownik.
+  \item W systemie istnieje co najmniej jeden pracownik.
 } 
-\addfield{Warunki końcowe:}{Dane pracownika zostają usunięte z systemu.}
+\additemizedfield{Warunki końcowe:}{
+\item Dane pracownika zostały usunięte z systemu.
+\item Usunięty pracownik nie jest wyświetlany na liście pracowników.}
 \addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję usunięcia pracownika.
-    \item System wyświetla okno potwierdzenia.
-    \item Aktor zatwierdza usunięcie pracownika.
-    \item System usuwa dane pracownika.
-    \item System wyświetla potwierdzenie wykonania operacji.
+    \item Aktor wybiera opcję usunięcia danych pracownika z systemu.
+    \item System prosi o potwierdzenie operacji.
+    \item Aktor potwierdza usunięcie pracownika z systemu.
+    \item System wyświetla informację o pomyślnym usunięciu pracownika z systemu.
 }
 \addscenario{Scenariusz alternatywny:}{
-	\item[3.a] Aktor anuluje usuwanie pracownika
-		\begin{enumerate}
-		\item[1.--2.] Jak w scenariuszu głównym.
-		\item[3.] System zamyka okno potwierdzenia.
-		\end{enumerate}
+    \item[4.a] Aktor anuluje usunięcie pracownika z systemu.
+      \begin{enumerate}
+        \item[1.--2.] Jak w scenariuszu głównym.
+        \item[3.] Aktor anuluje usunięcie towaru z systemu.
+        \item[4.] System wyświetla informację, że operacja została anulowana.
+      \end{enumerate}
 }
-\addfield{Wymagania funkcjonalne}{1. Zarządzanie pracownikami, 1.4 Usuwanie danych pracowników}
+\addfield{Wymagania funkcjonalne}{1., 1.3}
 \end{usecase}
 
 \subsection{Zarządzanie raportami} 
@@ -120,7 +135,7 @@
 	\item Aktor wybiera opcję tworzenia raportów.
     \item System wyświetla listę możliwych dostępnych typów raportów.
 }
-\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami}
+\addfield{Wymagania funkcjonalne}{7.}
 \end{usecase}
 
 \subsection{Generowanie raportów o wydanych towarach}
@@ -133,12 +148,13 @@
   \item Aktor został uwierzytelniony.
   \item W systemie przechowywana jest informacja o co najmniej jednym wydaniu towarów.
 } 
-\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem o wydanych towarach.} 
+\additemizedfield{Warunki końcowe:} {
+\item Aktor posiada dokument z raportem o wydanych towarach.} 
 \addscenario{Scenariusz główny:}{
 	\item Aktor wybiera opcję generowania raportu o wydanych towarach.
     \item System generuje raport o wydanych towarach.
 }
-\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.1 Generowanie raportów o wydanych towarach}
+\addfield{Wymagania funkcjonalne}{7., 7.1}
 \end{usecase}
 
 \subsection{Generowanie raportów o przyjętych towarach}
@@ -151,10 +167,11 @@
   \item Aktor został uwierzytelniony.
   \item W systemie przechowywana jest informacja o co najmniej jednym przyjęciu towarów.
 } 
-\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem o przyjętych towarach.} 
+\additemizedfield{Warunki końcowe:} {
+\item Aktor posiada dokument z raportem o przyjętych towarach.} 
 \addscenario{Scenariusz główny:}{
 	\item Aktor wybiera opcję generowania raportu o przyjętych towarach.
     \item System generuje raport o przyjętych towarach.
 }
-\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.2 Generowanie raportów o przyjętych towarach}
+\addfield{Wymagania funkcjonalne}{7., 7.2}
 \end{usecase}
