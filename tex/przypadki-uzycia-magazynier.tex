@@ -11,7 +11,7 @@
   % Warunki końcowe (brak).
   \addscenario{Przebieg zdarzeń:}{
   \item Aktor wybiera opcję przeglądania listy towarów w magazynie.
-  \item System wyświetla listę towarów w magazynie.
+  \item System wyświetla listę towarów w magazynie wraz z opcjami zarządzania danymi dokumentów.
   }
   \addfield{Wymagania funkcjonalne:}{2.}
 \end{usecase}
@@ -169,7 +169,7 @@ TODO diagram komunikacji TODO diagram ecb
        \item[1--4.] Jak w scenariuszu głównym.
        \item[5.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
        \item[6.] System wyświetla zsumowane wartości dla tych samych towarów.
-       \item[7.--oo]. Jak w scenariuszu głównym.
+       \item[7--...] Jak w scenariuszu głównym.
        \end{enumerate}
   }
   \addfield{Zakres przetwarzanych danych:} {
@@ -182,318 +182,195 @@ TODO diagram komunikacji TODO diagram ecb
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 % %%%%%%
-% \subsection{Zarządzanie danymi dostawców}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie danymi dostawców}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{4. Zarządzanie danymi dostawców}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-% %%%%%%
-% \subsection{Dodawanie dostawców}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU37}{Dodawanie dostawców}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{4.1 Dodawanie dostawców.}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-% %%%%%%
-% \subsection{Edycja danych dostawców}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU38}{Edycja danych dostawców}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe 
-%   \additemizedfield{Warunki końcowe:}{
-%     \item dane dostawcy dla zamówień zakupu nie mogą być zmienione. (dane historyczne).
-%   }
-%   %  
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{4.2 Edycja danych dostawców}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-% %%%%%%%
-% \subsection{Usuwanie danych dostawców}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU39}{Usuwanie danych dostawców}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe
-%   \additemizedfield{Warunki końcowe:}{
-%     \item Dane dostawcy dla zamówień zakupu muszą pozostać niezmienione.
-%   }
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
+\subsection{Przyjęcie towaru na magazyn}
+\begin{usecase}
+  \addtitle{PU35}{Przyjęcie towaru na magazyn}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  % Warunki końcowe (brak).
+  \addscenario{Przebieg zdarzeń:}{
+  \item Aktor wybiera opcję przyjęcia towaru na magazyn.
+  \item System wyświetla listę dokumentów PZ wraz z opcjami do zarządzania dokumentami wydania towaru.
+  }
+  \addfield{Wymagania funkcjonalne:}{4.}
+\end{usecase}
+TODO diagram komunikacji
+TODO diagram ecb.
+%%%%%%%
+\subsection{Tworzenie dokumentu przyjęcia towaru}
+\begin{usecase}
+  \addtitle{PU36}{Tworzenie dokumentu przyjęcia towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dokument wydania towaru został zapisany w systemie.
+    \item Aktor otrzymuje informacje o poprawnym dodaniu dokumentu do systemu.
+    \item Użytkownik może wyświetlić dokument na liście dokumentów przyjęcia towaru. 
+    \item Ilość przechowywanego towaru została zaktualizowana o ilość towaru zapisanego w dokumencie przyjęcia towaru.
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addscenario{Przebieg zdarzeń:}{
+    \item Aktor wybiera opcję utworzenia nowego dokumentu przyjęcia towaru.
+    \item System wyświetla formularz nowego dokumentu przyjęcia towaru.
+    \item Aktor wypełnia podstawowe dane dokumentu.
+    \item Aktor wybiera kontrahenta operacji.
+    \item Aktor wybiera towary, które będą przyjęte od kontrahenta.
+    \item Aktor wskazuje ilość oraz cenę jednostkową przyjmowanego towaru.
+    \item Aktor wybiera opcję zapisania dokumentu.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Przebiegi alternatywne:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[5.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--5.] Jak w scenariuszu głównym.
+       \item[6.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[7.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[8--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{4.1}
+\end{usecase}
+TODO diagram komunikacji
+TODO diagram ecb.
+%%%%%%%%
+\subsection{Edycja dokumentu przyjęcia towaru}
+\begin{usecase}
+  \addtitle{PU36}{Edycja dokumentu przyjęcia towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU35}
+  \additemizedfield{Warunki początkowe:}{
+    \item Aktor został uwierzytelniony.
+    \item Operacja przyjęcia towaru, którego dotyczy wybrany dokument, nie została jeszcze zrealizowana.
+  }
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dane towaru zostały zaktualizowane w systemie.
+    \item Aktor otrzymuje informację o poprawnej aktualizacji dokumentu.
+    \item Użytkownik może wyświetlić dane towaru na liście towarów. 
+    \item Ilość przechowywanego towaru została zaktualizowana o ilość towaru zapisanego w dokumencie przyjęcia towaru.
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  % TODO prawie duplikacja z Tworzeniem dokumentu przyjęcia towaru
+  \addscenario{Przebieg zdarzeń:}{
+    \item Aktor wybiera opcję edycji wybranego dokumentu przyjęcia towaru.
+    \item System wyświetla formularz edycji dokumentu przyjęcia towaru.
+    \item Aktor wypełnia podstawowe dane dokumentu (oprócz pól wykluczonych z edycji).
+    \item Aktor aktualizuje listę towarów, ich ilości oraz ceny jednostkowe.
+    \item Aktor wybiera opcję aktualizacji dokumentu.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Przebiegi alternatywne:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[4.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--4.] Jak w scenariuszu głównym.
+       \item[5.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[6.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[7--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{4.2}
+\end{usecase}
+TODO diagram komunikacji TODO diagram ecb
+\subsection{Usuwanie dokumentu przyjęcia towaru}
+\begin{usecase}
+  \addtitle{PU37}{Usuwanie dokumentu przyjęcia towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  \additemizedfield{Warunki końcowe:}{
+    \item Dane dokumentu zostały usunięte z systemu.
+    \item Usunięty dokument nie jest wypisywany na liście dokumentów przyjęcia towaru.
+    \item Stan towarów z usuniętego dokumentu jest zaktualizowany o ilości zapisane w usuwanym dokumencie.
+  }
+  \addscenario{Przebieg zdarzeń:}{
+    \item Aktor wybiera opcję usunięcia dokumentu przyjęcia towaru z systemu.
+    \item System prosi o potwierdzenie operacji.
+    \item Aktor potwierdza usunięcie dokumentu z systemu.
+    \item System wyświetla informację o pomyślnym usunięciu dokumentu z systemu.
+  }
+  \addscenario{Przebiegi alternatywne:}{
+    \item[2.a] Aktor anuluje usunięcie dokumentu z systemu.
+      \begin{enumerate}
+        \item[1.--2.] Jak w scenariuszu głównym.
+        \item[3.] Aktor anuluje usunięcie dokumentu z systemu.
+        \item[4.] System wyświetla informację, że operacja została anulowana.
+      \end{enumerate}
+  }
+  \addfield{Wymagania funkcjonalne:}{4.3}
+\end{usecase}
+TODO diagram komunikacji TODO diagram ecb
 
-
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
-
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
+\subsection{Realizacja przyjęcia towaru na magazyn}
+\begin{usecase}
+  \addtitle{PU38}{Realizacja przyjęcia towaru na magazyn}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \additemizedfield{Warunki początkowe:}{
+    \item Aktor został uwierzytelniony.
+    \item Wybrane przyjęcie towaru nie zostało jeszcze zrealizowane.}
+  \additemizedfield{Warunki końcowe:} {
+    \item Dokument przyjęcia towaru został oznaczony jako zrealizowany.
+    \item Możliwe jest utworzenie korekty do zrealizowanego dokumentu przyjęcia towaru.
+  }
+  \addscenario{Przebieg zdarzeń:}{
+     \item Aktor wybiera opcję przyjęcia towaru na magazyn.
+     \item System prosi o potwierdzenie realizacji przyjęcia towaru na magazyn.
+     \item Aktor potwierdza realizację przyjęcia towaru na magazyn.
+     % TODO mogło by być np powiadomienie dla dostawcy, że towar został przyjęty.
+     \item System oznacza dokument przyjęcia towaru jako zrealizowany.
+  }
+ \addscenario{Przebiegi alternatywne:}{
+    \item[4.a] Aktor anuluje realizację przyjęcia towaru.
+      \begin{enumerate}
+        \item[1.--2.] Jak w scenariuszu głównym.
+        \item[3.] Aktor anuluje realizację dokumentu.
+        \item[4.] System wyświetla informację, że operacja została anulowana.
+      \end{enumerate}
+  }
+  \addfield{Wymagania funkcjonalne:}{4.}
+\end{usecase}
+TODO diagram komunikacji
+TODO diagram ecb
 
 % \subsection{Zarządzanie zamówieniami zakupu}
 % \begin{usecase}
