@@ -109,7 +109,7 @@ TODO diagram komunikacji TODO diagram ecb
 %%%%%%%
 \subsection{Usuwanie danych towaru}
 \begin{usecase}
-  \addtitle{PU35}{Usuwanie danych towaru}
+  \addtitle{PU33}{Usuwanie danych towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
@@ -132,6 +132,53 @@ TODO diagram komunikacji TODO diagram ecb
       \end{enumerate}
   }
   \addfield{Wymagania funkcjonalne:}{2.3}
+\end{usecase}
+TODO diagram komunikacji TODO diagram ecb
+\subsection{Korekta stanu towaru}
+\begin{usecase}
+  \addtitle{PU34}{Korekta stanu towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU30, PU32}
+  \additemizedfield{Warunki początkowe:}{
+    \item Aktor został uwierzytelniony.
+    \item W systemie są zapisane dane co najmniej jednego towaru.
+  }
+  \additemizedfield{Warunki końcowe:} {
+    \item Ilość towaru została zaktualizowana zgodnie z podaną wartością korekty oraz obecnym stanem towaru.
+    \item Ilość towaru przechowywana w systemie musi spełniać warunki poprawności przedstawione w \ref{dziedzina-problemu}.
+    \item W systemie został zapisany dokument korekty stanu towaru w magazynie.
+  }
+  \addscenario{Przebieg zdarzeń:}{
+     \item Aktor wybiera opcję utworzenia dokumentu korekty stanu towaru.
+     \item System wyświetla formularz korekty stanu towaru.
+     \item Aktor wypełnia podstawowe dane dokumentu.
+     \item Aktor wybiera towary, których stan podlega korekcie w tworzonym dokumencie oraz podaje ich nowe ilości.
+     \item Aktor wybiera opcję zapisania dokumentu.
+     \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Przebiegi alternatywne:} {
+     \item[3.a] Aktor podał niepoprawne dane.
+       \begin{enumerate}
+          \item[1--3.] Jak w scenariuszu głównym.
+          \item[4.] System informuje aktora, że podana wartość nie jest prawidłowa.
+          \item[5.] Aktor wraca do punktu 3.
+       \end{enumerate}
+     \item[4.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--4.] Jak w scenariuszu głównym.
+       \item[5.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[6.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[7.--oo]. Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Dane wprowadzane zgodne z informacjami przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:} {
+    Takie jak przedstawione w \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{2.2.2 Zmiana ilości towarów}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 % %%%%%%
