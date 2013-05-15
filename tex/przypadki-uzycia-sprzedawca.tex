@@ -1,2 +1,131 @@
 \section{Moduł sprzedaży}
-Terefere
+\singlespacing
+
+\subsection{Wydanie z magazynu} 
+\begin{usecase}
+\addtitle{PU12}{Wydanie z magazynu} 
+% Priorytet
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję przeglądania wydań towarów.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu}
+\end{usecase}
+
+
+\subsection{Tworzenie dokumentu wydania towaru} 
+\begin{usecase}
+\addtitle{PU13}{Tworzenie dokumentu wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu wydania.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.1 Tworzenie dokumentu wydania towaru}
+\end{usecase}
+
+\subsection{Edycja dokumentu wydania towaru} 
+\begin{usecase}
+\addtitle{PU14}{Edycja dokumentu wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu wydania towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.2 Edycja dokumentu wydania towaru}
+\end{usecase}
+
+\subsection{Usuwanie dokumentu wydania towaru} 
+\begin{usecase}
+\addtitle{PU15}{Usuwanie dokumentu wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu wydania towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.3 Usuwanie dokumentu wydania towaru}
+\end{usecase}
+
+\subsection{Realizacja wydania towaru} 
+\begin{usecase}
+\addtitle{PU16}{Realizacja wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.4 Realizacja wydania towaru}
+\end{usecase}
+
+\subsection{Korekta wydania towaru} 
+\begin{usecase}
+\addtitle{PU15}{Korekta wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru}
+\end{usecase}
+
+\subsubsection{Tworzenie dokumentu korekty wydania towaru} 
+\begin{usecase}
+\addtitle{PU15}{Tworzenie korekty wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru, 5.5.1 Tworzenie dokumentu korekty wydania towaru}
+\end{usecase}
+
+\subsubsection{Edycja dokumentu korekty wydania towaru} 
+\begin{usecase}
+\addtitle{PU15}{Edycja dokumentu korekty wydania towaru} 
+\addfield{Priorytet:}{wysoki}
+\addfield{Aktor główny:}{Sprzedawca}
+\addfield{Rozszerza przypadki:}{PU12}
+\additemizedfield{Warunki początkowe:}{
+  \item Aktor został uwierzytelniony.
+} 
+\addscenario{Scenariusz główny:}{
+	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
+    \item System wyświetla listę wydań towarów.
+}
+\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru, 5.5.2 Edycja dokumentu korekty w}
+\end{usecase}
