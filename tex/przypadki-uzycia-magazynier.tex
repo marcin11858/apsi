@@ -3,12 +3,6 @@
 \singlespacing
 \subsection{Zarządzanie danymi towarów}
 
-Dane towarów stanowią podstawę do przygotowywania zamówień przez
-sprzedawcę. Istotne jest więc, aby magazynier, odpowiedzialny za
-zarządzanie towarami przedsiębiorstwa, posiadał narzędzia 
-ułatwiające realizację niezbędnych czynności. System
-do zarządzania magazynem powinien więc umożliwiać \textbf{zarządzanie
-danymi towarów}.
 \begin{usecase}
   \addtitle{PU30}{Zarządzanie danymi towarów}
   \addfield{Priorytet:}{wysoki}
@@ -25,12 +19,10 @@ TODO diagram komunikacji
 TODO diagram ecb.
 
 %%%%%%%%
-\subsection{Dodawanie towarów}
-Przypadek użycia systemu umożliwiający wprowadzenie do systemu informacji
-o nowym towarze w magazynie. Rozszerza możliwość zarządzania towarami w systemie.
+\subsection{Dodawanie towaru}
 %
 \begin{usecase}
-  \addtitle{PU31}{Dodawanie towarów}
+  \addtitle{PU31}{Dodawanie towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Rozszerza przypadki:}{PU30}
@@ -75,8 +67,6 @@ TODO diagram ecb.
 
 %%%%%%%
 \subsection{Edycja danych towarów}
-Przypadek użycia systemu umożliwiający edycję danych towarów. Rozszerza
-możliwości zarządzania danymi towarów.
 \begin{usecase}
   \addtitle{PU32}{Edycja danych towarów}
   \addfield{Priorytet:}{wysoki}
@@ -111,16 +101,13 @@ możliwości zarządzania danymi towarów.
         \item[6.] Aktor wraca do punktu 3.
       \end{enumerate}
   }
-  \addfield{Zakres przetwarzanych danych:}{Dane towaru dostępne przy edycji, przedstawione w rozdziale \ref{dziedzina-problemu}}.
+  \addfield{Zakres przetwarzanych danych:}{Dane towaru dostępne przy edycji, przedstawione w rozdziale \ref{dziedzina-problemu}.}
   \addfield{Warunki poprawności danych:}{Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.}
   \addfield{Wymagania funkcjonalne:}{2.2 Edycja danych towarów, 2.2.1 Edycja opisu towaru}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 %%%%%%%
 \subsection{Usuwanie danych towarów}
-Przypadek użycia systemu umożliwiający usunięcie danych towarów z systemu.
-Przypadek ten jest szczególnie użyteczny w sytuacji zmiany profilu % pfffff...
-asortymentu obsługiwanego przez wybrany magazyn.
 \begin{usecase}
   \addtitle{PU35}{Usuwanie danych towarów}
   \addfield{Priorytet:}{wysoki}
