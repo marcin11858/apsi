@@ -1,131 +1,189 @@
 \section{Moduł sprzedaży}
 \singlespacing
 
-\subsection{Wydanie z magazynu} 
+\subsection{Wydanie towaru z magazynu}
 \begin{usecase}
-\addtitle{PU12}{Wydanie z magazynu} 
-% Priorytet
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję przeglądania wydań towarów.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu}
+  \addtitle{PU12}{Wydanie towaru z magazynu}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  % Warunki końcowe (brak).
+  \addscenario{Scenariusz główny:}{
+  \item Aktor wybiera opcję wydania towaru z magazynu.
+  \item System wyświetla listę dokumentów WZ wraz z opcjami do zarządzania dokumentami wydania towaru.
+  }
+  \addfield{Wymagania funkcjonalne:}{5.}
+\end{usecase}
+
+\subsection{Tworzenie dokumentu wydania towaru}
+\begin{usecase}
+  \addtitle{PU13}{Tworzenie dokumentu wydania towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \addfield{Rozszerza przypadki:}{PU12}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dokument wydania towaru został zapisany w systemie.
+    \item Aktor otrzymuje informacje o poprawnym dodaniu dokumentu do systemu.
+    \item Użytkownik może wyświetlić dokument na liście dokumentów wydania towaru. 
+    \item Ilość przechowywanego towaru została zaktualizowana o ilość towaru zapisanego w dokumencie wydania towaru.
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addscenario{Scenariusz główny:}{
+    \item Aktor wybiera opcję utworzenia nowego dokumentu wydania towaru.
+    \item System wyświetla formularz nowego dokumentu wydania towaru.
+    \item Aktor wypełnia podstawowe dane dokumentu.
+    \item Aktor wybiera kontrahenta operacji.
+    \item Aktor wybiera towary, które będą wydane kontrahentowi.
+    \item Aktor wskazuje ilość oraz cenę jednostkową wydawanego towaru.
+    \item Aktor wybiera opcję zapisania dokumentu.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Scenariusz alternatywny:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[5.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--5.] Jak w scenariuszu głównym.
+       \item[6.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[7.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[8--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{5.1}
+\end{usecase}
+
+\subsection{Edycja dokumentu wydania towaru}
+\begin{usecase}
+  \addtitle{PU14}{Edycja dokumentu wydania towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \addfield{Rozszerza przypadki:}{PU12}
+  \additemizedfield{Warunki początkowe:}{
+    \item Aktor został uwierzytelniony.
+    \item Operacja wydania towaru, którego dotyczy wybrany dokument, nie została jeszcze zrealizowana.
+  }
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dane dokumentu zostały zaktualizowane w systemie.
+    \item Aktor otrzymuje informację o poprawnej aktualizacji dokumentu.
+    \item Użytkownik może wyświetlić dane dokumentu na liście dokumentów wydania towaru. 
+    \item Ilość przechowywanego towaru została zaktualizowana o ilość towaru zapisanego w dokumencie wydania towaru.
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addscenario{Scenariusz główny:}{
+    \item Aktor wybiera opcję edycji wybranego dokumentu wydania towaru.
+    \item System wyświetla formularz edycji dokumentu wydania towaru.
+    \item Aktor wypełnia podstawowe dane dokumentu (oprócz pól wykluczonych z edycji).
+    \item Aktor aktualizuje listę towarów, ich ilości oraz ceny jednostkowe.
+    \item Aktor wybiera opcję aktualizacji dokumentu.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Scenariusz alternatywny:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[4.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--4.] Jak w scenariuszu głównym.
+       \item[5.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[6.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[7--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{5.2}
+\end{usecase}
+
+\subsection{Usuwanie dokumentu wydania towaru}
+\begin{usecase}
+  \addtitle{PU15}{Usuwanie dokumentu wydania towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \addfield{Rozszerza przypadki:}{PU12}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
+  \additemizedfield{Warunki końcowe:}{
+    \item Dane dokumentu zostały usunięte z systemu.
+    \item Usunięty dokument nie jest wyświetlany na liście dokumentów wydania towaru.
+    \item Stan towarów z usuniętego dokumentu jest zaktualizowany o ilości zapisane w usuwanym dokumencie.
+  }
+  \addscenario{Scenariusz główny:}{
+    \item Aktor wybiera opcję usunięcia dokumentu wydania towaru z systemu.
+    \item System prosi o potwierdzenie operacji.
+    \item Aktor potwierdza usunięcie dokumentu z systemu.
+    \item System wyświetla informację o pomyślnym usunięciu dokumentu z systemu.
+  }
+  \addscenario{Scenariusz alternatywny:}{
+    \item[2.a] Aktor anuluje usunięcie dokumentu z systemu.
+      \begin{enumerate}
+        \item[1.--2.] Jak w scenariuszu głównym.
+        \item[3.] Aktor anuluje usunięcie dokumentu z systemu.
+        \item[4.] System wyświetla informację, że operacja została anulowana.
+      \end{enumerate}
+  }
+  \addfield{Wymagania funkcjonalne:}{5.3}
+\end{usecase}
+
+\subsection{Realizacja wydania towaru z magazynu}
+\begin{usecase}
+  \addtitle{PU16}{Realizacja wydania towaru z magazynu}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \additemizedfield{Warunki początkowe:}{
+    \item Aktor został uwierzytelniony.
+    \item Wybrane wydanie towaru nie zostało jeszcze zrealizowane.}
+  \additemizedfield{Warunki końcowe:} {
+    \item Dokument wydania towaru został oznaczony jako zrealizowany.
+    \item Możliwe jest utworzenie korekty do zrealizowanego dokumentu wydania towaru.
+  }
+  \addscenario{Scenariusz główny:}{
+     \item Aktor wybiera opcję wydania towaru z magazynu.
+     \item System prosi o potwierdzenie realizacji wydania towaru z magazynu.
+     \item Aktor potwierdza realizację wydania towaru z magazynu.
+     \item System oznacza dokument wydania towaru jako zrealizowany.
+  }
+ \addscenario{Scenariusz alternatywny:}{
+    \item[4.a] Aktor anuluje realizację wydania towaru.
+      \begin{enumerate}
+        \item[1.--2.] Jak w scenariuszu głównym.
+        \item[3.] Aktor anuluje realizację dokumentu.
+        \item[4.] System wyświetla informację, że operacja została anulowana.
+      \end{enumerate}
+  }
+  \addfield{Wymagania funkcjonalne:}{5.}
 \end{usecase}
 
 
-\subsection{Tworzenie dokumentu wydania towaru} 
-\begin{usecase}
-\addtitle{PU13}{Tworzenie dokumentu wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu wydania.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.1 Tworzenie dokumentu wydania towaru}
-\end{usecase}
 
-\subsection{Edycja dokumentu wydania towaru} 
-\begin{usecase}
-\addtitle{PU14}{Edycja dokumentu wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu wydania towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.2 Edycja dokumentu wydania towaru}
-\end{usecase}
 
-\subsection{Usuwanie dokumentu wydania towaru} 
-\begin{usecase}
-\addtitle{PU15}{Usuwanie dokumentu wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu wydania towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.3 Usuwanie dokumentu wydania towaru}
-\end{usecase}
 
-\subsection{Realizacja wydania towaru} 
-\begin{usecase}
-\addtitle{PU16}{Realizacja wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.4 Realizacja wydania towaru}
-\end{usecase}
 
-\subsection{Korekta wydania towaru} 
-\begin{usecase}
-\addtitle{PU15}{Korekta wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru}
-\end{usecase}
-
-\subsubsection{Tworzenie dokumentu korekty wydania towaru} 
-\begin{usecase}
-\addtitle{PU15}{Tworzenie korekty wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru, 5.5.1 Tworzenie dokumentu korekty wydania towaru}
-\end{usecase}
-
-\subsubsection{Edycja dokumentu korekty wydania towaru} 
-\begin{usecase}
-\addtitle{PU15}{Edycja dokumentu korekty wydania towaru} 
-\addfield{Priorytet:}{wysoki}
-\addfield{Aktor główny:}{Sprzedawca}
-\addfield{Rozszerza przypadki:}{PU12}
-\additemizedfield{Warunki początkowe:}{
-  \item Aktor został uwierzytelniony.
-} 
-\addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję tworzenia dokumentu przyjęcia towaru.
-    \item System wyświetla listę wydań towarów.
-}
-\addfield{Wymagania funkcjonalne}{5. Wydanie z magazynu, 5.5 Korekta wydania towaru, 5.5.2 Edycja dokumentu korekty w}
-\end{usecase}
