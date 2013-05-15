@@ -2,7 +2,6 @@
 \singlespacing
 
 \subsection{Zarządzanie pracownikami} 
-Przypadek użycia umożliwiający zarządzanie pracownikami.
 \begin{usecase}
 \addtitle{PU1}{Zarządzanie pracownikami} 
 \addfield{Priorytet:}{wysoki}
@@ -19,7 +18,6 @@ Przypadek użycia umożliwiający zarządzanie pracownikami.
 \end{usecase}
 
 \subsection{Dodawanie pracowników}
-Przypadek użycia umożliwiający dodawanie pracowników.
 \begin{usecase}
 \addtitle{PU2}{Dodawanie pracowników} 
 % Priorytet
@@ -51,7 +49,6 @@ Przypadek użycia umożliwiający dodawanie pracowników.
 \end{usecase}
 
 \subsection{Edycja danych pracowników}
-Przypadek użycia opisujący edycję danych pracowników.
 \begin{usecase}
 \addtitle{PU3}{Edycja danych pracowników} 
 \addfield{Priorytet:}{wysoki}
@@ -83,7 +80,6 @@ Przypadek użycia opisujący edycję danych pracowników.
 \end{usecase}
 
 \subsection{Usuwanie danych pracowników}
-Przypadek użycia opisujący usuwanie danych pracowników.
 \begin{usecase}
 \addtitle{PU4}{Usuwanie danych pracowników} 
 \addfield{Priorytet:}{wysoki}
@@ -112,14 +108,13 @@ Przypadek użycia opisujący usuwanie danych pracowników.
 \end{usecase}
 
 \subsection{Zarządzanie raportami} 
-Przypadek użycia umożliwiający zarządzanie raportami.
 \begin{usecase}
 \addtitle{PU5}{Zarządzanie raportami} 
 \addfield{Priorytet:}{średni}
 \addfield{Aktor główny:}{Kierownik}
 \additemizedfield{Warunki początkowe:}{
   \item Aktor został uwierzytelniony.
-  \item W systemie przechowywana jest informacja o co najmniej jednej sprzedaży/zakupie.
+  \item W systemie przechowywana jest informacja o co najmniej jednym przyjęciu/wydaniu towarów.
 } 
 \addscenario{Scenariusz główny:}{
 	\item Aktor wybiera opcję tworzenia raportów.
@@ -128,40 +123,38 @@ Przypadek użycia umożliwiający zarządzanie raportami.
 \addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami}
 \end{usecase}
 
-\subsection{Generowanie raportów sprzedaży}
-Przypadek użycia umożliwiający generowanie raportów sprzedaży.
+\subsection{Generowanie raportów o wydanych towarach}
 \begin{usecase}
-\addtitle{PU6}{Generowanie raportów sprzedaży} 
+\addtitle{PU6}{Generowanie raportów o wydanych towarach} 
 \addfield{Priorytet:}{średni}
 \addfield{Aktor główny:}{Kierownik}
 \addfield{Rozszerza przypadki:}{PU5}
 \additemizedfield{Warunki początkowe:}{
   \item Aktor został uwierzytelniony.
-  \item W systemie przechowywana jest informacja o co najmniej jednej sprzedaży.
+  \item W systemie przechowywana jest informacja o co najmniej jednym wydaniu towarów.
 } 
-\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem sprzedaży.} 
+\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem o wydanych towarach.} 
 \addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję generowania raportu sprzedaży.
-    \item System generuje raport sprzedaży.
+	\item Aktor wybiera opcję generowania raportu o wydanych towarach.
+    \item System generuje raport o wydanych towarach.
 }
-\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.1 Generowanie raportów sprzedaży}
+\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.1 Generowanie raportów o wydanych towarach}
 \end{usecase}
 
-\subsection{Generowanie raportów zakupów}
-Przypadek użycia umożliwiający generowanie raportów zakupów.
+\subsection{Generowanie raportów o przyjętych towarach}
 \begin{usecase}
-\addtitle{PU7}{Generowanie raportów zakupów} 
+\addtitle{PU7}{Generowanie raportów o przyjętych towarach} 
 \addfield{Priorytet:}{średni}
 \addfield{Aktor główny:}{Kierownik}
 \addfield{Rozszerza przypadki:}{PU5}
 \additemizedfield{Warunki początkowe:}{
   \item Aktor został uwierzytelniony.
-  \item W systemie przechowywana jest informacja o co najmniej jednym zakupie.
+  \item W systemie przechowywana jest informacja o co najmniej jednym przyjęciu towarów.
 } 
-\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem zakupów.} 
+\addfield{Warunki końcowe:} {Aktor posiada dokument z raportem o przyjętych towarach.} 
 \addscenario{Scenariusz główny:}{
-	\item Aktor wybiera opcję generowania raportu zakupu.
-    \item System generuje raport zakupu.
+	\item Aktor wybiera opcję generowania raportu o przyjętych towarach.
+    \item System generuje raport o przyjętych towarach.
 }
-\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.2 Generowanie raportów zakupów}
+\addfield{Wymagania funkcjonalne}{7. Zarządzanie raportami, 7.2 Generowanie raportów o przyjętych towarach}
 \end{usecase}
