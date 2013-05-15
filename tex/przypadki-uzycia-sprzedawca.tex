@@ -179,9 +179,61 @@
         \item[4.] System wyświetla informację, że operacja została anulowana.
       \end{enumerate}
   }
-  \addfield{Wymagania funkcjonalne:}{5.}
+  \addfield{Wymagania funkcjonalne:}{5.4}
 \end{usecase}
 
+\subsection{Korekta wydania towaru}
+\begin{usecase}
+  \addtitle{PU17}{Korekta wydania towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Sprzedawca}
+  \addfield{Rozszerza przypadki:}{PU12}
+  \additemizedfield{Warunki początkowe:}{
+     \item Aktor został uwierzytelniony.
+     \item Wybrany dokument wydania towaru został już zrealizowany.
+  }
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dokument korekty wydania towaru został zapisany w systemie.
+    \item Ilość przechowywanych towarów została zaktualizowana zgodnie z wartością podaną na korekcie. 
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addscenario{Scenariusz główny:}{
+    \item Aktor wybiera opcję utworzenia korekty dla wskazanego dokumentu przyjęcia towaru.
+    \item System wyświetla formularz nowej korekty. 
+    \item Aktor wypełnia podstawowe dane korekty.
+    \item Aktor wybiera towary, które podlegają zwrotowi oraz ich cenę.
+    \item Aktor wybiera opcję zapisania korekty.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Scenariusz alternatywny:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[5.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--5.] Jak w scenariuszu głównym.
+       \item[6.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[7.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[8--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{5.5}
+\end{usecase}
 
 
 
