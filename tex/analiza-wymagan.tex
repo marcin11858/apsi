@@ -114,7 +114,7 @@ wymagania oraz ryzyku realizacji i aktorach.
 		    2.1 & Dodawanie towaru & wysoki &  niskie & magazynier \\
 		    2.2 & Edycja opisu towaru & wysoki & niskie & magazynier \\
 		    2.3 & Usuwanie danych towaru & wysoki & niskie & magazynier \\
-            2.4 & Korekta stanu towaru & wysoki & niskie & użytkownik \\
+            2.4 & Korekta stanu towaru & wysoki & niskie & magazynier \\
 		    \hline
 		   	3 & Zarządzanie danymi kontrahentów & wysoki & niskie & użytkownik \\
 		   	3.1 & Dodawanie kontrahenta & wysoki & niski & użytkownik \\
@@ -206,53 +206,54 @@ określony priorytet oraz ryzyko.
 
 \section{Specyfikacja przypadków użycia na poziomie ogólnym}
 
-Dwa podstawowe zadania kierownika to zarządzanie innymi użytkownikami 
-systemu oraz zarządzanie raportami. Posiada on największe 
-uprawnienia w systemie. Może dodawać i usuwać użytkowników, a 
-także nadawać im uprawnienia. Kierownik zajmuje się 
-generowaniem raportów sprzedaży i zakupu.
-Diagram przedstawiający przypadki użycia kierownika znajduje się na rysunku
-\ref{fig:kierownikUseCase}.
+Dwa podstawowe zadania kierownika to zarządzanie innymi użytkownikami
+systemu oraz zarządzanie raportami. Posiada on największe uprawnienia
+w systemie. Może dodawać i usuwać użytkowników, a także nadawać im
+uprawnienia. Kierownik zajmuje się generowaniem raportów sprzedaży i
+zakupu.  Diagram przedstawiający przypadki użycia kierownika znajduje
+się na rysunku \ref{fig:kierownikUseCase}.
 
-Sprzedawca pośredniczy w kontaktach z klientem i zarządza procesem 
-sprzedaży towarów. Przyjmuje on zamówienia i dodaje je do bazy, 
-aktualizując jednocześnie dane klientów. Sprawuje kontrolę nad 
-realizacją zamówień sprzedaży, a w razie potrzeby może anulować zamówienie. 
-Do zadań sprzedawcy należy prowadzenie ewidencji klientów, aktualizowanie 
-informacji o nich oraz usuwanie starych. Przypadki użycia sprzedawcy zostały
-zaprezentowane na diagramie \ref{fig:sprzedawcaUseCase}.  
+Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu
+magazynu w systemie. Wprowadza dane towarów do systemu, a także
+aktualizuje ich stan. Ponadto zarządza on przyjęciami towaru do
+magazynu oraz danymi kontrahentów.  Zadaniem magazyniera jest
+prowadzenie ewidencji kontrahentów, dodawanie nowych oraz usuwanie
+tych, z którymi zakończono współpracę. Magazynier kontroluje
+przyjmowanie towarów do magazynu.  W razie potrzeby może zwrócić
+przyjęty towar. Diagram przedstawiający opisane przypadki użycia
+został zaprezentowany na rysunku \ref{fig:magazynierUseCase}.
 
-Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu magazynu 
-w systemie. Wprowadza dane towarów do systemu, a także aktualizuje ich 
-ilość. Ponadto zarządza on zamówieniami zakupu oraz danymi dostawców. 
-Zadaniem magazyniera jest prowadzenie ewidencji dostawców, dodawanie nowych 
-oraz usuwanie tych, z którymi zakończono współpracę. Magazynier tworzy
-zamówienia zakupu zgodnie z zapotrzebowaniem oraz kontroluje realizację zamówień. W razie 
-potrzeby może anulować zamówienie zakupu. Diagram przedstawiający opisane
-przypadki użycia został zaprezentowany na rysunku \ref{fig:magazynierUseCase}.
+Sprzedawca pośredniczy w kontaktach z kontrahentem i zarządza procesem
+sprzedaży towarów. Przyjmuje on zamówienia (wykonuje operacje wydania
+towaru z magazynu) i dodaje je do bazy, aktualizując jednocześnie dane
+klientów. Sprawuje kontrolę nad realizacją wydania towaru z magazynu,
+a w razie potrzeby może przyjąć zwrócony towar. Do zadań sprzedawcy
+należy prowadzenie ewidencji kontrahentów, aktualizowanie informacji o
+nich oraz usuwanie starych. Przypadki użycia sprzedawcy zostały
+zaprezentowane na diagramie \ref{fig:sprzedawcaUseCase}.
 
 \begin{figure}[ht]
-    \begin{center}
+  \begin{center}
     \includegraphics[angle=-90,scale=0.8]{../img/kierownikUseCase.png}
-    \end{center}
-    \caption{Diagram przypadków użycia kierownika}
-    \label{fig:kierownikUseCase}
+  \end{center}
+  \caption{Diagram przypadków użycia kierownika}
+  \label{fig:kierownikUseCase}
 \end{figure}
 
 \begin{figure}[ht]
-    \begin{center}
+  \begin{center}
     \includegraphics[angle=-90,scale=0.75]{../img/sprzedawcaUseCase.png}
-    \end{center}
-    \caption{Diagram przypadków użycia sprzedawcy}
-    \label{fig:sprzedawcaUseCase}
+  \end{center}
+  \caption{Diagram przypadków użycia sprzedawcy}
+  \label{fig:sprzedawcaUseCase}
 \end{figure}
 
 
 \begin{figure}[ht]
-    \begin{center}
-    	\includegraphics[angle=-90,scale=0.7]{../img/magazynierUseCase.png}
-    	\caption{Diagram przypadków użycia magazyniera}
-    	\label{fig:magazynierUseCase}
-    \end{center}
+  \begin{center}
+    \includegraphics[angle=-90,scale=0.7]{../img/magazynierUseCase.png}
+    \caption{Diagram przypadków użycia magazyniera}
+    \label{fig:magazynierUseCase}
+  \end{center}
 \end{figure}
 
