@@ -100,51 +100,53 @@ wymagania oraz ryzyku i aktorach.
 
 \begin{table}[ht]
 	 \begin{center}
-% 	    \rowcolors{1}{}{lightblue}
+% 	    \rowcolors{1}{}{light-blue}
 	    \begin{tabular}{| l | l | l | l | l |}%\toprule
 	    	\hline
-		    \textbf{Lp.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
+		    \textbf{LP.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
 		    \textbf{Nazwa aktora} \\
 		    \hline
 			1 & Zarządzanie użytkownikami & wysoki & niskie & kierownik \\
-		    1.1 & Dodawanie użytkowników & wysoki & niskie & kierownik \\
-		    1.2 & Edycja danych użytkowników & wysoki & niskie & kierownik \\ 	
-		    1.3 & Usuwanie danych użytkowników & wysoki &niskie & kierownik \\
+		    1.1 & Dodawanie użytkownika & wysoki & niskie & kierownik \\
+		    1.2 & Edycja danych użytkownika & wysoki & niskie & kierownik \\ 	
+		    1.3 & Usuwanie danych użytkownika & wysoki &niskie & kierownik \\
 		    \hline
 		    2 & Zarządzanie danymi towarów & wysoki & niskie & magazynier \\
 		    2.1 & Dodawanie towaru & wysoki &  niskie & magazynier \\
-		    2.2 & Edycja danych towarów & wysoki & niskie & magazynier \\
-		    2.2.1 & Edycja opisu towarów & wysoki & niskie & magazynier \\
-		    2.2.2 & Zmiana ilości towarów & wysoki & niskie & użytkownik \\
-		    2.3 & Usuwanie danych towarów & wysoki & niskie & magazynier \\
+		    2.2 & Edycja opisu towaru & wysoki & niskie & magazynier \\
+		    2.3 & Usuwanie danych towaru & wysoki & niskie & magazynier \\
+            2.4 & Korekta stanu towaru & wysoki & niskie & użytkownik \\
 		    \hline
-		   	3 & Zarządzanie danymi klientów & wysoki & niskie & sprzedawca \\
-		   	3.1 & Dodawanie klientów & wysoki & niski & sprzedawca \\
-		   	3.2 & Edycja danych klientów & wysoki & niskie & sprzedawca \\
-		   	3.3 & Usuwanie danych klientów & wysoki & niskie & sprzedawca \\
+		   	3 & Zarządzanie danymi kontrahentów & wysoki & niskie & użytkownik \\
+		   	3.1 & Dodawanie kontrahenta & wysoki & niski & użytkownik \\
+		   	3.2 & Edycja danych kontrahenta & wysoki & niskie & użytkownik \\
+		   	3.3 & Usuwanie danych kontrahenta & średni & niskie & użytkownik \\
 		   	\hline
-		   	4 & Zarządzanie danymi dostawców & wysoki & niskie & magazynier \\
-		   	4.1 & Dodawanie dostawców & wysoki & niskie & magazynier \\
-		   	4.2 & Edycja danych dostawców & wysoki & niskie & magazynier \\
-		   	4.3 & Usuwanie danych dostawców & wysoki & niskie & magazynier \\
+            4 & Przyjęcie na magazyn & wysoki & niskie & magazynier \\
+		   	4.1 & Tworzenie dokumentu przejęcia towaru & wysoki & niskie & magazynier \\
+		   	4.2 & Edycja dokumentu przyjęcia towaru & wysoki & niskie & magazynier \\
+		   	4.3 & Usuwanie dokumentu przyjęcia towaru & wysoki & niskie & magazynier \\
+		   	4.4 & Realizacja przyjęcia towaru & wysoki & niskie & magazynier \\
+		   	4.5 & Korekta przyjęcia towaru & wysoki & niskie & magazynier \\
+            4.5.1 & Tworzenie dokumentu korekty przyjęcia towaru & średni & niskie & magazynier \\
+            4.5.2 & Edycja dokumentu przyjęcia towaru & średni & niskie & magazynier \\
+            4.5.3 & Usunięcie dokumentu przyjęcia towaru & średni & niskie & magazynier \\
+            4.5.4 & Realizacja korekty przyjęcia towaru & średni & niskie & magazynier \\ 
+            \hline
+		   	5 & Wydanie z magazynu & wysoki & niskie & sprzedawca \\
+		   	5.1 & Tworzenie dokumentu wydania towaru & wysoki & niskie & sprzedawca \\
+		   	5.2 & Edycja dokumentu wydania towaru & średni & niskie & sprzedawca \\
+		   	5.3 & Usunięcie dokumentu wydania towaru & wysoki & niskie & sprzedawca \\
+		   	5.4 & Realizacja wydania towaru & wysoki & niskie & sprzedawca \\
+		   	5.5 & Korekta wydania towaru & średni & niskie & sprzedawca \\
+            5.5.1 & Tworzenie dokumentu korekty wydania towaru & średni & niskie & sprzedawca \\
+            5.5.2 & Edycja dokumentu wydania towaru & średni & niskie & sprzedawca \\
+            5.5.3 & Usunięcie dokumentu wydania towaru & średni & niskie & sprzedawca \\
+            5.5.4 & Realizacja korekty wydania towaru & średni & niskie & sprzedawca \\ 
 		   	\hline
-		   	5 & Zarządzanie zamówieniami sprzedaży & wysoki & niskie & sprzedawca \\
-		   	5.1 & Tworzenie zamówień sprzedaży & wysoki & niskie & sprzedawca \\
-		   	5.2 & Edycja zamówień sprzedaży & wysoki & niskie & sprzedawca \\
-		   	5.3 & Usuwanie zamówień sprzedaży & wysoki & niskie & sprzedawca \\
-		   	5.4 & Realizacja zamówień sprzedaży & wysoki & niskie & sprzedawca \\
-		   	5.5 & Anulowanie zamówień sprzedaży & wysoki & niskie & sprzedawca \\
-		   	\hline
-		   	6 & Zarządzanie zamówieniami zakupu & wysoki & niskie & magazynier \\
-		   	6.1 & Tworzenie zamówień zakupu & wysoki & niskie & magazynier \\
-		   	6.2 & Edycja zamówień zakupu & wysoki & niskie & magazynier \\
-		   	6.3 & Usuwanie zamówień zakupu & wysoki & niskie & magazynier \\
-		   	6.4 & Realizacja zamówień zakupu & wysoki & niskie & magazynier \\
-		   	6.5 & Anulowanie zamówień zakupu & wysoki & niskie & magazynier \\
-		   	\hline
-		   	7 & Zarządzanie raportami & średni & niskie & kierownik \\
-		   	7.1 & Generowanie raportów sprzedaży & średni & niskie & kierownik \\
-		   	7.2 & Generowanie raportów zakupów & średni & niskie & kierownik \\
+		   	6 & Zarządzanie raportami & średni & niskie & kierownik \\
+		   	6.1 & Generowanie raportów sprzedaży & średni & niskie & kierownik \\
+		   	6.2 & Generowanie raportów zakupów & średni & niskie & kierownik \\
 		   	\hline
 	    \end{tabular}
 	\end{center}
