@@ -1,109 +1,156 @@
 \section{Dziedzina problemu}
 \label{dziedzina-problemu}
-Poniżej przedstawione zostały kluczowe pojęcia i procesy charakteryzujące system obsługi magazynu.
+Poniżej przedstawione zostały kluczowe pojęcia i procesy
+charakteryzujące system obsługi magazynu.
 
 \subsection{Towary}
-Towar jest podstawową jednostką przechowywaną w magazynie. Każdy towar jest opisany przez następujące cechy:
+Towar jest podstawową jednostką przechowywaną w magazynie. Każdy towar
+jest opisany przez następujące cechy:
 \begin{itemize}
-	\item nazwa,
-	\item kod kreskowy,
-	\item kategoria,
-	\item jednostka miary,
-	\item stan początkowy (początkowa ilość towaru w magazynie),
-	\item cena sprzedaży.
+\item nazwa,
+\item kod kreskowy,
+\item kategoria,
+\item jednostka miary,
+\item stan początkowy (początkowa ilość towaru w magazynie),
+\item cena sprzedaży.
 \end{itemize}
 
 Warunki poprawności danych towaru:
 \begin{itemize}
-    \item nazwa towaru powinna posiadać co najmniej 3 znaki; 
-    \item cena sprzedaży musi być liczbą nieujemną, z dokładnością do dwóch miejsc po przecinku;
-    \item stan początkowy musi być liczbą całkowitą nieujemną;
-    \item kod kreskowy musi spełniać jedną z norm akceptowanych przez organizację \emph{GS1}\footnote{http://www.gs1pl.org/}.
+\item nazwa towaru powinna posiadać co najmniej 3 znaki;
+\item cena sprzedaży musi być liczbą nieujemną, z dokładnością do
+  dwóch miejsc po przecinku;
+\item stan początkowy musi być liczbą całkowitą nieujemną;
+\item kod kreskowy musi spełniać jedną z norm akceptowanych przez
+  organizację \emph{GS1}\footnote{http://www.gs1pl.org/}.
 \end{itemize}
 
 Możliwe są następujące operacje:
 \begin{itemize}
-	\item dodawanie towaru,
-	\item edytowanie towaru z wyłączeniem bezpośredniej edycji stanu początkowego, który jest cechą ustalaną na podstawie dokumentów PZ, WZ oraz korekt magazynu,
-	\item usuwanie towarów, które nie znajdują się w żadnym z dokumentów PZ, WZ lub korekcie magazynu.
+\item dodawanie towaru,
+\item edytowanie towaru z wyłączeniem bezpośredniej edycji stanu
+  początkowego, który jest cechą ustalaną na podstawie dokumentów PZ,
+  WZ oraz korekt stanu magazynu,
+\item usuwanie towarów, które nie znajdują się w żadnym z dokumentów
+  PZ, WZ lub korekcie magazynu.
 \end{itemize}
 
-Ponadto dla każdego towaru możliwe jest określenie stanu minimalnego oraz maksymalnego w magazynie, od którego zależna będzie możliwość dokonania operacji przyjęcia zamówienia, wydania zamówienia oraz korekty stanu magazynu.
+Ponadto dla każdego towaru możliwe jest określenie stanu minimalnego
+oraz maksymalnego w magazynie, od którego zależna będzie możliwość
+dokonania operacji przyjęcia zamówienia, wydania zamówienia oraz
+korekty stanu magazynu.
 
 \subsection{Dokumenty}
-W systemie wyróżnione są trzy typy dokumentów: PZ, WZ oraz korekta stanu magazynu.
+W systemie wyróżnione są trzy typy dokumentów: PZ, WZ oraz korekta
+stanu magazynu.
 
 \subsubsection{PZ}
 Dokument PZ jest dokumentem powiązanym z procesem przyjęcia towaru.
 Dokument PZ zawiera:
 \begin{itemize}
-	\item numer dokumentu: PZnr\_kolejny\_dokumentu/rok, np: PZ1/2003,
-	\item dane wystawcy (magazynu),
-	\item dane kontrahenta,
-	\item datę operacji,
-	\item dane towarów wraz z ilością przyjętych towarów -- wartość ta dodaje się do stanu towaru w magazynie,
-	\item cenę towaru, ustalaną indywidualnie dla każdego dokumentu PZ,
-	\item łączną cenę towarów.
+\item numer dokumentu: PZnr\_kolejny\_dokumentu/rok, np: PZ1/2003,
+\item dane wystawcy (magazynu),
+\item dane kontrahenta,
+\item datę operacji,
+\item dane towarów wraz z ilością przyjętych towarów -- wartość ta
+  dodaje się do stanu towaru w magazynie,
+\item cenę towaru, ustalaną indywidualnie dla każdego dokumentu PZ,
+\item łączną cenę towarów.
 \end{itemize}
 
 \subsubsection{WZ}
 Dokument WZ jest dokumentem powiązanym z procesem wydania towaru.
 Dokument WZ zawiera:
 \begin{itemize}
-	\item numer dokumentu: WZnr\_kolejny\_dokumentu/rok, np: WZ1/2003,
-	\item dane wystawcy (magazynu),
-	\item dane kontrahenta,
-	\item datę operacji,
-	\item dane towarów wraz z ilością przyjętych towarów -- wartość ta odejmuje się do stanu towaru w magazynie,
-	\item cenę towaru, ustalaną indywidualnie dla każdego dokumentu WZ (cena towaru z danych towaru to tylko sugestia),
-	\item łączną cenę towarów.
+\item numer dokumentu: WZnr\_kolejny\_dokumentu/rok, np: WZ1/2003,
+\item dane wystawcy (magazynu),
+\item dane kontrahenta,
+\item datę operacji,
+\item dane towarów wraz z ilością przyjętych towarów -- wartość ta
+  odejmuje się do stanu towaru w magazynie,
+\item cenę towaru, ustalaną indywidualnie dla każdego dokumentu WZ
+  (cena towaru z danych towaru to tylko sugestia),
+\item łączną cenę towarów.
 \end{itemize}
 
 \subsubsection{Korekta stanu magazynu}
 \begin{itemize}
-	\item data korekty,
-	\item numer dokumentu: Knr\_kolejny\_dokumentu/rok, np. K1/2013,
-	\item dane towarów, których stan podlega korekcie,
-	\item nowy stan towaru,
-	\item suma modyfikowanej ilości towarów na dokumencie.
+\item data korekty,
+\item numer dokumentu: Knr\_kolejny\_dokumentu/rok, np. K1/2013,
+\item dane towarów, których stan podlega korekcie,
+\item nowy stan towaru,
+\item suma modyfikowanej ilości towarów na dokumencie.
 \end{itemize}
 
 \subsubsection{Korekta PZ}
-Korekta PZ jest dokumentem analogicznym do dokumentu PZ, z zastrzeżeniem, iż odnosi się ona do już istniejącego dokumentu PZ oraz dane z korekty PZ muszą być zgodne z danymi dokumentu PZ do którego ta korekta się odnosi -- w korekcie może znaleźć się tylko podzbiór towarów z dokumentu PZ a ilości poszczególnych towarów na korekcie nie mogą przekraczać ilości towarów oryginalnego dokumentu.
+Korekta PZ formalizuje operację zwrotu towaru do dostawcy
+(kontrahenta).  Korekta PZ jest dokumentem analogicznym do dokumentu
+PZ, z zastrzeżeniem, iż odnosi się ona do już istniejącego dokumentu
+PZ oraz dane z korekty PZ muszą być zgodne z danymi dokumentu PZ do
+którego ta korekta się odnosi -- w korekcie może znaleźć się tylko
+podzbiór towarów z dokumentu PZ a ilości poszczególnych towarów na
+korekcie nie mogą przekraczać ilości towarów oryginalnego dokumentu.
+% Przydałaby się pewnie też możliwość realizacji korekty do korekty PZ
+% itd.  ale w ramach tego projektu odpuszczamy sobie to ;P.
 
 Ponadto:
 \begin{itemize}
-	\item numer dokumentu: PZknr\_kolejny\_dokumentu/rok, np PZk1/2013 (numer kolejny dokumentu nie jest w żaden sposób powiązany z jakimkolwiek numerem istniejącego dokumentu),
-	\item cena towaru w korekcie PZ ustalana jest niezależnie od ceny z oryginalnego dokumentu PZ,
-	\item ilość towaru w korekcie PZ odejmuje się od stanu towaru w magazynie.
+\item numer dokumentu: PZknr\_kolejny\_dokumentu/rok, np PZk1/2013
+  (numer kolejny dokumentu nie jest w żaden sposób powiązany z
+  jakimkolwiek numerem istniejącego dokumentu),
+\item cena towaru w korekcie PZ ustalana jest niezależnie od ceny z
+  oryginalnego dokumentu PZ,
+\item ilość towaru w korekcie PZ odejmuje się od stanu towaru w
+  magazynie.
 \end{itemize}
 
 \subsubsection{Korekta WZ}
-Korekta WZ jest dokumentem analogicznym do dokumentu WZ, z zastrzeżeniem, iż odnosi się ona do już istniejącego dokumentu WZ oraz dane z korekty WZ muszą być zgodne z danymi dokumentu WZ do którego ta korekta się odnosi -- w korekcie może znaleźć się tylko podzbiór towarów z dokumentu WZ a ilości poszczególnych towarów na korekcie nie mogą przekraczać ilości towarów oryginalnego dokumentu.
+Korekta WZ formalizuje operację zwrotu towaru od odbiorcy
+(kontrahenta) Korekta WZ jest dokumentem analogicznym do dokumentu WZ,
+z zastrzeżeniem, iż odnosi się ona do już istniejącego dokumentu WZ
+oraz dane z korekty WZ muszą być zgodne z danymi dokumentu WZ do
+którego ta korekta się odnosi -- w korekcie może znaleźć się tylko
+podzbiór towarów z dokumentu WZ a ilości poszczególnych towarów na
+korekcie nie mogą przekraczać ilości towarów oryginalnego dokumentu.
+% Przydałaby się pewnie też możliwość realizacji korekty do korekty WZ
+% itd.  ale w ramach tego projektu odpuszczamy sobie to ;P.
 
 Ponadto:
 \begin{itemize}
-	\item numer dokumentu: WZknr\_kolejny\_dokumentu/rok, np WZk1/2013 (numer kolejny dokumentu nie jest w żaden sposób powiązany z jakimkolwiek numerem istniejącego dokumentu),
-	\item cena towaru w korekcie WZ ustalana jest niezależnie od ceny z oryginalnego dokumentu WZ,
-	\item ilość towaru w korekcie WZ dodaje się od stanu towaru w magazynie.
+\item numer dokumentu: WZknr\_kolejny\_dokumentu/rok, np WZk1/2013
+  (numer kolejny dokumentu nie jest w żaden sposób powiązany z
+  jakimkolwiek numerem istniejącego dokumentu),
+\item cena towaru w korekcie WZ ustalana jest niezależnie od ceny z
+  oryginalnego dokumentu WZ,
+\item ilość towaru w korekcie WZ dodaje się od stanu towaru w
+  magazynie.
 \end{itemize}
 
 \subsection{Przyjęcie towaru}
 Z procesem przyjęcia towaru powiązane są następujące operacje:
 \begin{itemize}
-	\item utworzenie dokumentu PZ,
-	\item edycja dokumentu PZ -- dowolne pole, zmiany ilości przyjętego towaru wpływają na stan towaru w magazynie,
-	\item usunięcie dokumentu PZ -- usunięcie dokumentu PZ powoduje aktualizację (odjęcie) ilości towarów, które były uwzględnione w tym dokumencie.
+\item utworzenie dokumentu PZ,
+\item edycja dokumentu PZ -- dowolne pole, zmiany ilości przyjętego
+  towaru wpływają na stan towaru w magazynie,
+\item usunięcie dokumentu PZ -- usunięcie dokumentu PZ powoduje
+  aktualizację (odjęcie) ilości towarów, które były uwzględnione w tym
+  dokumencie.
 \end{itemize}
 
 \subsection{Wydanie towaru}
 Z procesem wydania towaru powiązane są następujące operacje:
 \begin{itemize}
-	\item utworzenie dokumentu WZ,
-	\item edycja dokumentu WZ -- dowolne pole, zmiany ilości przyjętego towaru wpływają na stan towaru w magazynie,
-	\item usunięcie dokumentu WZ -- usunięcie dokumentu WZ powoduje aktualizację (dodanie) ilości towarów, które były uwzględnione w tym dokumencie.
+\item utworzenie dokumentu WZ,
+\item edycja dokumentu WZ -- dowolne pole, zmiany ilości przyjętego
+  towaru wpływają na stan towaru w magazynie,
+\item usunięcie dokumentu WZ -- usunięcie dokumentu WZ powoduje
+  aktualizację (dodanie) ilości towarów, które były uwzględnione w tym
+  dokumencie.
 \end{itemize}
 
-Dodatkowo można wskazać przyjęcie towaru, do którego odnosi się to wydanie towaru: wtedy możliwe jest wskazanie wydawanego towaru, który był kiedyś przyjęty za pewną kwotę, a tym samym możliwe jest obliczenie zysku ze wydania towaru/wskazanie marży z towaru)
+Dodatkowo można wskazać przyjęcie towaru, do którego odnosi się to
+wydanie towaru: wtedy możliwe jest wskazanie wydawanego towaru, który
+był kiedyś przyjęty za pewną kwotę, a tym samym możliwe jest
+obliczenie zysku z wydania towaru/wskazanie marży z towaru).
 
-% LocalWords:  WZ
+% LocalWords: WZ
