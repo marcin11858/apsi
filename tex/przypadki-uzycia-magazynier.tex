@@ -1,14 +1,11 @@
 \section{Moduł zarządzania towarami}
-% 
 \singlespacing
 \subsection{Zarządzanie danymi towarów}
-
 \begin{usecase}
   \addtitle{PU30}{Zarządzanie danymi towarów}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
-  % Warunki końcowe (brak).
   \addscenario{Przebieg zdarzeń:}{
   \item Aktor wybiera opcję przeglądania listy towarów w magazynie.
   \item System wyświetla listę towarów w magazynie wraz z opcjami zarządzania danymi dokumentów.
@@ -17,10 +14,7 @@
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
-
-%%%%%%%%
 \subsection{Dodawanie towaru}
-%
 \begin{usecase}
   \addtitle{PU31}{Dodawanie towaru}
   \addfield{Priorytet:}{wysoki}
@@ -30,7 +24,7 @@ TODO diagram ecb.
   \additemizedfield{Warunki końcowe:}{ 
     \item Dane towaru zostały zapisane w systemie.
     \item Aktor otrzymuje informacje o poprawnym dodaniu towaru do systemu.
-    \item Użytkownik może wyświetlić dane towaru na liście towarów. % TODO jak warunki końcowe mają się do scenariuszy alternatywnych?
+    \item Użytkownik może wyświetlić dane towaru na liście towarów.
     \item Dane towaru mogą być uwzględnione w dokumentach przedstawionych w rozdziale \ref{dziedzina-problemu}.
   }
   \addscenario{Przebieg zdarzeń:}{
@@ -65,7 +59,6 @@ TODO diagram ecb.
 TODO diagram komunikacji
 TODO diagram ecb.
 
-%%%%%%%
 \subsection{Edycja opisu towaru}
 \begin{usecase}
   \addtitle{PU32}{Edycja opisu towaru}
@@ -106,7 +99,6 @@ TODO diagram ecb.
   \addfield{Wymagania funkcjonalne:}{2.2}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
-%%%%%%%
 \subsection{Usuwanie danych towaru}
 \begin{usecase}
   \addtitle{PU33}{Usuwanie danych towaru}
@@ -197,7 +189,6 @@ TODO diagram komunikacji TODO diagram ecb
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
-%%%%%%%
 \subsection{Tworzenie dokumentu przyjęcia towaru}
 \begin{usecase}
   \addtitle{PU36}{Tworzenie dokumentu przyjęcia towaru}
@@ -253,7 +244,6 @@ TODO diagram ecb.
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
-%%%%%%%%
 \subsection{Edycja dokumentu przyjęcia towaru}
 \begin{usecase}
   \addtitle{PU36}{Edycja dokumentu przyjęcia towaru}
@@ -345,9 +335,11 @@ TODO diagram komunikacji TODO diagram ecb
   \addtitle{PU38}{Realizacja przyjęcia towaru na magazyn}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU35}
   \additemizedfield{Warunki początkowe:}{
     \item Aktor został uwierzytelniony.
-    \item Wybrane przyjęcie towaru nie zostało jeszcze zrealizowane.}
+    \item Wybrane przyjęcie towaru nie zostało jeszcze zrealizowane.
+  }
   \additemizedfield{Warunki końcowe:} {
     \item Dokument przyjęcia towaru został oznaczony jako zrealizowany.
     \item Możliwe jest utworzenie korekty do zrealizowanego dokumentu przyjęcia towaru.
@@ -367,44 +359,66 @@ TODO diagram komunikacji TODO diagram ecb
         \item[4.] System wyświetla informację, że operacja została anulowana.
       \end{enumerate}
   }
-  \addfield{Wymagania funkcjonalne:}{4.}
+  \addfield{Wymagania funkcjonalne:}{4.4}
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb
 
-% \subsection{Zarządzanie zamówieniami zakupu}
-% \begin{usecase}
-%   %
-%   % ID + nazwa
-%   \addtitle{PU36}{Zarządzanie zamówieniami zakupu}
-%   %
-%   % Priorytet
-%   \addfield{Priorytet:}{wysoki}
-%   %
-%   % Aktor główny - zazwyczaj ten, który inicjuje przypadek użycia.
-%   \addfield{Aktor główny:}{Magazynier}
-%   %
-%   %	Warunki początkowe
-%   \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
-%   %
-%   % Warunki końcowe (brak).
-%   % 
-%   % Scenariusz główny.
-%   \addscenario{Przebieg zdarzeń:}{
-%   \item Magazynier wybiera opcję wyświetlenia listy towarów w
-%     magazynie.
-%   \item System wyświetla listę towarów w magazynie.
-%   }
-%   %
-%   % Wyjątki \addfield{Wyjątki:}{brak}
-%   %
-%   % Wymagania funkcjonalne związane z danym przypadkiem użycia
-%   \addfield{Wymagania funkcjonalne:}{Usuwanie danych towarów}
-%   %
-%   % Wymagania niefunkcjonalne - tylko gdy konieczne
-%   % \addfield{Wymagania niefunkcjonalne}{}
-% \end{usecase}
-% TODO diagram komunikacji TODO diagram ecb
+\subsection{Korekta przyjęcia towaru}
+\begin{usecase}
+  \addtitle{PU39}{Korekta przyjęcia towaru}
+  \addfield{Priorytet:}{wysoki}
+  \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU35}
+  \additemizedfield{Warunki początkowe:}{
+     \item Aktor został uwierzytelniony.
+     \item Wybrany dokument przyjęcia towaru został już zrealizowany.
+  }
+  \additemizedfield{Warunki końcowe:}{ 
+    \item Dokument korekty towaru został zapisany w systemie.
+    \item Aktor otrzymuje informacje o poprawnym dodaniu korekty do systemu.
+    \item Ilość przechowywanych towarów została zaktualizowana zgodnie z wartością podaną na korekcie. 
+    \item Ilość przechowywanego towaru jest zgodna z warunkami poprawności danych przedstawionymi w \ref{dziedzina-problemu}.
+  }
+  \addscenario{Przebieg zdarzeń:}{
+    \item Aktor wybiera opcję utworzenia korekty dla wskazanego dokumentu przyjęcia towaru.
+    \item System wyświetla formularz nowej korekty. 
+    \item Aktor wypełnia podstawowe dane korekty.
+    \item Aktor wybiera towary, które podlegają zwrotowi oraz ich cenę.
+    \item Aktor wybiera opcję zapisania korekty.
+    \item System informuje aktora, że dane zostały poprawnie zaktualizowane.
+  }
+  \addscenario{Przebiegi alternatywne:} {
+    \item [3.a] Aktor nie podał wymaganych pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
+        \item[6.] Aktor wraca do punktu 3.  
+      \end{enumerate}
+    \item [3.b] Aktor podał błędne wartości pól formularza:
+      \begin{enumerate}
+        \item[1--4.] Jak w scenariuszu głównym.
+        \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
+        \item[6.] Aktor wraca do punktu 3.
+      \end{enumerate}
+     \item[5.a] Aktor wybrał ten sam towar co najmniej dwa razy.
+       \begin{enumerate}
+       \item[1--5.] Jak w scenariuszu głównym.
+       \item[6.] System informuje aktora, że co najmniej dwa razy wybrał ten sam towar, podane ilości towaru zostaną więc zsumowane.
+       \item[7.] System wyświetla zsumowane wartości dla tych samych towarów.
+       \item[8--...] Jak w scenariuszu głównym.
+       \end{enumerate}
+  }
+  \addfield{Zakres przetwarzanych danych:} {
+    Pola dokumentu wydania towaru takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Warunki poprawności danych:}{
+    Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
+  }
+  \addfield{Wymagania funkcjonalne:}{4.5.1}
+\end{usecase}
+TODO diagram komunikacji
+TODO diagram ecb.
 
 
 
