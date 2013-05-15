@@ -13,7 +13,7 @@
   \item Aktor wybiera opcję przeglądania listy towarów w magazynie.
   \item System wyświetla listę towarów w magazynie.
   }
-  \addfield{Wymagania funkcjonalne:}{2. Zarządzanie danymi towarów}
+  \addfield{Wymagania funkcjonalne:}{2.}
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
@@ -43,13 +43,13 @@ TODO diagram ecb.
   \addscenario{Przebiegi alternatywne:} {
     \item [4.a] Aktor nie podał wymaganych pól formularza:
       \begin{enumerate}
-        \item[1.--4.] Jak w scenariuszu głównym.
+        \item[1--4.] Jak w scenariuszu głównym.
         \item[5.] System wyświetla powiadomienie o konieczności podania wymaganych informacji.
         \item[6.] Aktor wraca do punktu 3.  
       \end{enumerate}
     \item [4.b] Aktor podał błędne wartości pól formularza:
       \begin{enumerate}
-        \item[1.--4.] Jak w scenariuszu głównym.
+        \item[1--4.] Jak w scenariuszu głównym.
         \item[5.] System wyświetla powiadomienie o błędnych polach formularza.
         \item[6.] Aktor wraca do punktu 3.
       \end{enumerate}
@@ -60,15 +60,15 @@ TODO diagram ecb.
   \addfield{Warunki poprawności danych:}{
     Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.
   }
-  \addfield{Wymagania funkcjonalne:}{2.1 Dodawanie towaru}
+  \addfield{Wymagania funkcjonalne:}{2.1}
 \end{usecase}
 TODO diagram komunikacji
 TODO diagram ecb.
 
 %%%%%%%
-\subsection{Edycja danych towarów}
+\subsection{Edycja opisu towaru}
 \begin{usecase}
-  \addtitle{PU32}{Edycja danych towarów}
+  \addtitle{PU32}{Edycja opisu towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Rozszerza przypadki:}{PU30}
@@ -103,16 +103,16 @@ TODO diagram ecb.
   }
   \addfield{Zakres przetwarzanych danych:}{Dane towaru dostępne przy edycji, przedstawione w rozdziale \ref{dziedzina-problemu}.}
   \addfield{Warunki poprawności danych:}{Warunki poprawności takie jak przedstawione w rozdziale \ref{dziedzina-problemu}.}
-  \addfield{Wymagania funkcjonalne:}{2.2 Edycja danych towarów, 2.2.1 Edycja opisu towaru}
+  \addfield{Wymagania funkcjonalne:}{2.2}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 %%%%%%%
-\subsection{Usuwanie danych towarów}
+\subsection{Usuwanie danych towaru}
 \begin{usecase}
-  \addtitle{PU35}{Usuwanie danych towarów}
+  \addtitle{PU35}{Usuwanie danych towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Warunki początkowe:}{Magazynier został uwierzytelniony.}
+  \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
   \additemizedfield{Warunki końcowe:}{
     \item Dane towaru zostały usunięte z systemu.
     \item Usunięty towar nie jest wypisywany na liście towarów w magazynie.
@@ -131,7 +131,7 @@ TODO diagram komunikacji TODO diagram ecb
         \item[4.] System wyświetla informację, że operacja została anulowana.
       \end{enumerate}
   }
-  \addfield{Wymagania funkcjonalne:}{2.3 Usuwanie danych towarów}
+  \addfield{Wymagania funkcjonalne:}{2.3}
 \end{usecase}
 TODO diagram komunikacji TODO diagram ecb
 % %%%%%%
