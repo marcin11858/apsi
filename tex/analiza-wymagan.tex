@@ -105,10 +105,10 @@ wymagania oraz ryzyku realizacji i aktorach.
 		    \textbf{LP.} & \textbf{Nazwa}  & \textbf{Priorytet} & \textbf{Ryzyko} &
 		    \textbf{Nazwa aktora} \\
 		    \hline
-			1 & Zarządzanie użytkownikami & wysoki & niskie & kierownik \\
-		    1.1 & Dodawanie użytkownika & wysoki & niskie & kierownik \\
-		    1.2 & Edycja danych użytkownika & wysoki & niskie & kierownik \\ 	
-		    1.3 & Usuwanie danych użytkownika & wysoki &niskie & kierownik \\
+			1 & Zarządzanie pracownikami & wysoki & niskie & kierownik \\
+		    1.1 & Dodawanie pracownika & wysoki & niskie & kierownik \\
+		    1.2 & Edycja danych pracownika & wysoki & niskie & kierownik \\ 	
+		    1.3 & Usuwanie danych pracownika & wysoki &niskie & kierownik \\
 		    \hline
 		    2 & Zarządzanie danymi towarów & wysoki & niskie & magazynier \\
 		    2.1 & Dodawanie towaru & wysoki &  niskie & magazynier \\
@@ -144,8 +144,8 @@ wymagania oraz ryzyku realizacji i aktorach.
             5.5.4 & Realizacja korekty wydania towaru & średni & niskie & sprzedawca \\ 
 		   	\hline
 		   	6 & Zarządzanie raportami & średni & niskie & kierownik \\
-		   	6.1 & Generowanie raportu sprzedaży & średni & niskie & kierownik \\
-		   	6.2 & Generowanie raport zakupów & średni & niskie & kierownik \\
+		   	6.1 & Generowanie raportów o wydanych towarach & średni & niskie & kierownik \\
+		   	6.2 & Generowanie raportów o przyjętych towarach & średni & niskie & kierownik \\
 		   	\hline
 	    \end{tabular}
 	\end{center}
@@ -206,11 +206,8 @@ określony priorytet oraz ryzyko.
 
 \section{Specyfikacja przypadków użycia na poziomie ogólnym}
 
-Dwa podstawowe zadania kierownika to zarządzanie innymi użytkownikami
-systemu oraz zarządzanie raportami. Posiada on największe uprawnienia
-w systemie. Może dodawać i usuwać użytkowników, a także nadawać im
-uprawnienia. Kierownik zajmuje się generowaniem raportów sprzedaży i
-zakupu.  Diagram przedstawiający przypadki użycia kierownika znajduje
+Dwa podstawowe zadania kierownika to zarządzanie pracownikami (innymi użytkownikami systemu) oraz zarządzanie raportami. Posiada on największe uprawnienia
+w systemie. Może dodawać i usuwać pracowników, a także nadawać im uprawnienia. Kierownik zajmuje się generowaniem raportów wydanych oraz przyjętych towarów.  Diagram przedstawiający przypadki użycia kierownika znajduje
 się na rysunku \ref{fig:kierownikUseCase}.
 
 Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu
