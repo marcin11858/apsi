@@ -4,7 +4,7 @@
 \subsection{Zarządzanie danymi towarów}
 
 \begin{usecase}
-  \addtitle{PU30}{Zarządzanie danymi towarów}
+  \addtitle{PU18}{Zarządzanie danymi towarów}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
@@ -22,10 +22,10 @@ TODO diagram ecb.
 \subsection{Dodawanie towaru}
 %
 \begin{usecase}
-  \addtitle{PU31}{Dodawanie towaru}
+  \addtitle{PU19}{Dodawanie towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU30}
+  \addfield{Rozszerza przypadki:}{PU18}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
   \additemizedfield{Warunki końcowe:}{ 
     \item Dane towaru zostały zapisane w systemie.
@@ -67,10 +67,10 @@ TODO diagram ecb.
 %%%%%%%
 \subsection{Edycja opisu towaru}
 \begin{usecase}
-  \addtitle{PU32}{Edycja opisu towaru}
+  \addtitle{PU20}{Edycja opisu towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU30}
+  \addfield{Rozszerza przypadki:}{PU18}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
    \additemizedfield{Warunki końcowe:}{ 
     \item Dane towaru zostały zaktualizowane w systemie.
@@ -107,9 +107,10 @@ TODO diagram komunikacji TODO diagram ecb
 %%%%%%%
 \subsection{Usuwanie danych towaru}
 \begin{usecase}
-  \addtitle{PU33}{Usuwanie danych towaru}
+  \addtitle{PU21}{Usuwanie danych towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
+  \addfield{Rozszerza przypadki:}{PU18}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
   \additemizedfield{Warunki końcowe:}{
     \item Dane towaru zostały usunięte z systemu.
@@ -134,10 +135,10 @@ TODO diagram komunikacji TODO diagram ecb
 TODO diagram komunikacji TODO diagram ecb
 \subsection{Korekta stanu towaru}
 \begin{usecase}
-  \addtitle{PU34}{Korekta stanu towaru}
+  \addtitle{PU22}{Korekta stanu towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU30, PU32}
+  \addfield{Rozszerza przypadki:}{PU18, PU20}
   \additemizedfield{Warunki początkowe:}{
     \item Aktor został uwierzytelniony.
     \item W systemie są zapisane dane co najmniej jednego towaru.
@@ -182,7 +183,7 @@ TODO diagram komunikacji TODO diagram ecb
 % %%%%%%
 \subsection{Przyjęcie towaru na magazyn}
 \begin{usecase}
-  \addtitle{PU35}{Przyjęcie towaru na magazyn}
+  \addtitle{PU23}{Przyjęcie towaru na magazyn}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
@@ -198,10 +199,10 @@ TODO diagram ecb.
 %%%%%%%
 \subsection{Tworzenie dokumentu przyjęcia towaru}
 \begin{usecase}
-  \addtitle{PU36}{Tworzenie dokumentu przyjęcia towaru}
+  \addtitle{PU24}{Tworzenie dokumentu przyjęcia towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Rozszerza przypadki:}{PU23}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
   \additemizedfield{Warunki końcowe:}{ 
     \item Dokument przyjęcia towaru został zapisany w systemie.
@@ -254,10 +255,10 @@ TODO diagram ecb.
 %%%%%%%%
 \subsection{Edycja dokumentu przyjęcia towaru}
 \begin{usecase}
-  \addtitle{PU36}{Edycja dokumentu przyjęcia towaru}
+  \addtitle{PU25}{Edycja dokumentu przyjęcia towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Rozszerza przypadki:}{PU23}
   \additemizedfield{Warunki początkowe:}{
     \item Aktor został uwierzytelniony.
     \item Operacja przyjęcia towaru, którego dotyczy wybrany dokument, nie została jeszcze zrealizowana.
@@ -309,10 +310,10 @@ TODO diagram ecb.
 TODO diagram komunikacji TODO diagram ecb
 \subsection{Usuwanie dokumentu przyjęcia towaru}
 \begin{usecase}
-  \addtitle{PU37}{Usuwanie dokumentu przyjęcia towaru}
+  \addtitle{PU26}{Usuwanie dokumentu przyjęcia towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Rozszerza przypadki:}{PU23}
   \addfield{Warunki początkowe:}{Aktor został uwierzytelniony.}
   \additemizedfield{Warunki końcowe:}{
     \item Dane dokumentu zostały usunięte z systemu.
@@ -339,10 +340,10 @@ TODO diagram komunikacji TODO diagram ecb
 
 \subsection{Realizacja przyjęcia towaru na magazyn}
 \begin{usecase}
-  \addtitle{PU38}{Realizacja przyjęcia towaru na magazyn}
+  \addtitle{PU27}{Realizacja przyjęcia towaru na magazyn}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU35, PU36}
+  \addfield{Rozszerza przypadki:}{PU23, PU24}
   \additemizedfield{Warunki początkowe:}{
     \item Aktor został uwierzytelniony.
     \item Wybrane przyjęcie towaru nie zostało jeszcze zrealizowane.}
@@ -372,10 +373,10 @@ TODO diagram ecb
 
 \subsection{Korekta przyjęcia towaru}
 \begin{usecase}
-  \addtitle{PU39}{Korekta przyjęcia towaru}
+  \addtitle{PU28}{Korekta przyjęcia towaru}
   \addfield{Priorytet:}{wysoki}
   \addfield{Aktor główny:}{Magazynier}
-  \addfield{Rozszerza przypadki:}{PU35}
+  \addfield{Rozszerza przypadki:}{PU23}
   \additemizedfield{Warunki początkowe:}{
      \item Aktor został uwierzytelniony.
      \item Wybrany dokument przyjęcia towaru został już zrealizowany.
