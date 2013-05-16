@@ -119,7 +119,7 @@
           <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_8GuiIaYBEeKR54jCR2hajQ"/>
         </children>
         <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_8Gre0aYBEeKR54jCR2hajQ" showStereotype="Image"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8Gre0qYBEeKR54jCR2hajQ" x="15576" y="3828"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8Gre0qYBEeKR54jCR2hajQ" x="16236" y="4356"/>
       </children>
       <children xmi:id="_K69LcKYCEeKR54jCR2hajQ" element="_K65hEKYCEeKR54jCR2hajQ">
         <children xmi:id="_K6-ZkKYCEeKR54jCR2hajQ" type="ImageCompartment">
@@ -1055,7 +1055,7 @@
     <generalization xmi:id="_CBLj0KYBEeKR54jCR2hajQ" general="_9C_LgKYAEeKR54jCR2hajQ"/>
     <generalization xmi:id="_CgnR0KYBEeKR54jCR2hajQ" general="_bExZkKYAEeKR54jCR2hajQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_zclcgKYBEeKR54jCR2hajQ" name="Zarządzanie użytkownikami">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_zclcgKYBEeKR54jCR2hajQ" name="Zarządzanie pracownikami">
     <extensionPoint xmi:id="_CDeNYKYCEeKR54jCR2hajQ" name="ExtensionPoint1"/>
     <extensionPoint xmi:id="_PZ74MKYCEeKR54jCR2hajQ" name="ExtensionPoint2"/>
     <extensionPoint xmi:id="_Tmy6MKYCEeKR54jCR2hajQ" name="ExtensionPoint3"/>
@@ -1070,14 +1070,14 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4gbw4KYBEeKR54jCR2hajQ" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8GobgKYBEeKR54jCR2hajQ" name="Dodawanie użytkowników">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8GobgKYBEeKR54jCR2hajQ" name="Dodawanie pracownika">
     <extend xmi:id="_CC0GEKYCEeKR54jCR2hajQ" extendedCase="_zclcgKYBEeKR54jCR2hajQ" extensionLocation="_CDeNYKYCEeKR54jCR2hajQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_C731AKYCEeKR54jCR2hajQ" name="UseCase1"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_K65hEKYCEeKR54jCR2hajQ" name="Edycja danych użytkowników">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_K65hEKYCEeKR54jCR2hajQ" name="Edycja danych pracownika">
     <extend xmi:id="_PZ9GUKYCEeKR54jCR2hajQ" extendedCase="_zclcgKYBEeKR54jCR2hajQ" extensionLocation="_PZ74MKYCEeKR54jCR2hajQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_QheIAKYCEeKR54jCR2hajQ" name="Usuwanie danych użytkowników">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_QheIAKYCEeKR54jCR2hajQ" name="Usuwanie danych pracownika">
     <extend xmi:id="_Tm0vYKYCEeKR54jCR2hajQ" extendedCase="_zclcgKYBEeKR54jCR2hajQ" extensionLocation="_Tmy6MKYCEeKR54jCR2hajQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_XwMYgKYCEeKR54jCR2hajQ" name="Zarządzanie raportami">
@@ -1094,10 +1094,10 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dOkswKYCEeKR54jCR2hajQ" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_eOOy8KYCEeKR54jCR2hajQ" name="Generowanie raportów sprzedaży">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_eOOy8KYCEeKR54jCR2hajQ" name="Generowanie raportów o wydanych towarach">
     <extend xmi:id="_mhnlcKYCEeKR54jCR2hajQ" extendedCase="_XwMYgKYCEeKR54jCR2hajQ" extensionLocation="_mhqBsKYCEeKR54jCR2hajQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_jQvDgKYCEeKR54jCR2hajQ" name="Generowanie raportów zakupów">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_jQvDgKYCEeKR54jCR2hajQ" name="Generowanie raportów o przyjętych towarach">
     <extend xmi:id="_nMKXQKYCEeKR54jCR2hajQ" extendedCase="_XwMYgKYCEeKR54jCR2hajQ" extensionLocation="_nMJwMKYCEeKR54jCR2hajQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_NuLrkKYDEeKR54jCR2hajQ" name="Zarządzanie danymi towarów">
