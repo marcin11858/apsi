@@ -824,6 +824,15 @@
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_Cl6SAL7uEeKGVqlwbV8Uvw" name="Kontrahent">
+      <ownedAttribute xmi:id="_FtTGoL8jEeKGVqlwbV8Uvw" name="imię" visibility="private"/>
+      <ownedAttribute xmi:id="_Gj1tEL8jEeKGVqlwbV8Uvw" name="nazwisko" visibility="private"/>
+      <ownedAttribute xmi:id="_fCi3oL8jEeKGVqlwbV8Uvw" name="pesel" visibility="private"/>
+      <ownedAttribute xmi:id="_jskWwL8jEeKGVqlwbV8Uvw" name="nip" visibility="private"/>
+      <ownedAttribute xmi:id="_Das8cL8kEeKGVqlwbV8Uvw" name="adres" visibility="private"/>
+      <ownedAttribute xmi:id="_EXNA8L8kEeKGVqlwbV8Uvw" name="telefon" visibility="private"/>
+      <ownedAttribute xmi:id="_FIhwML8kEeKGVqlwbV8Uvw" name="email" visibility="private"/>
+      <ownedAttribute xmi:id="_JpmusL8kEeKGVqlwbV8Uvw" name="nazwa" visibility="private"/>
+      <ownedAttribute xmi:id="_K_lqML8kEeKGVqlwbV8Uvw" name="rodzajKontrahenta" visibility="private"/>
       <ownedOperation xmi:id="_bbXngL8hEeKGVqlwbV8Uvw" name="pobierzDaneDoPrezentacji"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_SuHEoL7uEeKGVqlwbV8Uvw" name="OknoZarządzaniaKontrahentami">
