@@ -1591,9 +1591,27 @@
       <ownedOperation xmi:id="_zuGEML8kEeKGVqlwbV8Uvw" name="generujRaportWydanychTowarów"/>
       <ownedOperation xmi:id="_2EvygL8kEeKGVqlwbV8Uvw" name="generujRaportPrzyjętychTowarów"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_kZsA4L5yEeKCn5GESATZIg" name="DisplayReportTypes"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_nwXzYL5zEeKCn5GESATZIg" name="Towar"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_pXfiML5zEeKCn5GESATZIg" name="DokumentWydaniaTowaru"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nwXzYL5zEeKCn5GESATZIg" name="Towar">
+      <ownedOperation xmi:id="_u3QIsL8yEeKGVqlwbV8Uvw" name="pobierzDaneDoPrezentacji"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pXfiML5zEeKCn5GESATZIg" name="DokumentWZ">
+      <ownedAttribute xmi:id="_bKBJFL8yEeKGVqlwbV8Uvw" name="twórzDokumentWZ" visibility="private">
+        <type xmi:type="uml:Class" href="platform:/resource/ModulSprzedazy/ModulSprzedazy.emx#_S79_AL8xEeKGVqlwbV8Uvw?ModulSprzedazy/TwórzDokumentWZ?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bKBJFr8yEeKGVqlwbV8Uvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bKBJFb8yEeKGVqlwbV8Uvw" value="1"/>
+        <association href="platform:/resource/ModulSprzedazy/ModulSprzedazy.emx#_bKBJEL8yEeKGVqlwbV8Uvw?ModulSprzedazy/%3CAssociation%3E?"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zhaxwb8yEeKGVqlwbV8Uvw" name="towar" visibility="private" type="_nwXzYL5zEeKCn5GESATZIg" association="_zhaxwL8yEeKGVqlwbV8Uvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhaxw78yEeKGVqlwbV8Uvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhaxwr8yEeKGVqlwbV8Uvw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_z-LmQb8yEeKGVqlwbV8Uvw" name="kontrahent" visibility="private" association="_z-LmQL8yEeKGVqlwbV8Uvw">
+        <type xmi:type="uml:Class" href="platform:/resource/ObslugaKontahentow/ObslugaKontrahentow.emx#_Cl6SAL7uEeKGVqlwbV8Uvw?ObslugaKontrahentow/Kontrahent?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-LmQ78yEeKGVqlwbV8Uvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z-LmQr8yEeKGVqlwbV8Uvw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_3j3a4L8vEeKGVqlwbV8Uvw" name="pobierzDaneDoWyświetlenia"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_sJRGQL5zEeKCn5GESATZIg" name="GenerujRaportWydanychTowarów">
       <ownedAttribute xmi:id="_wjf14b5zEeKCn5GESATZIg" name="delivery" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_wjf14L5zEeKCn5GESATZIg">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wjf1475zEeKCn5GESATZIg" value="1"/>
@@ -1635,7 +1653,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v1ttYr50EeKCn5GESATZIg"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_mBBgML50EeKCn5GESATZIg" name="DokumentPrzyjęciaTowaru"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mBBgML50EeKCn5GESATZIg" name="DokumentPZ"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_tNUu0L50EeKCn5GESATZIg" memberEnd="_tNUu0b50EeKCn5GESATZIg _tNUu1L50EeKCn5GESATZIg"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_vL_a8L50EeKCn5GESATZIg" memberEnd="_vL_a8b50EeKCn5GESATZIg _vL_a9L50EeKCn5GESATZIg">
       <ownedEnd xmi:id="_vL_a9L50EeKCn5GESATZIg" name="" visibility="private" type="_iqJD8L50EeKCn5GESATZIg" association="_vL_a8L50EeKCn5GESATZIg">
@@ -1659,6 +1677,18 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_-qnyQL8bEeKGVqlwbV8Uvw" memberEnd="_-qnyQb8bEeKGVqlwbV8Uvw _-qnyRL8bEeKGVqlwbV8Uvw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zhaxwL8yEeKGVqlwbV8Uvw" memberEnd="_zhaxwb8yEeKGVqlwbV8Uvw _zhaxxL8yEeKGVqlwbV8Uvw">
+      <ownedEnd xmi:id="_zhaxxL8yEeKGVqlwbV8Uvw" name="" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_zhaxwL8yEeKGVqlwbV8Uvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zhkiwb8yEeKGVqlwbV8Uvw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhkiwL8yEeKGVqlwbV8Uvw"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_z-LmQL8yEeKGVqlwbV8Uvw" memberEnd="_z-LmQb8yEeKGVqlwbV8Uvw _z-LmRL8yEeKGVqlwbV8Uvw">
+      <ownedEnd xmi:id="_z-LmRL8yEeKGVqlwbV8Uvw" name="" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_z-LmQL8yEeKGVqlwbV8Uvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-UwMb8yEeKGVqlwbV8Uvw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z-UwML8yEeKGVqlwbV8Uvw"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:id="_MiYuNb5qEeKCn5GESATZIg">
       <eAnnotations xmi:id="_MiYuNr5qEeKCn5GESATZIg" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
@@ -1693,7 +1723,6 @@
   <RUPAnalysis:Boundary xmi:id="_9K90EL5wEeKCn5GESATZIg" base_Class="_62_mUL5wEeKCn5GESATZIg"/>
   <RUPAnalysis:Control xmi:id="_FPTd8L5xEeKCn5GESATZIg" base_Class="_DEkEsL5xEeKCn5GESATZIg"/>
   <RUPAnalysis:Boundary xmi:id="_jUZMwL5yEeKCn5GESATZIg" base_Class="_hZdKEL5yEeKCn5GESATZIg"/>
-  <RUPAnalysis:Control xmi:id="_b0rdcL5zEeKCn5GESATZIg" base_Class="_kZsA4L5yEeKCn5GESATZIg"/>
   <RUPAnalysis:Entity xmi:id="_-4iBwL5zEeKCn5GESATZIg" base_Class="_pXfiML5zEeKCn5GESATZIg"/>
   <RUPAnalysis:Entity xmi:id="__g63cL5zEeKCn5GESATZIg" base_Class="_nwXzYL5zEeKCn5GESATZIg"/>
   <RUPAnalysis:Control xmi:id="_AHOCcL50EeKCn5GESATZIg" base_Class="_sJRGQL5zEeKCn5GESATZIg"/>
