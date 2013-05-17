@@ -834,6 +834,7 @@
       <ownedAttribute xmi:id="_JpmusL8kEeKGVqlwbV8Uvw" name="nazwa" visibility="private"/>
       <ownedAttribute xmi:id="_K_lqML8kEeKGVqlwbV8Uvw" name="rodzajKontrahenta" visibility="private"/>
       <ownedOperation xmi:id="_bbXngL8hEeKGVqlwbV8Uvw" name="pobierzDaneDoPrezentacji"/>
+      <ownedOperation xmi:id="_yU5QEL85EeKGVqlwbV8Uvw" name="ustawDane"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_SuHEoL7uEeKGVqlwbV8Uvw" name="OknoZarządzaniaKontrahentami">
       <ownedAttribute xmi:id="_meoBwb7uEeKGVqlwbV8Uvw" name="displayContractors" visibility="private" type="_bLnccL7uEeKGVqlwbV8Uvw" association="_meoBwL7uEeKGVqlwbV8Uvw">
