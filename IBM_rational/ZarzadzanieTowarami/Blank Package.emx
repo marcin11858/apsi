@@ -3706,10 +3706,6 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fjct0r86EeKGVqlwbV8Uvw" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fjct0b86EeKGVqlwbV8Uvw"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_FFZPwb88EeKGVqlwbV8Uvw" name="towar5" visibility="private" type="_gEwp8L8gEeK4hPGbCuLmFw" association="_FFZPwL88EeKGVqlwbV8Uvw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FFZPw788EeKGVqlwbV8Uvw" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FFZPwr88EeKGVqlwbV8Uvw"/>
-      </ownedAttribute>
       <ownedOperation xmi:id="_pBIxQL8vEeK4hPGbCuLmFw" name="ustawDane"/>
       <ownedOperation xmi:id="_milrML8vEeK4hPGbCuLmFw" name="pobierzDaneDoPrezentacji"/>
       <ownedOperation xmi:id="_qqVjsL8vEeK4hPGbCuLmFw" name="obliczSumeIlosciTowarow"/>
@@ -4049,12 +4045,6 @@
       <ownedEnd xmi:id="_k5lFAb86EeKGVqlwbV8Uvw" name="" visibility="private" type="_KS3lwL8yEeK4hPGbCuLmFw" association="_k5bUAL86EeKGVqlwbV8Uvw">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k5lFA786EeKGVqlwbV8Uvw" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k5lFAr86EeKGVqlwbV8Uvw"/>
-      </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_FFZPwL88EeKGVqlwbV8Uvw" memberEnd="_FFZPwb88EeKGVqlwbV8Uvw _FFjAwL88EeKGVqlwbV8Uvw">
-      <ownedEnd xmi:id="_FFjAwL88EeKGVqlwbV8Uvw" name="" visibility="private" type="_HHq8cL8vEeK4hPGbCuLmFw" association="_FFZPwL88EeKGVqlwbV8Uvw">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FFjAwr88EeKGVqlwbV8Uvw" value="*"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FFjAwb88EeKGVqlwbV8Uvw"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:id="_KOtvWL5SEeKQpIvVeCBC9w">
