@@ -1596,7 +1596,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_pXfiML5zEeKCn5GESATZIg" name="DokumentWZ">
       <ownedAttribute xmi:id="_bKBJFL8yEeKGVqlwbV8Uvw" name="twórzDokumentWZ" visibility="private">
-        <type xmi:type="uml:Class" href="platform:/resource/ModulSprzedazy/ModulSprzedazy.emx#_S79_AL8xEeKGVqlwbV8Uvw?ModulSprzedazy/TwórzDokumentWZ?"/>
+        <type xmi:type="uml:Class" href="platform:/resource/ModulSprzedazy/ModulSprzedazy.emx#_S79_AL8xEeKGVqlwbV8Uvw?ModulSprzedazy/UtwórzDokumentWZ?"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bKBJFr8yEeKGVqlwbV8Uvw" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bKBJFb8yEeKGVqlwbV8Uvw" value="1"/>
         <association href="platform:/resource/ModulSprzedazy/ModulSprzedazy.emx#_bKBJEL8yEeKGVqlwbV8Uvw?ModulSprzedazy/%3CAssociation%3E?"/>
@@ -1610,7 +1610,15 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-LmQ78yEeKGVqlwbV8Uvw" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z-LmQr8yEeKGVqlwbV8Uvw"/>
       </ownedAttribute>
-      <ownedOperation xmi:id="_3j3a4L8vEeKGVqlwbV8Uvw" name="pobierzDaneDoWyświetlenia"/>
+      <ownedAttribute xmi:id="_JfrxIL85EeKGVqlwbV8Uvw" name="towar2" visibility="private" association="_JfiAIL85EeKGVqlwbV8Uvw">
+        <type xmi:type="uml:Class" href="platform:/resource/ZarzadzanieTowarami/Blank%20Package.emx#_gEwp8L8gEeK4hPGbCuLmFw?Blank%20Package/Towar?"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JfrxIr85EeKGVqlwbV8Uvw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JfrxIb85EeKGVqlwbV8Uvw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_fWkaUL84EeKGVqlwbV8Uvw" name="ustawDane"/>
+      <ownedOperation xmi:id="_3j3a4L8vEeKGVqlwbV8Uvw" name="pobierzDaneDoPrezentacji"/>
+      <ownedOperation xmi:id="_hoc9YL84EeKGVqlwbV8Uvw" name="obliczSumeIlosciTowarow"/>
+      <ownedOperation xmi:id="_jf0HoL84EeKGVqlwbV8Uvw" name="obliczSumeCenTowarow"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_sJRGQL5zEeKCn5GESATZIg" name="GenerujRaportWydanychTowarów">
       <ownedAttribute xmi:id="_wjf14b5zEeKCn5GESATZIg" name="delivery" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_wjf14L5zEeKCn5GESATZIg">
@@ -1687,6 +1695,12 @@
       <ownedEnd xmi:id="_z-LmRL8yEeKGVqlwbV8Uvw" name="" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_z-LmQL8yEeKGVqlwbV8Uvw">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z-UwMb8yEeKGVqlwbV8Uvw" value="*"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z-UwML8yEeKGVqlwbV8Uvw"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JfiAIL85EeKGVqlwbV8Uvw" memberEnd="_JfrxIL85EeKGVqlwbV8Uvw _JfrxI785EeKGVqlwbV8Uvw">
+      <ownedEnd xmi:id="_JfrxI785EeKGVqlwbV8Uvw" name="" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_JfiAIL85EeKGVqlwbV8Uvw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JfrxJb85EeKGVqlwbV8Uvw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JfrxJL85EeKGVqlwbV8Uvw"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:id="_MiYuNb5qEeKCn5GESATZIg">
