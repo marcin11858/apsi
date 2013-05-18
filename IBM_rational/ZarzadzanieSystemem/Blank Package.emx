@@ -1641,6 +1641,10 @@
       <ownedOperation xmi:id="_3j3a4L8vEeKGVqlwbV8Uvw" name="pobierzDaneDoPrezentacji"/>
       <ownedOperation xmi:id="_hoc9YL84EeKGVqlwbV8Uvw" name="obliczSumeIlosciTowarow"/>
       <ownedOperation xmi:id="_jf0HoL84EeKGVqlwbV8Uvw" name="obliczSumeCenTowarow"/>
+      <ownedOperation xmi:id="_JBBDcL_OEeK56coZtA2fTg" name="new"/>
+      <ownedOperation xmi:id="_lz9tkL_SEeK56coZtA2fTg" name="ustawDaneDokumentu"/>
+      <ownedOperation xmi:id="_td-hAL_UEeK56coZtA2fTg" name="delete"/>
+      <ownedOperation xmi:id="_knKb4L_VEeK56coZtA2fTg" name="oznaczJakoZrealizowany"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_sJRGQL5zEeKCn5GESATZIg" name="GenerujRaportWydanychTowarów">
       <ownedAttribute xmi:id="_wjf14b5zEeKCn5GESATZIg" name="delivery" visibility="private" type="_pXfiML5zEeKCn5GESATZIg" association="_wjf14L5zEeKCn5GESATZIg">
