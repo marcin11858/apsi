@@ -75,7 +75,7 @@
             <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="__yyJNr-UEeKcE5qJXSFHgA" canonical="false"/>
           </children>
           <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="__yo_Qr-UEeKcE5qJXSFHgA" showStereotype="Label"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__yo_Q7-UEeKcE5qJXSFHgA" x="5280" y="-2904" width="4704" height="6100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__yo_Q7-UEeKcE5qJXSFHgA" x="3960" y="-2640" width="4704" height="6100"/>
         </children>
         <children xmi:id="_BHR28b-VEeKcE5qJXSFHgA" element="_BHR28L-VEeKcE5qJXSFHgA">
           <children xmi:id="_BHR29L-VEeKcE5qJXSFHgA" type="ImageCompartment">
@@ -146,7 +146,7 @@
             <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_BHR2-r-VEeKcE5qJXSFHgA" canonical="false"/>
           </children>
           <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_BHR28r-VEeKcE5qJXSFHgA" showStereotype="Label"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BHR287-VEeKcE5qJXSFHgA" x="11352" y="-2904" width="3785" height="5975"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BHR287-VEeKcE5qJXSFHgA" x="9504" y="-2640" width="3785" height="5975"/>
         </children>
         <children xmi:id="_ERyEEL-VEeKcE5qJXSFHgA" element="_ERo6IL-VEeKcE5qJXSFHgA">
           <children xmi:id="_ERyEE7-VEeKcE5qJXSFHgA" type="ImageCompartment">
@@ -246,7 +246,7 @@
             <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_ERyEGb-VEeKcE5qJXSFHgA" canonical="false"/>
           </children>
           <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_ERyEEb-VEeKcE5qJXSFHgA" showStereotype="Label"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ERyEEr-VEeKcE5qJXSFHgA" x="16896" y="-2904" width="9332" height="6098"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ERyEEr-VEeKcE5qJXSFHgA" x="14520" y="-2640" width="9332" height="6098"/>
         </children>
         <children xmi:id="_F0Rxkb-VEeKcE5qJXSFHgA" element="_F0RxkL-VEeKcE5qJXSFHgA">
           <children xmi:id="_F0RxlL-VEeKcE5qJXSFHgA" type="ImageCompartment">
@@ -1094,9 +1094,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_BHR28L-VEeKcE5qJXSFHgA" name="Sprzedaz">
       <packagedElement xmi:type="uml:Component" xmi:id="_SRbucL-YEeKcE5qJXSFHgA" name="Kontroler" clientDependency="_tpEN8L-YEeKcE5qJXSFHgA _9_uTUL-YEeKcE5qJXSFHgA _-hs_AL-YEeKcE5qJXSFHgA">
-        <eAnnotations xmi:id="_WIWVoL-YEeKcE5qJXSFHgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <details xmi:id="_WIWVob-YEeKcE5qJXSFHgA" key="serwlet"/>
-        </eAnnotations>
+        <eAnnotations xmi:id="_WIWVoL-YEeKcE5qJXSFHgA" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_gI834L-YEeKcE5qJXSFHgA" name="Widoki">
         <eAnnotations xmi:id="_KoaSIL-ZEeKcE5qJXSFHgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -1117,7 +1115,11 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_Xg5AcL-ZEeKcE5qJXSFHgA" supplier="_DU0IsL-ZEeKcE5qJXSFHgA" client="_PjkkkL-ZEeKcE5qJXSFHgA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YHo3YL-ZEeKcE5qJXSFHgA" supplier="_g6iiUL-XEeKcE5qJXSFHgA" client="_PjkkkL-ZEeKcE5qJXSFHgA"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_YjWjAL-ZEeKcE5qJXSFHgA" supplier="_0BoH8L-XEeKcE5qJXSFHgA" client="_PjkkkL-ZEeKcE5qJXSFHgA"/>
-      <packagedElement xmi:type="uml:Component" xmi:id="_DpnzsL-cEeKcE5qJXSFHgA" name="Interfejs czytnika kodów kreskowych"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_DpnzsL-cEeKcE5qJXSFHgA" name="Interfejs czytnika kodów kreskowych">
+        <eAnnotations xmi:id="_B0oEIL-gEeKcE5qJXSFHgA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_Dz3_EL-gEeKcE5qJXSFHgA" key="driver"/>
+        </eAnnotations>
+      </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_LI_IQL-cEeKcE5qJXSFHgA" supplier="_DpnzsL-cEeKcE5qJXSFHgA" client="_PjkkkL-ZEeKcE5qJXSFHgA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_F0RxkL-VEeKcE5qJXSFHgA" name="Aplikacja">
