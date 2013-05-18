@@ -4528,7 +4528,7 @@
               </children>
               <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_W8__Ub-QEeKpl4fWZGOZDg" lineWidth="1" showStereotype="Text"/>
               <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_W8__Ur-QEeKpl4fWZGOZDg" points="[0, 0, 190, 0]$[-190, 0, 0, 0]"/>
-              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_W9JwUL-QEeKpl4fWZGOZDg" id="8554:424"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_W9JwUL-QEeKpl4fWZGOZDg" id="8554:687"/>
               <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_W9JwUb-QEeKpl4fWZGOZDg" id="8737:0"/>
             </edges>
           </contents>
