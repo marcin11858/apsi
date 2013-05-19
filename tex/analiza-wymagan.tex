@@ -69,6 +69,9 @@ architekturze trójwarstwowej uwzględnione są następujące warstwy:
 W przypadku realizowanego systemu do obsługi magazynu zastosowana będzie
 architektura trójwarstwowa.
 
+%%%%%%%%%% DZIEDZINA PROBLEMU
+\input{dziedzina-problemu}
+
 \section{Aktorzy}
 
 Aktorzy w zaprojektowanym systemie zostali podzieleni na dwie grupy: aktorów
@@ -143,6 +146,7 @@ wymagania oraz ryzyku realizacji i aktorach.
 	\end{center}
 \end{table}
 \FloatBarrier
+\newpage
 
 \section{Wymagania niefunkcjonalne}
 
@@ -195,32 +199,3 @@ określony priorytet oraz ryzyko.
 	\end{center}
 \end{table}
 \FloatBarrier
-
-\section{Specyfikacja przypadków użycia na poziomie ogólnym}
-
-Dwa podstawowe zadania kierownika to zarządzanie pracownikami (innymi
-użytkownikami systemu) oraz zarządzanie raportami. Posiada on
-największe uprawnienia w systemie. Może dodawać i usuwać pracowników,
-a także nadawać im uprawnienia. Kierownik zajmuje się generowaniem
-raportów wydanych oraz przyjętych towarów.  Diagram przedstawiający
-przypadki użycia kierownika znajduje się na rysunku
-\ref{fig:kierownikUseCase}.
-
-Magazynier jest osobą odpowiedzialną za odwzorowanie aktualnego stanu
-magazynu w systemie. Wprowadza dane towarów do systemu, a także
-aktualizuje ich stan. Ponadto zarządza on przyjęciami towaru do
-magazynu oraz danymi kontrahentów.  Zadaniem magazyniera jest
-prowadzenie ewidencji kontrahentów, dodawanie nowych oraz usuwanie
-tych, z którymi zakończono współpracę. Magazynier kontroluje
-przyjmowanie towarów do magazynu.  W razie potrzeby może zwrócić
-przyjęty towar. Diagram przedstawiający opisane przypadki użycia
-został zaprezentowany na rysunku \ref{fig:magazynierUseCase}.
-
-Sprzedawca pośredniczy w kontaktach z kontrahentem i zarządza procesem
-sprzedaży towarów. Przyjmuje on zamówienia (wykonuje operacje wydania
-towaru z magazynu) i dodaje je do bazy, aktualizując jednocześnie dane
-klientów. Sprawuje kontrolę nad realizacją wydania towaru z magazynu,
-a w razie potrzeby może przyjąć zwrócony towar. Do zadań sprzedawcy
-należy prowadzenie ewidencji kontrahentów, aktualizowanie informacji o
-nich oraz usuwanie starych. Przypadki użycia sprzedawcy zostały
-zaprezentowane na diagramie \ref{fig:sprzedawcaUseCase}.
