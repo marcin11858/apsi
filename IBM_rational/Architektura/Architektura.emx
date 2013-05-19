@@ -470,7 +470,7 @@
                 <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_rDTXib-WEeKcE5qJXSFHgA"/>
               </children>
               <styles xmi:type="umlnotation:UMLComponentStyle" xmi:id="_rDKNkr-WEeKcE5qJXSFHgA" showStereotype="Label"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rDKNk7-WEeKcE5qJXSFHgA" x="5940" y="449"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rDKNk7-WEeKcE5qJXSFHgA" x="5940" y="185"/>
             </children>
             <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_IfMfub-VEeKcE5qJXSFHgA" canonical="false"/>
           </children>
@@ -1136,7 +1136,7 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_DfqjQL-YEeKcE5qJXSFHgA" supplier="_dWhecL-WEeKcE5qJXSFHgA" client="_0BoH8L-XEeKcE5qJXSFHgA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_IfDVwL-VEeKcE5qJXSFHgA" name="DBMS">
-      <packagedElement xmi:type="uml:Component" xmi:id="_mUgtIL-WEeKcE5qJXSFHgA" name="Procedury składowane" clientDependency="_v9RXIL-WEeKcE5qJXSFHgA"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_mUgtIL-WEeKcE5qJXSFHgA" name="Perspektywy" clientDependency="_v9RXIL-WEeKcE5qJXSFHgA"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_rDKNkL-WEeKcE5qJXSFHgA" name="Model relacyjny"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_v9RXIL-WEeKcE5qJXSFHgA" supplier="_rDKNkL-WEeKcE5qJXSFHgA" client="_mUgtIL-WEeKcE5qJXSFHgA"/>
     </packagedElement>
