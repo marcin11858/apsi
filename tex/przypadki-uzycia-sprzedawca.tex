@@ -1,6 +1,22 @@
-\section{Moduł sprzedaży}
-\singlespacing
+\section{Sprzedaż}
+Sprzedawca pośredniczy w kontaktach z kontrahentem i zarządza procesem
+sprzedaży towarów. Przyjmuje on zamówienia (wykonuje operacje wydania
+towaru z magazynu) i dodaje je do bazy, aktualizując jednocześnie dane
+klientów. Sprawuje kontrolę nad realizacją wydania towaru z magazynu,
+a w razie potrzeby może przyjąć zwrócony towar. Do zadań sprzedawcy
+należy prowadzenie ewidencji kontrahentów, aktualizowanie informacji o
+nich oraz usuwanie starych. Przypadki użycia sprzedawcy zostały
+zaprezentowane na diagramie \ref{fig:Sprzedaz}.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{../img/usecase/Sprzedaz.pdf}
+  \caption{Diagram przypadków użycia dla sprzedaży.}
+  \label{fig:Sprzedaz}
+\end{figure}
+
+\newpage
+\singlespacing
 \subsection{Wydanie towaru z magazynu}
 \begin{usecase}
   \addtitle{PU12}{Wydanie towaru z magazynu}
