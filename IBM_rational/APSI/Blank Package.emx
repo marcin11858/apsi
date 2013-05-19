@@ -491,6 +491,19 @@
         <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_n3IqEaYGEeKR54jCR2hajQ" showStereotype="Image"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n3IqEqYGEeKR54jCR2hajQ" x="4752" y="14652"/>
       </children>
+      <children xmi:id="_DUW70MBAEeKmWLhPgAGDXQ" element="_DUNx4MBAEeKmWLhPgAGDXQ">
+        <children xmi:id="_DUW708BAEeKmWLhPgAGDXQ" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_DUW71MBAEeKmWLhPgAGDXQ" width="2216" height="1322"/>
+        </children>
+        <children xmi:id="_DUW71cBAEeKmWLhPgAGDXQ" type="Stereotype"/>
+        <children xmi:id="_DUW71sBAEeKmWLhPgAGDXQ" type="Name"/>
+        <children xmi:id="_DUW718BAEeKmWLhPgAGDXQ" type="Parent"/>
+        <children xmi:id="_DUW72MBAEeKmWLhPgAGDXQ" visible="false" type="Extension_Points">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_DUW72cBAEeKmWLhPgAGDXQ"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_DUW70cBAEeKmWLhPgAGDXQ" showStereotype="Image"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DUW70sBAEeKmWLhPgAGDXQ" x="18216" y="3168"/>
+      </children>
       <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="__QXXIKYCEeKR54jCR2hajQ"/>
       <element xsi:nil="true"/>
       <edges xmi:id="__qEbIKYDEeKR54jCR2hajQ" element="__p-UgKYDEeKR54jCR2hajQ" source="_ZLk78KYDEeKR54jCR2hajQ" target="_NuP9AKYDEeKR54jCR2hajQ">
@@ -702,6 +715,26 @@
         <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_yk_Ek74HEeKSnfBV-4cUmw" lineWidth="1" showStereotype="Text"/>
         <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yk_ElL4HEeKSnfBV-4cUmw" points="[-1, -10, -2, 125]$[-37, -118, -38, 17]"/>
       </edges>
+      <edges xmi:id="_IXHrEcBAEeKmWLhPgAGDXQ" element="_IW96EMBAEeKmWLhPgAGDXQ" source="_DUW70MBAEeKmWLhPgAGDXQ" target="_ZLk78KYDEeKR54jCR2hajQ">
+        <children xmi:id="_IXHrFMBAEeKmWLhPgAGDXQ" type="KindLabel">
+          <children xmi:id="_IXHrFsBAEeKmWLhPgAGDXQ" type="Stereotype"/>
+          <children xmi:id="_IXHrGMBAEeKmWLhPgAGDXQ" type="Kind"/>
+          <children xmi:id="_IXHrF8BAEeKmWLhPgAGDXQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IXHrFcBAEeKmWLhPgAGDXQ" y="-186"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_IXHrEsBAEeKmWLhPgAGDXQ" lineWidth="1" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IXHrE8BAEeKmWLhPgAGDXQ" points="[-7, -10, 222, 264]$[-188, -260, 41, 14]"/>
+      </edges>
+      <edges xmi:id="_JO_uQMBAEeKmWLhPgAGDXQ" element="_JO2kUcBAEeKmWLhPgAGDXQ" source="_DUW70MBAEeKmWLhPgAGDXQ" target="_XsQ98KYGEeKR54jCR2hajQ">
+        <children xmi:id="_JO_uQ8BAEeKmWLhPgAGDXQ" type="KindLabel">
+          <children xmi:id="_JO_uRcBAEeKmWLhPgAGDXQ" type="Stereotype"/>
+          <children xmi:id="_JO_uR8BAEeKmWLhPgAGDXQ" type="Kind"/>
+          <children xmi:id="_JO_uRsBAEeKmWLhPgAGDXQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JO_uRMBAEeKmWLhPgAGDXQ" y="-186"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_JO_uQcBAEeKmWLhPgAGDXQ" lineWidth="1" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JO_uQsBAEeKmWLhPgAGDXQ" points="[-17, 10, 199, -100]$[-171, 96, 45, -14]"/>
+      </edges>
     </contents>
     <contents xmi:type="notation:Diagram" xmi:id="_IBZLEKYHEeKR54jCR2hajQ" type="Usecase" name="Sprzedaz">
       <children xmi:id="_ItL6EKYHEeKR54jCR2hajQ" element="_9C_LgKYAEeKR54jCR2hajQ">
@@ -791,6 +824,19 @@
         </children>
         <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_5L56saZMEeKQuuFkzNy1Vw" showStereotype="Image"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5L56sqZMEeKQuuFkzNy1Vw" x="7788" y="10824"/>
+      </children>
+      <children xmi:id="_OQkKscBAEeKmWLhPgAGDXQ" element="_OQkKsMBAEeKmWLhPgAGDXQ">
+        <children xmi:id="_OQkKtMBAEeKmWLhPgAGDXQ" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_OQkKtcBAEeKmWLhPgAGDXQ" width="2216" height="1322"/>
+        </children>
+        <children xmi:id="_OQkKtsBAEeKmWLhPgAGDXQ" type="Stereotype"/>
+        <children xmi:id="_OQkKt8BAEeKmWLhPgAGDXQ" type="Name"/>
+        <children xmi:id="_OQt7sMBAEeKmWLhPgAGDXQ" type="Parent"/>
+        <children xmi:id="_OQt7scBAEeKmWLhPgAGDXQ" visible="false" type="Extension_Points">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_OQt7ssBAEeKmWLhPgAGDXQ"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLClassifierStyle" xmi:id="_OQkKssBAEeKmWLhPgAGDXQ" showStereotype="Image"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OQkKs8BAEeKmWLhPgAGDXQ" x="14124" y="528"/>
       </children>
       <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_IBZLEaYHEeKR54jCR2hajQ"/>
       <element xsi:nil="true"/>
@@ -902,6 +948,16 @@
         </children>
         <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_bG9g0b48EeKSnfBV-4cUmw" lineWidth="1" showStereotype="Text"/>
         <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bG9g0r48EeKSnfBV-4cUmw" points="[-1, -10, 0, 130]$[-1, -117, 0, 23]"/>
+      </edges>
+      <edges xmi:id="_T-sLIMBAEeKmWLhPgAGDXQ" element="_T-iaIcBAEeKmWLhPgAGDXQ" source="_OQkKscBAEeKmWLhPgAGDXQ" target="_mRffIKZMEeKQuuFkzNy1Vw">
+        <children xmi:id="_T-sLI8BAEeKmWLhPgAGDXQ" type="KindLabel">
+          <children xmi:id="_T-sLJcBAEeKmWLhPgAGDXQ" type="Stereotype"/>
+          <children xmi:id="_T-sLJ8BAEeKmWLhPgAGDXQ" type="Kind"/>
+          <children xmi:id="_T-sLJsBAEeKmWLhPgAGDXQ" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T-sLJMBAEeKmWLhPgAGDXQ" y="-186"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_T-sLIcBAEeKmWLhPgAGDXQ" lineWidth="1" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T-sLIsBAEeKmWLhPgAGDXQ" points="[-2, 10, -14, -55]$[-33, 50, -45, -15]"/>
       </edges>
     </contents>
     <contents xmi:type="notation:Diagram" xmi:id="_5UkEsL44EeKSnfBV-4cUmw" type="Usecase" name="ObslugaKontrahentow">
@@ -1120,6 +1176,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_ZLgqgKYDEeKR54jCR2hajQ" name="Dodawanie towaru">
     <extend xmi:id="__p-UgKYDEeKR54jCR2hajQ" extendedCase="_NuLrkKYDEeKR54jCR2hajQ" extensionLocation="__qAJsKYDEeKR54jCR2hajQ"/>
+    <extensionPoint xmi:id="_IXHrEMBAEeKmWLhPgAGDXQ" name="ExtensionPoint1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_2UImgKYDEeKR54jCR2hajQ" name="Edycja opisu towaru">
     <extend xmi:id="_ADrN8KYEEeKR54jCR2hajQ" extendedCase="_2UImgKYDEeKR54jCR2hajQ" extensionLocation="_ADtqMKYEEeKR54jCR2hajQ"/>
@@ -1195,6 +1252,7 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_XsMFcKYGEeKR54jCR2hajQ" name="Tworzenie dokumentu przyjęcia towaru">
     <extend xmi:id="_qxb4AKYGEeKR54jCR2hajQ" extendedCase="_62klAKYFEeKR54jCR2hajQ" extensionLocation="_qxeUQKYGEeKR54jCR2hajQ"/>
     <extensionPoint xmi:id="_yk_Ekb4HEeKSnfBV-4cUmw" name="ExtensionPoint1"/>
+    <extensionPoint xmi:id="_JO2kUMBAEeKmWLhPgAGDXQ" name="ExtensionPoint2"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_cCIyAKYGEeKR54jCR2hajQ" name="Edycja dokumentu przyjęcia towaru">
     <extend xmi:id="_rhFMQKYGEeKR54jCR2hajQ" extendedCase="_62klAKYFEeKR54jCR2hajQ" extensionLocation="_rhD-IKYGEeKR54jCR2hajQ"/>
@@ -1253,6 +1311,7 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_mRb0wKZMEeKQuuFkzNy1Vw" name="Tworzenie dokumentu wydania towaru">
     <extend xmi:id="_73zgQKZMEeKQuuFkzNy1Vw" extendedCase="_etlBwKZMEeKQuuFkzNy1Vw" extensionLocation="_7318gKZMEeKQuuFkzNy1Vw"/>
     <extensionPoint xmi:id="_bGzv0b48EeKSnfBV-4cUmw" name="ExtensionPoint1"/>
+    <extensionPoint xmi:id="_T-iaIMBAEeKmWLhPgAGDXQ" name="ExtensionPoint2"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_r_CQwKZMEeKQuuFkzNy1Vw" name="Edycja dokumentu wydania towaru">
     <extend xmi:id="_8dOhgKZMEeKQuuFkzNy1Vw" extendedCase="_etlBwKZMEeKQuuFkzNy1Vw" extensionLocation="_8dNTYKZMEeKQuuFkzNy1Vw"/>
@@ -1298,6 +1357,13 @@
     <ownedBehavior xmi:type="uml:Interaction" xmi:id="_-6pdQL5VEeKQpIvVeCBC9w" name="Interaction1">
       <eAnnotations xmi:id="_-8bl8L5VEeKQpIvVeCBC9w" source="uml2.diagrams"/>
     </ownedBehavior>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DUNx4MBAEeKmWLhPgAGDXQ" name="Skanowanie kodu kreskowego">
+    <extend xmi:id="_IW96EMBAEeKmWLhPgAGDXQ" extendedCase="_ZLgqgKYDEeKR54jCR2hajQ" extensionLocation="_IXHrEMBAEeKmWLhPgAGDXQ"/>
+    <extend xmi:id="_JO2kUcBAEeKmWLhPgAGDXQ" extendedCase="_XsMFcKYGEeKR54jCR2hajQ" extensionLocation="_JO2kUMBAEeKmWLhPgAGDXQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_OQkKsMBAEeKmWLhPgAGDXQ" name="Skanowanie kodu kreskowego">
+    <extend xmi:id="_T-iaIcBAEeKmWLhPgAGDXQ" extendedCase="_mRb0wKZMEeKQuuFkzNy1Vw" extensionLocation="_T-iaIMBAEeKmWLhPgAGDXQ"/>
   </packagedElement>
   <profileApplication xmi:id="_zr-OQ6X_EeKR54jCR2hajQ">
     <eAnnotations xmi:id="_zr-1UKX_EeKR54jCR2hajQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
