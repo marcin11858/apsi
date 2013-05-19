@@ -3346,7 +3346,7 @@
       <ownedOperation xmi:id="_fLfhYL-pEeKcE5qJXSFHgA" name="wprowadzDaneDokumentu"/>
       <ownedOperation xmi:id="_7KV8cL-qEeKcE5qJXSFHgA" name="wyswietlBlad"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_zVox0L8tEeK4hPGbCuLmFw" name="KorygujStanTowaru">
+    <packagedElement xmi:type="uml:Class" xmi:id="_zVox0L8tEeK4hPGbCuLmFw" name="KorygujStanTowarów">
       <ownedAttribute xmi:id="_7foXxL8tEeK4hPGbCuLmFw" name="formularzKorektyStanuTowaru" visibility="private" type="_lG4NEL8tEeK4hPGbCuLmFw" association="_7foXwL8tEeK4hPGbCuLmFw">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7foXxr8tEeK4hPGbCuLmFw" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7foXxb8tEeK4hPGbCuLmFw" value="1"/>
@@ -5267,7 +5267,7 @@
     <packagedElement xmi:type="uml:SendOperationEvent" xmi:id="_dS4E0r-nEeKcE5qJXSFHgA" name="SendOperationEvent31"/>
     <packagedElement xmi:type="uml:DestructionEvent" xmi:id="_dS4E1L-nEeKcE5qJXSFHgA" name="DestructionEvent2"/>
     <packagedElement xmi:type="uml:Collaboration" xmi:id="_P9Xm0L-oEeKcE5qJXSFHgA" name="Collaboration6">
-      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_P9Xm0b-oEeKcE5qJXSFHgA" name="Korekta stanu towaru">
+      <ownedBehavior xmi:type="uml:Interaction" xmi:id="_P9Xm0b-oEeKcE5qJXSFHgA" name="Korekta stanu towarów">
         <eAnnotations xmi:id="_P9Xm0r-oEeKcE5qJXSFHgA" source="uml2.diagrams">
           <contents xmi:type="notation:Diagram" xmi:id="_P9Xm07-oEeKcE5qJXSFHgA" type="Sequence" element="_P9Xm0b-oEeKcE5qJXSFHgA" name="pu22seq" measurementUnit="Himetric">
             <children xmi:id="_P9Xm1L-oEeKcE5qJXSFHgA" element="_P9Xm0b-oEeKcE5qJXSFHgA">
