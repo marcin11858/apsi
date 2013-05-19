@@ -1,2 +1,52 @@
 \chapter{Model analityczny}
-tereferere
+
+Na diagramie \ref{fig:DiagramKlas} przedstawiony został  diagram klas projektowanego systemu.
+Jedną z podjętych decyzji jest wyróżnienie typu wyliczeniowego \textit{TypDokumentu}, który determinuje rodzaj utworzonego dokumentu(WZ lub PZ). Decyzja ta podyktowana była faktem, iż funkcje udostępniane przez oba typy dokumentów są identyczne, a jedyna różnica która pomiędzy nimi istnieje związana jest z kontekstem, w którym występuje dany dokument.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[scale=0.7]{../img/model/diagram_klas.pdf}
+  \end{center}
+  \caption{Diagram klas}
+  \label{fig:DiagramKlas}
+\end{figure}
+\FloatBarrier
+
+Na kolejnych diagramach przedstawione zostały szczegółowe diagramy klas zaprezentowanych na diagramie \ref{fig:DiagramKlas} uwzględniające atrybuty oraz metody klas.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[scale=0.7]{../img/model/diagram_operacja.pdf}
+  \end{center}
+  \caption{Diagram klas - operacja}
+  \label{fig:DiagramKlasOperacja}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[scale=0.7]{../img/model/diagram_towar.pdf}
+  \end{center}
+  \caption{Diagram klas - towar}
+  \label{fig:DiagramKlasTowar}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[scale=0.7]{../img/model/diagram_pracownik.pdf}
+  \end{center}
+  \caption{Diagram klas - pracownik}
+  \label{fig:DiagramKlasPracownik}
+\end{figure}
+\FloatBarrier
+
+Na diagramie \ref{fig:DiagramDAO} przedstawiona została hierarchia klas warstwy dostępu do danych (DAO).
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[scale=0.4]{../img/model/diagram_dao.pdf}
+  \end{center}
+  \caption{Diagram DAO}
+  \label{fig:DiagramDAO}
+\end{figure}
+\FloatBarrier
