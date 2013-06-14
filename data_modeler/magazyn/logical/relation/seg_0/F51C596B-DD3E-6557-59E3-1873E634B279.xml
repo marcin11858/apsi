@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_7" directorySegmentName="seg_0" id="F51C596B-DD3E-6557-59E3-1873E634B279">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 20:37:23 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<targetTransferable>false</targetTransferable>
+<sourcePk>1C1F186D-F667-0B25-3B04-3DBDC1EE5555</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>zawiera</nameOnSource>
+<nameOnTarget>wchodzi w sklad</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>54307A9E-3FAC-0B48-8BC1-8A62B32E3939</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>21DF37C8-0A1C-495F-A7AD-61A707610866</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

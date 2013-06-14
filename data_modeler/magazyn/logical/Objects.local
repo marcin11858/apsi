@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="7B1ABBE9-1E1F-4771-4100-B060660A25B0" name="DOSTAWCA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0130093F-2607-97BA-DA7E-9DF51DCB1242" name="KLIENT" seqName="seg_0"/>
+   <object objectType="Entity" objectID="21DF37C8-0A1C-495F-A7AD-61A707610866" name="POZYCJA ZAMOWIENIA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="09D3DAA6-D7B6-F946-5EAB-2B7B388191CE" name="PRACOWNIK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="515AFC25-D44E-7358-229C-7A8709B48CC4" name="PRACOWNIK OBSLUGUJACY ZAMOWIENIE" seqName="seg_0"/>
+   <object objectType="Entity" objectID="09135B39-4A01-CABF-70F7-E102B47A899F" name="TOWAR" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E63D924D-0172-FA22-A118-ECD0B190A071" name="ZAMOWIENIE SPRZEDAZY" seqName="seg_0"/>
+   <object objectType="Entity" objectID="54307A9E-3FAC-0B48-8BC1-8A62B32E3939" name="ZAMOWIENIE ZAKUPU" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0BDAAD3D-BAB8-BC36-7786-C63AA663F751" name="Realtion 1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="A783F693-AD05-0535-E807-93D2E1D3E31D" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="13CD6CC5-F07A-975B-B246-DDB20C0B24DF" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D33A61DA-8D4D-BCB9-442E-20AFCB84A3EB" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="E7159952-9140-5D18-5713-4AD4B7B389CC" name="Relation_6" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F51C596B-DD3E-6557-59E3-1873E634B279" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="34FAAC98-C34C-8C12-F6D2-35D7F790BE0F" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="32026B3D-A15F-0FBE-5EF1-2EEFD25B5CDC" name="Relation_9" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

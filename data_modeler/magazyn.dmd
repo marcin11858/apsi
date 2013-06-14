@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="magazyn" id="9E56368A-0E83-220F-84E4-F6D80EC99689" version="3.5">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 12:05:51 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9E56368A-0E83-220F-84E4-F6D80EC99689</designId>
+</OSDM_Design>

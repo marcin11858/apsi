@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="09135B39-4A01-CABF-70F7-E102B47A899F" name="TOWAR">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 13:01:40 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID TOWARU" id="A977656C-B163-9997-C0E2-905155493733">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 13:01:45 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="NAZWA" id="2B6F6E9E-223F-09BF-F31F-B91CD9355C7C">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 13:01:50 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ILOSC NA MAGAZYNIE" id="505D32D5-B98C-5758-91D0-414C5E918D8A">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 20:43:21 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="70F267A0-A275-BEA4-6232-1F4FF9DBEE77" name="Key_1">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 13:02:37 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A977656C-B163-9997-C0E2-905155493733</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
