@@ -1,15 +1,15 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.logical.LogicalDesign>
-   <object objectType="Entity" objectID="09D3DAA6-D7B6-F946-5EAB-2B7B388191CE" name="PRACOWNIK" seqName="seg_0"/>
    <object objectType="Entity" objectID="54307A9E-3FAC-0B48-8BC1-8A62B32E3939" name="DOKUMENT" seqName="seg_0"/>
    <object objectType="Entity" objectID="EA3F7D4D-A858-134C-0C02-06726121F264" name="KATEGORIA TOWARU" seqName="seg_0"/>
-   <object objectType="Entity" objectID="21DF37C8-0A1C-495F-A7AD-61A707610866" name="POZYCJA ZAMOWIENIA" seqName="seg_0"/>
-   <object objectType="Entity" objectID="09135B39-4A01-CABF-70F7-E102B47A899F" name="TOWAR" seqName="seg_0"/>
    <object objectType="Entity" objectID="7B1ABBE9-1E1F-4771-4100-B060660A25B0" name="KONTRAHENT" seqName="seg_0"/>
-   <object objectType="Relation" objectID="D33A61DA-8D4D-BCB9-442E-20AFCB84A3EB" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Entity" objectID="21DF37C8-0A1C-495F-A7AD-61A707610866" name="POZYCJA ZAMOWIENIA" seqName="seg_0"/>
+   <object objectType="Entity" objectID="09D3DAA6-D7B6-F946-5EAB-2B7B388191CE" name="PRACOWNIK" seqName="seg_0"/>
+   <object objectType="Entity" objectID="09135B39-4A01-CABF-70F7-E102B47A899F" name="TOWAR" seqName="seg_0"/>
    <object objectType="Relation" objectID="F2F1F1F9-7ED3-B626-E51C-9878D1CFF0AF" name="Relation_16" seqName="seg_0"/>
-   <object objectType="Relation" objectID="15F4E905-8524-FADB-9CDA-D4102D932808" name="Relation_20" seqName="seg_0"/>
    <object objectType="Relation" objectID="F326678B-A8A4-4C8B-E67A-3D5EA4AA1A6A" name="Relation_19" seqName="seg_0"/>
-   <object objectType="Relation" objectID="32026B3D-A15F-0FBE-5EF1-2EEFD25B5CDC" name="Relation_9" seqName="seg_0"/>
+   <object objectType="Relation" objectID="15F4E905-8524-FADB-9CDA-D4102D932808" name="Relation_20" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D33A61DA-8D4D-BCB9-442E-20AFCB84A3EB" name="Relation_5" seqName="seg_0"/>
    <object objectType="Relation" objectID="F51C596B-DD3E-6557-59E3-1873E634B279" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="32026B3D-A15F-0FBE-5EF1-2EEFD25B5CDC" name="Relation_9" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.logical.LogicalDesign>
