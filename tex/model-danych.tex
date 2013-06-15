@@ -24,7 +24,7 @@
 W niniejszym podrozdziale znajduje się opis bazy danych przedstawionej na
 rysunkach \ref{fig:magazyn-er} oraz \ref{fig:raport-er}.
 
-\subsubsection{Tabela Pracownicy}
+\subsubsection{Tabela PRACOWNICY}
 Tabela pracownicy zawiera informacje o pracownikach, którzy mogą używać
 aplikacji do celów obsługi magazynu. Zostały w niej zawarte najważniejsze atrybuty jakie posiada każdy z
 pracowników, takie jak:
@@ -48,7 +48,7 @@ pracowników, takie jak:
 W tabeli tej nie ma żadnych dodatkowych ograniczeń poza określeniem
 obowiązkowości bądź opcjonalności atrybutów.
 
-\subsubsection{Tabela Dokumenty}
+\subsubsection{Tabela DOKUMENTY}
 Tabela ta reprezentuje dokumenty, które mogą być tworzone oraz przechowane w
 systemie. Są to w szczególności dokumenty przyjęcia towarów, dokumenty wydania
 na zewnątrz oraz korekty tych dokumentów. Każdy z dokumentów zawiera wymienione
@@ -72,7 +72,7 @@ W tabeli tej oprócz standardowych ograniczeń opcjonalności oraz unikalności,
 konieczne jest stworzenie wyzwalacza pilnującego aby dokument o statusie korekta
 posiadał id korygowanego dokumentu.
 
-\subsubsection{Tabela Pozycje Zamówienia}
+\subsubsection{Tabela POZYCJE\_ZAMÓWIENIA}
 Zawiera informacje o pozycjach występujących w stworzonym dokumencie. Pozycja
 zamówienia posiada tylko dwa następujące atrybuty:
 \begin{itemize}
@@ -83,7 +83,7 @@ zamówienia posiada tylko dwa następujące atrybuty:
 
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością.
 
-\subsubsection{Tabela Towary}
+\subsubsection{Tabela TOWARY}
 Tabela towary opisuje towary przechowywane w magazynie. Posiada następujące
 atrybuty:
 \begin{itemize}
@@ -103,7 +103,7 @@ atrybuty:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością nazwy.
 
-\subsubsection{Tabela Kategorie towarów}
+\subsubsection{Tabela KATEGORIE\_TOWARÓW}
 Tabela kategorie towarów przechowuje informacje o  kategoriach jakii mogą być
 towary w magazynie.
 Posiada ona tylko dwa atrybuty obowiązkowe:
@@ -116,7 +116,7 @@ Posiada ona tylko dwa atrybuty obowiązkowe:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością nazwy i klucza.
 
-\subsubsection{Tabela Kontrahenci}
+\subsubsection{Tabela KONTRAHENCI}
 Tabela kontrahenci reprezentuje osoby fizyczne bądź firmy z którymi
 współpracuje magazyn, mogą być to zarówno dostawcy jak i klienci magazynu. Kontrahent opisany
 jest za pomocą następujących atrybutów:
@@ -143,7 +143,7 @@ kontrahenta. Zadaniem tego wyzwalacza powinno być sprawdzenie czy użytkownik
 podał imię i nazwisko (w przypadku osoby fizycznej) bądź nazwę (w przypadku
 przedsiębiorstwa). Wyzwalacz będzie uruchamiany w momencie dodawania i aktualizacji danych kontrahenta.
 
-\subsubsection{Tabela Raporty}
+\subsubsection{Tabela RAPORTY}
 Tabela raporty umożliwia kierownikom śledzenie ilości i wartości zamawianych
 oraz sprzedawanych towarów. Posiadają one kilka atrybutów koniecznych z punktu
 widzenia ich użyteczności:
@@ -164,7 +164,7 @@ widzenia ich użyteczności:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością.
 
-\subsubsection{Tabela Pozycje Raportu}
+\subsubsection{Tabela POZYCJE\_RAPORTU}
 Tabela pozycje raportu opisuje pozycje uwzględnione w raporcie. Posiada
 następujące atrybuty:
 \begin{itemize}
