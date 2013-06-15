@@ -24,9 +24,9 @@
 W niniejszym podrozdziale znajduje się opis bazy danych przedstawionej na
 rysunkach \ref{fig:magazyn-er} oraz \ref{fig:raport-er}.
 
-\subsubsection{Tabela Pracownik}
-Zawiera informacje o pracownikach, którzy mogą używać aplikacji do celów obsługi
-magazynu. Zostały w niej zawarte najważniejsze atrybuty jakie posiada każdy z
+\subsubsection{Tabela Pracownicy}
+Tabela pracownicy zawiera informacje o pracownikach, którzy mogą używać
+aplikacji do celów obsługi magazynu. Zostały w niej zawarte najważniejsze atrybuty jakie posiada każdy z
 pracowników, takie jak:
 \begin{itemize}
   \item \textbf{id\_pracownika} - sztuczny klucz główny, służy do identyfikacji
@@ -48,7 +48,7 @@ pracowników, takie jak:
 W tabeli tej nie ma żadnych dodatkowych ograniczeń poza określeniem
 obowiązkowości bądź opcjonalności atrybutów.
 
-\subsubsection{Tabela Dokument}
+\subsubsection{Tabela Dokumenty}
 Tabela ta reprezentuje dokumenty, które mogą być tworzone oraz przechowane w
 systemie. Są to w szczególności dokumenty przyjęcia towarów, dokumenty wydania
 na zewnątrz oraz korekty tych dokumentów. Każdy z dokumentów zawiera wymienione
@@ -72,7 +72,7 @@ W tabeli tej oprócz standardowych ograniczeń opcjonalności oraz unikalności,
 konieczne jest stworzenie wyzwalacza pilnującego aby dokument o statusie korekta
 posiadał id korygowanego dokumentu.
 
-\subsubsection{Tabela Pozycja Zamówienia}
+\subsubsection{Tabela Pozycje Zamówienia}
 Zawiera informacje o pozycjach występujących w stworzonym dokumencie. Pozycja
 zamówienia posiada tylko dwa następujące atrybuty:
 \begin{itemize}
@@ -83,8 +83,8 @@ zamówienia posiada tylko dwa następujące atrybuty:
 
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością.
 
-\subsubsection{Tabela Towar}
-Tabela towar opisuje towary przechowywane w magazynie. Posiada następujące
+\subsubsection{Tabela Towary}
+Tabela towary opisuje towary przechowywane w magazynie. Posiada następujące
 atrybuty:
 \begin{itemize}
   \item \textbf{kod\_kreskowy} - kod EAN (\textit{ang. European Article
@@ -103,9 +103,10 @@ atrybuty:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością nazwy.
 
-\subsubsection{Tabela Kategoria towaru}
-Kategoria towaru określa kategorie jakiej jest wybrany towar. Posiada ona tylko
-dwa atrybuty obowiązkowe:
+\subsubsection{Tabela Kategorie towarów}
+Tabela kategorie towarów przechowuje informacje o  kategoriach jakii mogą być
+towary w magazynie.
+Posiada ona tylko dwa atrybuty obowiązkowe:
 \begin{itemize}
   \item \textbf{id\_kategorii} - sztuczny klucz identyfikujący kategorie,
   atrybut obowiązkowy
@@ -115,9 +116,9 @@ dwa atrybuty obowiązkowe:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością nazwy i klucza.
 
-\subsubsection{Tabela Kontrahent}
-Kontrahent reprezentuje osoby fizyczne bądź firmy z którymi współpracuje
-magazyn, mogą być to zarówno dostawcy jak i klienci magazynu. Kontrahent opisany
+\subsubsection{Tabela Kontrahenci}
+Tabela kontrahenci reprezentuje osoby fizyczne bądź firmy z którymi
+współpracuje magazyn, mogą być to zarówno dostawcy jak i klienci magazynu. Kontrahent opisany
 jest za pomocą następujących atrybutów:
 \begin{itemize}
   \item \textbf{id\_kontrahenta} - sztuczny klucz główny identyfikujący
@@ -142,9 +143,9 @@ kontrahenta. Zadaniem tego wyzwalacza powinno być sprawdzenie czy użytkownik
 podał imię i nazwisko (w przypadku osoby fizycznej) bądź nazwę (w przypadku
 przedsiębiorstwa). Wyzwalacz będzie uruchamiany w momencie dodawania i aktualizacji danych kontrahenta.
 
-\subsubsection{Tabela Raport}
-Raport umożliwiają kierownikom śledzenie ilości i wartości zamawianych oraz
-sprzedawanych towarów. Posiadają one kilka atrybutów koniecznych z punktu
+\subsubsection{Tabela Raporty}
+Tabela raporty umożliwia kierownikom śledzenie ilości i wartości zamawianych
+oraz sprzedawanych towarów. Posiadają one kilka atrybutów koniecznych z punktu
 widzenia ich użyteczności:
 \begin{itemize}
   \item \textbf{id\_raportu} - sztuczny klucz główny identyfikujący raport,
@@ -163,8 +164,9 @@ widzenia ich użyteczności:
 Tabela nie posiada żadnych dodatkowych ograniczeń poza opcjonalnością oraz
 unikalnością.
 
-\subsubsection{Tabela Pozycja Raportu}
-Pozycja raportu opisuje pozycje uwzględnione w raporcie. Posiada następujące atrybuty:
+\subsubsection{Tabela Pozycje Raportu}
+Tabela pozycje raportu opisuje pozycje uwzględnione w raporcie. Posiada
+następujące atrybuty:
 \begin{itemize}
   \item \textbf{id\_pozycji} - klucz sztuczny identyfikujący pozycje w bazie
   danych, atrybut obowiązkowy
