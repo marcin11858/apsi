@@ -42,6 +42,16 @@
 </engineerTo>
 <use>0</use>
 </Attribute>
+<Attribute name="DATA UTWORZENIA" id="F258EB60-AF4B-0140-80BF-CC3DF681EE5B">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 13:02:55 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
 <Attribute name="ZAKRES OD" id="3DDF62C4-2296-C7D4-2A34-2B36C4700F92">
 <createdBy>nieznany</createdBy>
 <createdTime>2013-06-15 12:34:26 UTC</createdTime>
