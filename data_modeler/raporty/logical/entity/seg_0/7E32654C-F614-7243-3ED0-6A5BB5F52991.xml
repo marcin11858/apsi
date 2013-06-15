@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E32654C-F614-7243-3ED0-6A5BB5F52991" name="POZYCJA RAPORTU">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:35:53 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID POZYCJI" id="A295B536-7FF0-F240-F45E-BA080C5C8852">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:36:08 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="NAZWA TOWARU" id="01F94AB5-7B6E-2934-1646-3BEFF25F7F54">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:36:14 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ILOŚĆ" id="3120FBDE-910D-E462-7778-7FD84BE614C2">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:36:29 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="CENA" id="BFB59FE5-3717-9310-21E1-ECBD6BC820CF">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:36:36 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ID RAPORTU" id="0C37E37A-BE59-CB3B-E07F-74FA125ADEDC">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:37:48 UTC</createdTime>
+<generatorID>91283E24-B4AC-B414-6645-C698D65E80B8</generatorID>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<referedAttribute>DDADCBAD-2871-85C1-7D70-35816C9C925D</referedAttribute>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="34305D34-2CEA-C917-0E8D-ACFE23006447" name="POZYCJA RAPORTU PK">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:37:19 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0C37E37A-BE59-CB3B-E07F-74FA125ADEDC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

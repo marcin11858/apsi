@@ -22,54 +22,9 @@
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 </Attribute>
-<Attribute name="NR ZAMOWIENIA ZAKUPU" id="A8422B8D-B777-503C-6F8B-4A0681133F69">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 20:37:23 UTC</createdTime>
-<generatorID>F51C596B-DD3E-6557-59E3-1873E634B279</generatorID>
-<ownerDesignName>magazyn</ownerDesignName>
-<engineerTo>
-<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
-</engineerTo>
-<referedAttribute>24D7B981-ABCE-717B-BED5-53199972930A</referedAttribute>
-<use>0</use>
-</Attribute>
-<Attribute name="ID_DOSTAWCY" id="B5A2579E-5CC3-E0F2-DF8D-F09B42BC03A5">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 20:37:23 UTC</createdTime>
-<generatorID>F51C596B-DD3E-6557-59E3-1873E634B279</generatorID>
-<ownerDesignName>magazyn</ownerDesignName>
-<engineerTo>
-<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
-</engineerTo>
-<referedAttribute>81AB824C-FCFA-695F-068F-A024EDBEE413</referedAttribute>
-<use>0</use>
-</Attribute>
-<Attribute name="NR ZAMOWIENIA SPRZEDAZY" id="51A071CB-5909-FB5A-8836-5F19DA83ECA1">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 20:38:27 UTC</createdTime>
-<generatorID>34FAAC98-C34C-8C12-F6D2-35D7F790BE0F</generatorID>
-<ownerDesignName>magazyn</ownerDesignName>
-<engineerTo>
-<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
-</engineerTo>
-<referedAttribute>7A1DC7CB-BBB3-B529-EA0C-67350E17D020</referedAttribute>
-<use>0</use>
-</Attribute>
-<Attribute name="ID KLIENTA" id="3C7201AA-EDF9-47A1-BD5D-6A770CCF3E34">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 20:38:27 UTC</createdTime>
-<generatorID>34FAAC98-C34C-8C12-F6D2-35D7F790BE0F</generatorID>
-<ownerDesignName>magazyn</ownerDesignName>
-<engineerTo>
-<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
-</engineerTo>
-<referedAttribute>EB42E40E-2B1B-945F-CB8B-12AE4D523EEB</referedAttribute>
-<use>0</use>
-</Attribute>
-<Attribute name="ID TOWARU" id="23B1890F-3F89-E8A4-053D-FA7D63152069">
+<Attribute name="KOD KRESKOWY" id="23B1890F-3F89-E8A4-053D-FA7D63152069">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 20:40:00 UTC</createdTime>
 <generatorID>32026B3D-A15F-0FBE-5EF1-2EEFD25B5CDC</generatorID>
@@ -78,6 +33,26 @@
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
 <referedAttribute>A977656C-B163-9997-C0E2-905155493733</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="NUMER DOKUMENTU" id="635C9243-BB72-0B92-23E6-9BEC0CF1E7C6">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:05:17 UTC</createdTime>
+<generatorID>F51C596B-DD3E-6557-59E3-1873E634B279</generatorID>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<referedAttribute>CA3F16EE-4D88-732B-7EFD-7A6C645AF033</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="CENA" id="03398725-4335-1EF3-B51D-247F43271F38">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:19:53 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
 <use>0</use>
 </Attribute>
 </attributes>
@@ -91,11 +66,8 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>A8422B8D-B777-503C-6F8B-4A0681133F69</attributeRef>
-<attributeRef>B5A2579E-5CC3-E0F2-DF8D-F09B42BC03A5</attributeRef>
-<attributeRef>51A071CB-5909-FB5A-8836-5F19DA83ECA1</attributeRef>
-<attributeRef>3C7201AA-EDF9-47A1-BD5D-6A770CCF3E34</attributeRef>
 <attributeRef>23B1890F-3F89-E8A4-053D-FA7D63152069</attributeRef>
+<attributeRef>635C9243-BB72-0B92-23E6-9BEC0CF1E7C6</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

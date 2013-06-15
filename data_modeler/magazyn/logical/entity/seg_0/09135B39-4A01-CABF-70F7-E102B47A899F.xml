@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID TOWARU" id="A977656C-B163-9997-C0E2-905155493733">
+<Attribute name="KOD KRESKOWY" id="A977656C-B163-9997-C0E2-905155493733">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 13:01:45 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
@@ -32,7 +32,15 @@
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="JEDNOSTKA MIARY" id="609C0BCD-DA48-DC34-04FA-113097CA6B3B">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:00:49 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
 <use>0</use>
 </Attribute>
 <Attribute name="ILOSC NA MAGAZYNIE" id="505D32D5-B98C-5758-91D0-414C5E918D8A">
@@ -42,7 +50,27 @@
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="CENA SPRZEDAŻY" id="91A62212-F5CE-0B8C-2127-3D9E5FEC27F1">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:01:08 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ID KATEGORII" id="76291A63-C943-27D5-1559-7AB1F239398D">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:28:40 UTC</createdTime>
+<generatorID>F2F1F1F9-7ED3-B626-E51C-9878D1CFF0AF</generatorID>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<referedAttribute>1E66E206-F285-350F-0C3D-1772F7EFAF66</referedAttribute>
 <use>0</use>
 </Attribute>
 </attributes>

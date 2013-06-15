@@ -25,14 +25,13 @@
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
 </Attribute>
-<Attribute name="NAZWISKO" id="AB19AB7A-A948-96DB-2FDE-606FCA74E8D0">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 12:53:34 UTC</createdTime>
+<Attribute name="PESEL" id="9E9F9704-FB22-2E6A-9E26-80593B50C665">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:55:16 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 </Attribute>
 <Attribute name="IMIE" id="232D5FBA-C3E1-53BA-AB9B-F3FB4CB5EB30">
@@ -42,12 +41,49 @@
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="NAZWISKO" id="AB19AB7A-A948-96DB-2FDE-606FCA74E8D0">
+<createdBy>GIBBON</createdBy>
+<createdTime>2013-06-14 12:53:34 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
 <use>0</use>
 </Attribute>
 <Attribute name="STANOWISKO" id="009F509D-9ED8-4CE3-88D7-B7E8F977BD48">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 12:53:52 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="ADRES ZAMIESZKANIA" id="7B13A4B5-4285-F40E-7789-96F286D44AD2">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:55:34 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="TELEFON" id="384DDB92-52ED-C2D6-EB4E-1B303802852F">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:55:40 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="EMAIL" id="EA91856C-2512-7AD8-1F6A-A8CD6DCFE8F6">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:55:46 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>

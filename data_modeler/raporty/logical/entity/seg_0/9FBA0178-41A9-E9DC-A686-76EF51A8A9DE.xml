@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9FBA0178-41A9-E9DC-A686-76EF51A8A9DE" name="RAPORT">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:33:38 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID RAPORTU" id="DDADCBAD-2871-85C1-7D70-35816C9C925D">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:07 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="TYP" id="B87D1D5E-CC5E-5A1D-A30F-DCBE976B7ED7">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:20 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="NAZWA" id="D87E0C37-0B16-23F3-A784-3F66611BFBA0">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:13 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="ZAKRES OD" id="3DDF62C4-2296-C7D4-2A34-2B36C4700F92">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:26 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="ZAKRES DO" id="EDE3FDE7-0B54-13F9-0749-4D0CEADD7889">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:33 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9C89FEFF-7539-6D0F-F45E-22117773F9A4" name="RAPORT PK">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 12:34:12 UTC</createdTime>
+<ownerDesignName>raporty</ownerDesignName>
+<engineerTo>
+<item key="9333E3FF-0109-27E8-3761-D108698054AE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DDADCBAD-2871-85C1-7D70-35816C9C925D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -7,9 +7,9 @@
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
 <sourcePk>B745326D-F2E4-4375-B2B7-E17FDFB617FE</sourcePk>
-<identifying>true</identifying>
-<nameOnSource>realizuje</nameOnSource>
-<nameOnTarget>jest realizowane przez</nameOnTarget>
+<identifying>false</identifying>
+<nameOnSource>jest wystawiony dla</nameOnSource>
+<nameOnTarget>dotyczy</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

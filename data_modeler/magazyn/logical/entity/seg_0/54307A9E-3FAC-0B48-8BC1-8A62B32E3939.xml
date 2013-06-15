@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="54307A9E-3FAC-0B48-8BC1-8A62B32E3939" name="ZAMOWIENIE ZAKUPU">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="54307A9E-3FAC-0B48-8BC1-8A62B32E3939" name="DOKUMENT">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 19:46:48 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
@@ -15,27 +15,34 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="NR ZAMOWIENIA ZAKUPU" id="24D7B981-ABCE-717B-BED5-53199972930A">
-<createdBy>GIBBON</createdBy>
-<createdTime>2013-06-14 19:46:56 UTC</createdTime>
+<Attribute name="NUMER DOKUMENTU" id="CA3F16EE-4D88-732B-7EFD-7A6C645AF033">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:04:49 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 </Attribute>
-<Attribute name="DATA ZGLOSZENIA" id="BD6B8D67-262F-F3AE-FF7F-386ABFD9B977">
+<Attribute name="TYP" id="5C238955-F672-E305-A4C4-E6B7ED04C39C">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:15:40 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="DATA OPERACJI" id="BD6B8D67-262F-F3AE-FF7F-386ABFD9B977">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 19:47:12 UTC</createdTime>
 <ownerDesignName>magazyn</ownerDesignName>
 <engineerTo>
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 </Attribute>
-<Attribute name="ID_DOSTAWCY" id="81AB824C-FCFA-695F-068F-A024EDBEE413">
+<Attribute name="ID KONTRAHENTA" id="81AB824C-FCFA-695F-068F-A024EDBEE413">
 <createdBy>GIBBON</createdBy>
 <createdTime>2013-06-14 20:30:42 UTC</createdTime>
 <generatorID>D33A61DA-8D4D-BCB9-442E-20AFCB84A3EB</generatorID>
@@ -44,6 +51,48 @@
 <item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
 </engineerTo>
 <referedAttribute>EC2602B0-5C0C-4DBA-5421-433C85E06BB0</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="STATUS" id="93CAB4BF-E6C2-5F27-A940-8716A9AB4B34">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:27:48 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<use>0</use>
+</Attribute>
+<Attribute name="OPIS" id="1D620733-9115-7290-6A22-B0FD4786128F">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:52:47 UTC</createdTime>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+</Attribute>
+<Attribute name="ID PRACOWNIKA" id="E5580027-8A7C-70FB-A4D8-5A602A729E02">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:54:24 UTC</createdTime>
+<generatorID>F326678B-A8A4-4C8B-E67A-3D5EA4AA1A6A</generatorID>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<referedAttribute>F498E7DF-E894-F9A3-1722-65AB476E669F</referedAttribute>
+<use>0</use>
+</Attribute>
+<Attribute name="NUMER DOKUMENTU1" id="F6CA0DBA-CC17-8077-5256-DB0836790091">
+<createdBy>nieznany</createdBy>
+<createdTime>2013-06-15 11:57:07 UTC</createdTime>
+<generatorID>15F4E905-8524-FADB-9CDA-D4102D932808</generatorID>
+<ownerDesignName>magazyn</ownerDesignName>
+<engineerTo>
+<item key="5DD24584-F4A3-6174-E1C7-F53E19C4B88D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CA3F16EE-4D88-732B-7EFD-7A6C645AF033</referedAttribute>
 <use>0</use>
 </Attribute>
 </attributes>
@@ -57,8 +106,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>24D7B981-ABCE-717B-BED5-53199972930A</attributeRef>
-<attributeRef>81AB824C-FCFA-695F-068F-A024EDBEE413</attributeRef>
+<attributeRef>CA3F16EE-4D88-732B-7EFD-7A6C645AF033</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
